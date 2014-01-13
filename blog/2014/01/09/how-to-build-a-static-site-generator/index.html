@@ -1,0 +1,211 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<title>yet another static site generator  | Polina Soshnin</title>
+
+<meta name="author" content="Polina Soshnin"> 
+
+<meta name="description" content="how to build your own static site generator"> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Polina Soshnin" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
+
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
+
+          if (id) {
+            el = $('#' + id);
+
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Polina Soshnin</a></h1>
+<h4>A blogging framework for hackers.</h4>
+<nav id="main-nav"><ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/blog">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/code">Code</a></li>
+	
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/blog">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/code">Code</a></li>
+	
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:psoshnin.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Yet Another Static Site Generator</h2>
+	<div class="entry-content"><p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
+
+<p>There are lots of static site generators out there&mdash; 212 of them in fact! See <a href="http://staticsitegenerators.net/.">http://staticsitegenerators.net/.</a></p>
+
+<p>Why go about building your own static site generator?</p>
+
+<p>Well, there were a few things about static site generators that I found really handy:</p>
+
+<p>You can create content in markdown/textile
+You can manage everything with git
+You can publish directly from the terminal
+No database to maintain
+No hosting headaches&mdash; host on github
+Makes your code completely open source&mdash; yay!
+They can turn your site into an open source project
+High performance: static HTML pages can be immediately served by web server because there is no database requests or other overhead.
+No special software needs to be installed, and the processing/memory requirements are low
+SSG allow you to follow whatever workflow you like
+Any input format that can be transformed to HTML can be used
+Use the version control system of your choice
+The use of SSG makes the creation of your website into a process akin to software development&mdash; any budding swe will think that&rsquo;s awesome</p>
+
+<p>As a budding hacker, one way you can learn is by taking things apart and then putting them back together. That is what I will strive to do with Jekyll-Bootsrap.</p>
+
+<p>Jekyll-Bootstrap is the static site generator that I am using to power this blog. It provides a full blog scaffold for Jekyll based blogs. That means I will have ot peer into Jekyll to see what&rsquo;s going on and see if I can recreate my own, customized version of a static site generator.</p>
+
+<p>Another reason I wanted to do this project was that I wanted to explore another way to build a website. There are many ways to go about building a website. You can write HTML manually, use a framework to create dynamic web sites (see my post on web frameworks), or use a full fledged content management system (CMS) that offers an interface to create, edit, review, and publish your content. The Wellesley College website currently uses Drupal as its CMS.</p>
+
+<p>You can also use tools to generate static (instead of a dynamic) website.</p>
+
+<p>What the SSG will do:</p>
+
+<p>Once you have written some input files and created a layout along with rules to specify how files should be compiled, the site generator will do the rest for you. The compiler will take every changed item and produce output by running your specified transformations on the input. It can also be configured to deploy the site for you (heroku, github pages, what have you). An SSG also allows you to run checks on your output&mdash; it can validate the CSS, HTML, find stale files, and find broken links. You can add further checks with a few lines of code.</p>
+
+<p>Goal: the time of routinely writing HTML by hand is OVER. On to the static site generators! It&rsquo;s so much nicer to just write your content in Markdown and let the SSG do the rest for you.</p>
+
+<p>This article still in progress.</p>
+
+<p>Take a look at this for now: <a href="https://github.com/skx/static-site-generators">https://github.com/skx/static-site-generators</a></p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-09T00:00:00-08:00" pubdate data-updated="true"></time></div>
+	
+
+<div class="tags">
+
+	<a class='category' href='/blog/categories/cs/'>cs</a>
+
+</div>
+
+
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">
+
+
+<a href="http://twitter.com/psoshnin">Twitter</a> •
+<a href="https://github.com/psoshnin">Github</a> •
+<a href="http://www.linkedin.com/in/polinasoshnin">LinkedIn</a> 
+<br>
+Copyright &copy; 2014
+
+    Polina Soshnin
+
+<br>
+Powered by <a href="http://octopress.org/">Octopress</a>.
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

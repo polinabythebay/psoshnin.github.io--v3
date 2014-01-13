@@ -1,0 +1,288 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<title>playing framework roulette  | Polina Soshnin</title>
+
+<meta name="author" content="Polina Soshnin"> 
+
+<meta name="description" content=""> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Polina Soshnin" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
+
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
+
+          if (id) {
+            el = $('#' + id);
+
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Polina Soshnin</a></h1>
+<h4>A blogging framework for hackers.</h4>
+<nav id="main-nav"><ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/blog">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/code">Code</a></li>
+	
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul>
+	<li><a href="/">Home</a></li>
+	<li><a href="/blog">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/code">Code</a></li>
+	
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:psoshnin.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Playing Framework Roulette</h2>
+	<div class="entry-content"><p>Included file &lsquo;JB/setup&rsquo; not found in _includes directory</p>
+
+<p>Client-side frameworks are the way to build rich web apps</p>
+
+<h3>The lowdown on JavaScript Frameworks/Libraries:</h3>
+
+<p>What all of the frameworks agree on:</p>
+
+<p>Serious JS apps require proper data models and ability to do client side rendering, not just server rendering + Ajax/jQuery code</p>
+
+<p>All use the model-view-* separation. There’s some kind of controller piece, but it can depend on the framework.</p>
+
+<p>Data binding = Good
+All frameworks except Backbone and Spine have built in declarative data binding in their views</p>
+
+<p>Every single framework is MIT licensed and hosted on GitHub</p>
+
+<p>JS Library vs Framework
+Library: can put in your existing architecture and add specific functionality
+Framework: give you an architecture (a file structure) that you are meant to follow and are meant to handle common requirements</p>
+
+<p>Libraries don’t make your architecture so deeply tied to the project — they’re typically easier to learn, adopt, customize, and minimize project risk.
+Frameworks is a more ambitious take on advancing the craft of JS
+Ember JS — creator is also from Rails and SproutCore</p>
+
+<p>Libraries: Backbone, Knockout, Spine, CanJS
+Frameworks: Ember, AngularJS, Batman, Meteor</p>
+
+<p>more side by side comparisons here:
+<a href="http://blog.stevensanderson.com/2012/08/01/rich-javascript-applications-the-seven-frameworks-throne-of-js-2012/">http://blog.stevensanderson.com/2012/08/01/rich-javascript-applications-the-seven-frameworks-throne-of-js-2012/</a></p>
+
+<p>All of them must make decisions on how to deal with Views, URL Routing, and Data Storage
+If one of them is not built in, argument is that it’s easier to work with 3rd party libraries
+If one of them is built in, argument is that integration is more seamless.</p>
+
+<p>Ember (like Rails): We do a lot of magic, but it’s good magic.</p>
+
+<p>String-based vs DOM-based templates</p>
+
+<p>AngularJS — made by guys at Google</p>
+
+<p>String-based templates: use Handlebars.js
+DOM-based means more control flow via bindings in your markup and not relying on an external templating library</p>
+
+<p>Server-agnosticism
+Batman is designed for Rails
+Meteor does its own thing</p>
+
+<p>The architecture, convention, and tooling in Ember leans towards Rails developers</p>
+
+<p>Quick overview of the different JS technologies:</p>
+
+<p>Backbone
+M-V in JS
+Most minimal, best known, easy to adopt</p>
+
+<p>Spine
+Modified version of Backbone</p>
+
+<p>Meteor
+Bleeding edge future web framework
+Very radical
+Server-side runtime (Node+Mongo) with client-side runtime. WebSockets syncs between client and server.
+Node.js is a framework for server side applications
+Mongo is a leading NoSQL open source database
+Live deployments each time you edit your code.
+Client-side runtimes updated on the fly without losing their state
+Beyond conventional web development
+Full DB API on the client side—> makes it easier to make dynamic websites
+Don’t have to deal with callbacks anymore
+An Ecosystem of packages</p>
+
+<p>Internet has latency—> it can take awhile for your DB to update your screen</p>
+
+<p>Ember
+Built by guys from jQuery and Rails
+What you need to build an “ambitious” web application
+Biggest FM in terms of functionality and code size
+Very sophisticated, very opinionated
+Design inspired by Rails and Cocoa
+Will supply project templates for Rails</p>
+
+<p>Sites using this: NPR</p>
+
+<p>AngularJS
+Developed by Google, internally used by them
+No impact on your server architecture or file layout</p>
+
+<pre><code> Doesn’t need to control the whole page: can work on a section of your page
+</code></pre>
+
+<p>Combination of what browsers do today and what they will do natively in a few years</p>
+
+<pre><code> Declarative binding and observability —&gt; in a few years
+</code></pre>
+
+<p>Knockout
+Model-View-ViewModel
+Focused on rich UIs
+Not opinionated on URL routing or data access
+Won’t impact server architecture or file layout
+Doesn’t need to control the whole page</p>
+
+<p>Batman
+For people who use Rails and CoffeeScript
+Very opinionated, MUST follow conventions
+Full-stack framework with pretty rich models, views, controllers, and routing
+DOM-based templating</p>
+
+<p>CanJS
+Not very well known</p>
+
+<h3>Non-JS Frameworks</h3>
+
+<p>Ahhh there are so many of them! Play? Sinatra? Ruby on Rails? What to learn?</p>
+
+<h3>What to use?</h3>
+
+<p>Which one to choose?
+Scope: Are you starting from scratch and want a pre-prepared architecture to guide you?
+Or do you prefer to pick your own combinations of patterns and libraries?
+Design aesthetic: Do you like doing it?</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-09T00:00:00-08:00" pubdate data-updated="true"></time></div>
+	
+
+
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">
+
+
+<a href="http://twitter.com/psoshnin">Twitter</a> •
+<a href="https://github.com/psoshnin">Github</a> •
+<a href="http://www.linkedin.com/in/polinasoshnin">LinkedIn</a> 
+<br>
+Copyright &copy; 2014
+
+    Polina Soshnin
+
+<br>
+Powered by <a href="http://octopress.org/">Octopress</a>.
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

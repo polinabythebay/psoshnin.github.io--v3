@@ -1,4 +1,15 @@
-<p>
-  Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }} -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+
+
+
+<a href="http://twitter.com/psoshnin">Twitter</a> •
+<a href="https://github.com/psoshnin">Github</a> •
+<a href="http://www.linkedin.com/in/polinasoshnin">LinkedIn</a> 
+<br>
+Copyright &copy; {{ site.time | date: "%Y" }}
+{% if site.author %}
+    {{ site.author }}
+{% else %}
+    {{ site.title }}
+{% endif %}
+<br>
+Powered by <a href="http://octopress.org/">Octopress</a>.

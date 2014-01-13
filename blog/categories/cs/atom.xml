@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cs | ]]></title>
   <link href="http://psoshnin.github.io/blog/categories/cs/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-01-12T23:17:27-08:00</updated>
+  <updated>2014-01-12T23:26:21-08:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -12,17 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[SF: hackers and hypergentrification]]></title>
-    <link href="http://psoshnin.github.io/blog/2014/02/09/san-francisco-hackers-and-hypergentrification/"/>
-    <updated>2014-02-09T00:00:00-08:00</updated>
-    <id>http://psoshnin.github.io/blog/2014/02/09/san-francisco-hackers-and-hypergentrification</id>
-    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
-
-<p>I think it&rsquo;s interesting that one thing that hackers truly value is living in a society where there is equal access to the share of information. In SF, there is no equal access to opportunities or living arrangements. Facebook, which has a sign on its campus that says &ldquo;The Hacker Company&rdquo; seeks to epitomize this. I find it ironic because it is also a company in the Bay Area that has contributed to the hyper gentrification of San Francisco&rsquo;s neighborhoods. While it seeks to be all inclusive of different ethnic background and gender identities, in doing so it is hyper disclusive to class. The entire campus is very opulent and it would be difficult to be an employee there and not have a sense of entitlement to all the company perks money can buy.</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Why I am a Hacker]]></title>
@@ -152,6 +141,23 @@ The use of SSG makes the creation of your website into a process akin to softwar
 <p>A post in which I put my rails tutorials to use and build a website for my aunt and uncle&rsquo;s boutique roastery in Walla Walla, WA.</p>
 
 <p>I will use this post to talk about what went in to making the website.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mobile 1/3: building a W8 app]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/01/09/building-a-w8-app/"/>
+    <updated>2014-01-09T00:00:00-08:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/01/09/building-a-w8-app</id>
+    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
+
+<p>A three part series in which I talk about my experience developing in the three mobile ecosystems: iOS, Android, and W8.</p>
+
+<p>One huge problem with Client-Side systems going into 2014 is that to reach all users, your app must be built three times: in Android (Java), iOS (ObjC), and Windows 8(C#).</p>
+
+<p>Since I will probably have to come across these three ecosystems at one point in my career, I figured I&rsquo;d give all of them a go.</p>
+
+<p>This is a post in which I talk about my experience making W8 apps and why I will probably never want to do it in real life.</p>
 ]]></content>
   </entry>
   

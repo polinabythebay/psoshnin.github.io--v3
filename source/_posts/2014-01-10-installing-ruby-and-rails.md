@@ -4,8 +4,9 @@ title: "Installing Ruby and Rails"
 description: ""
 category: 
 tags: []
+published: false
 ---
-{% include JB/setup %}
+
 
 I was told that setting up my development environment for writing Rails apps was going to be one of the trickiest parts of my entire learning experience, and they were right. The process was convoluted enough that I'm making a post out of it to use as a means for documenting the process should I need to redo it in the future. 
 

@@ -4,8 +4,9 @@ title: "yet another static site generator"
 description: "how to build your own static site generator"
 category: cs
 tags: [ruby, projects]
+published: false
 ---
-{% include JB/setup %}
+
 
 There are lots of static site generators out there-- 212 of them in fact! See http://staticsitegenerators.net/.
 

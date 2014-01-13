@@ -4,8 +4,9 @@ title: "Mobile 1/3: building a W8 app"
 description: ""
 category: cs
 tags: [projects, c#, windows]
+published: false
 ---
-{% include JB/setup %}
+
 
 A three part series in which I talk about my experience developing in the three mobile ecosystems: iOS, Android, and W8. 
 

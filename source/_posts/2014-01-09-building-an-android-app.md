@@ -4,6 +4,7 @@ title: "Mobile 2/3: building an android app"
 description: ""
 category: 
 tags: []
+published: false
 ---
 {% include JB/setup %}
 

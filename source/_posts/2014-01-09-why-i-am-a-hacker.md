@@ -4,8 +4,9 @@ title: "Why I am a Hacker"
 description: ""
 category: cs
 tags: []
+published: false
 ---
-{% include JB/setup %}
+
 
 What are hackers like? Why are there so few women hackers? 
 

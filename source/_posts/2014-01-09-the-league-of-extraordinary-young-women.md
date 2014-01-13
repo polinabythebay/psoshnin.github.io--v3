@@ -4,8 +4,9 @@ title: "the league of extraordinary young women"
 description: ""
 category: 
 tags: []
+published: false
 ---
-{% include JB/setup %}
+
 
 Use this to keep a running tab of mentors in the field and resources for young women:
 

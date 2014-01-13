@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Why hello world"
-tagline: "Supporting tagline"
-description: "this is a description"
-category: acatetory
-tags: [thisisatag]
----
-{% include JB/setup %}
+title: "Zombie Ninjas Attack: A survivor's retrospective"
+date: 2011-07-03 5:59
+comments: true
+external-url:
+categories:
+published: true
+--- 
+
 
 Here is a ruby snippet, it's kinda cute:
 

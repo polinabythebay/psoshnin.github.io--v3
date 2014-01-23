@@ -8,7 +8,7 @@ footer: true
 ---
 
 
-###Communities I belong to:
+###Communities:
 
 [Quest Scholars Network](http://questscholarsnetwork.org/),
 [The Violet Society](http://www.thevioletsociety.com/),

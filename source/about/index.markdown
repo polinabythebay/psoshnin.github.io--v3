@@ -21,7 +21,7 @@ footer: true
 ###Puzzles and Projects:
 
 [Github](https://github.com/psoshnin),
-[Hacker Rank](https://www.hackerrank.com/Psoshnin),
+[HackerRank](https://www.hackerrank.com/Psoshnin),
 Project Euler 
 
 ###Exploring, connecting:

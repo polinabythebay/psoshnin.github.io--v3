@@ -1,201 +1,29 @@
+---
+layout: default
+---
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:200,300,400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  </head>
-
-  <body bgcolor="#fdf6e3">
-    <style type="text/css">
-      h1 {
-        font-family: 'Lato', 'Raleway', 'Fjalla One', sans-serif;
-        font-size: 40px;
-        padding-left: 37%;
-        padding-top: 5%;
-      }
-      h3 {
-        font-family: 'Raleway', 'Fjalla One', sans-serif;
-        padding-left: 37%
-      }
-      a {
-        text-decoration: none;
-        color:  #268bd2;
-      }
-      span.hidden {
-        display: none;
-      }
-      span.hidden2 {
-        display: none;
-      }
-      span.hidden3 {
-        display: none;
-      }
-      span.hidden4 {
-        display: none;
-      }
-      span.hidden5 {
-        display: none;
-      }
-    </style>
-    
-    <h1>
-      <p class="console">
-        <a href="/blog">
-          <span id="caption"></span>
-          <span id="cursor">_</span>
-        </a>
-        <script type="text/javascript">
-        function cursorAnimation() {
-          $('#cursor').animate({
-            opacity: 0
-          }, 'fast', 'swing').animate({
-            opacity: 1
-           }, 'fast', 'swing');
-          }
-          var captionLength = 0
-          var caption = 'Hi, I am Polina.'
-
-
-          $(document).ready(function() {
-              setInterval ('cursorAnimation()', 800);
-              captionEl = $('#caption');
-
-              type()
-          });
-
-          function type() {
-            captionEl.html(caption.substr(0, captionLength++));
-            if(captionLength < caption.length + 1) {
-              setTimeout('type()', 100);
-            } else {
-              captionLength = 0;
-              caption = ''
-              $("span#cursor").addClass("hidden")
-            }
-          }
-        </script>
-      </p>
-    </h1>
-
-    <h3 id='git'>
-      <p class="console">
-        <a href="/blog">
-          <span id="caption5"></span>
-          <span id="cursor5" class="hidden5">_</span>
-        </a>
-        <script type="text/javascript">
-        function cursorAnimation2() {
-          $('#cursor2').animate({
-            opacity: 0
-          }, 'fast', 'swing').animate({
-            opacity: 1
-           }, 'fast', 'swing');
-          }
-          var captionLength5 = 0
-          var caption5 = 'Blog'
-
-
-          setTimeout(function() {
-              $("span#cursor5").removeClass("hidden5")
-              setInterval ('cursorAnimation5()', 800);
-              captionEl5 = $('#caption5');
-              type5()
-          }, 2000);
-
-          function type5() {
-            captionEl5.html(caption5.substr(0, captionLength5++));
-            if(captionLength5 < caption5.length + 1) {
-              setTimeout('type5()', 100);
-            } else {
-              captionLength5 = 0;
-              caption5 = ''
-              $("span#cursor5").addClass("hidden5")
-            }
-          }
-        </script>
-      </p>
-    </h3>
-
-   <h3 id='git'>
-      <p class="console">
-        <a href="https://github.com/psoshnin" target="_blank">
-          <span id="caption2"></span>
-          <span id="cursor2" class="hidden2">_</span>
-        </a>
-        <script type="text/javascript">
-        function cursorAnimation2() {
-          $('#cursor2').animate({
-            opacity: 0
-          }, 'fast', 'swing').animate({
-            opacity: 1
-           }, 'fast', 'swing');
-          }
-          var captionLength2 = 0
-          var caption2 = 'Github'
-
-
-          setTimeout(function() {
-              $("span#cursor2").removeClass("hidden2")
-              setInterval ('cursorAnimation2()', 800);
-              captionEl2 = $('#caption2');
-              type2()
-          }, 3000);
-
-          function type2() {
-            captionEl2.html(caption2.substr(0, captionLength2++));
-            if(captionLength2 < caption2.length + 1) {
-              setTimeout('type2()', 100);
-            } else {
-              captionLength2 = 0;
-              caption2 = ''
-              $("span#cursor2").addClass("hidden2")
-            }
-          }
-        </script>
-      </p>
-    </h3>
-
-    <h3 id='linkedin'>
-      <p class="console">
-        <a href="http://www.linkedin.com/in/polinasoshnin" target="_blank">
-          <span id="caption3"></span>
-          <span id="cursor3" class="hidden3">_</span>
-        </a>
-        <script type="text/javascript">
-        function cursorAnimation3() {
-          $('#cursor3').animate({
-            opacity: 0
-          }, 'fast', 'swing').animate({
-            opacity: 1
-           }, 'fast', 'swing');
-          }
-          var captionLength3 = 0
-          var caption3 = 'Linkedin'
-
-
-          setTimeout(function() {
-              $("span.hidden3").removeClass("hidden3")
-              setInterval ('cursorAnimation3()', 800);
-              captionEl3 = $('#caption3');
-              type3()
-          }, 4000);
-
-          function type3() {
-            captionEl3.html(caption3.substr(0, captionLength3++));
-            if(captionLength3 < caption3.length + 1) {
-              setTimeout('type3()', 100);
-            } else {
-              captionLength3 = 0;
-              caption3 = ''
-            }
-          }
-        </script>
-      </p>
-    </h3>
-
-    
-  </body>
-</html>
+<div class="blog-index">
+  {% assign index = true %}
+  {% for post in paginator.posts %}
+  {% assign content = post.content %}
+    <article>
+      {% include article.html %}
+    </article>
+  {% endfor %}
+  <div class="pagination">
+    {% if paginator.next_page %}
+      <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
+    {% endif %}
+    <a href="/blog/archives">Blog Archives</a>
+    {% if paginator.previous_page %}
+    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
+    {% endif %}
+  </div>
+</div>
+<aside class="sidebar">
+  {% if site.blog_index_asides.size %}
+    {% include_array blog_index_asides %}
+  {% else %}
+    {% include_array default_asides %}
+  {% endif %}
+</aside>

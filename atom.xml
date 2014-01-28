@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://psoshnin.github.io/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-01-23T00:48:04-08:00</updated>
+  <updated>2014-01-28T01:30:38-05:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Zombie Ninjas Attack: A survivor's retrospective]]></title>
     <link href="http://psoshnin.github.io/blog/2011/07/03/why-hello-world/"/>
-    <updated>2011-07-03T05:59:00-07:00</updated>
+    <updated>2011-07-03T05:59:00-04:00</updated>
     <id>http://psoshnin.github.io/blog/2011/07/03/why-hello-world</id>
     <content type="html"><![CDATA[<p>Here is a ruby snippet, it&rsquo;s kinda cute:</p>
 

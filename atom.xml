@@ -4,7 +4,7 @@
   <title><![CDATA[Polina Soshnin]]></title>
   <link href="http://psoshnin.github.io/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-01-28T21:21:19-05:00</updated>
+  <updated>2014-01-29T11:39:02-05:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -12,27 +12,5 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Zombie Ninjas Attack: A survivor's retrospective]]></title>
-    <link href="http://psoshnin.github.io/blog/2011/07/03/why-hello-world/"/>
-    <updated>2011-07-03T05:59:00-04:00</updated>
-    <id>http://psoshnin.github.io/blog/2011/07/03/why-hello-world</id>
-    <content type="html"><![CDATA[<p>Here is a ruby snippet, it&rsquo;s kinda cute:</p>
-
-<div>
-  <pre><code class='ruby'>def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end</code></pre>
-</div>
-
-
-
-]]></content>
-  </entry>
   
 </feed>

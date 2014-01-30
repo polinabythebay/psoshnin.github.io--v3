@@ -4,10 +4,10 @@
 
 url: http://psoshnin.github.io
 title: Polina Soshnin
-subtitle: Learning Rails   
+subtitle: learning rails    
 author: Polina Soshnin
 simple_search: http://google.com/search
-description: This is a description
+description: I'm teaching myself Ruby on Rails 
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in

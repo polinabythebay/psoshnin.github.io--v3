@@ -8,29 +8,11 @@ footer: true
 ---
 
 <a name="return"></a>
-Independent Study Proposal
+[Objective](#objective) | [Goals](#goals) | [Overview](#overview) | [Course Materials](#materials)
 
-Web Development Studio: Ruby on Rails
+ [Week 1](#week1) | [Week 2](#week2) | [Week 3](#week3) | [Week 4](#week4) | [Week 5](#week5) | [Week 6](#week6) 
 
-Spring 2014
-
-Wellesley College
-
-Student: Polina Soshnin
-
-Faculty Advisor: Jean Herbst 
-
-[Objective](#objective)
-
-[Goals](#goals)
-
-[Overview](#overview)
-
-[Course Materials](#materials)
-
-| [Week 1](#week1) | [Week 2](#week2) | [Week 3](#week3) | [Week 4](#week4) | [Week 5](#week5) | [Week 6](#week6) |
-
-| [Week 7](#week7) | [Week 8](#week8) | [Week 9](#week9) | [Week 10](#week10) | [Week 11](#week11) | [Weeks 12-15](#week12-15) |
+ [Week 7](#week7) | [Week 8](#week8) | [Week 9](#week9) | [Week 10](#week10) | [Week 11](#week11) | [Weeks 12-15](#week12-15) 
 
 [Additional Resources](#resources)
 
@@ -64,6 +46,8 @@ By the end of the semester, through coursework and projects I aim to have a comp
 * Behavior-driven-development
 * **Product Planning**: user stories, use cases, wireframes, and mockups
 * Exposure to web **APIs**: Twitter, Gmail, Google Maps, MailChimp, Stripe, etc. 
+* Take steps towards learning the keys to becoming a successful developer in the modern open source driven Rails Community.
+
 
 <a name="overview"></a>
 ##Course overview
@@ -156,6 +140,7 @@ Rails intro [screencast](http://net.tutsplus.com/tutorials/ruby/the-intro-to-rai
 
 Git [Immersion](http://gitimmersion.com/)
 
+
 #####Quizzes
 
 * Learning Unix for OS X
@@ -171,6 +156,8 @@ Git [Immersion](http://gitimmersion.com/)
 * App from *Learn Rails*: Contact form, save to Google Drive
 * Update Github
 * Write Blog Post
+
+For fun: Basic [HTML and CSS](http://www.dontfeartheinternet.com/)
 
 <a name="week4"></a>
 ##Week Four
@@ -450,6 +437,9 @@ Choose several of the following [areas](https://www.ruby-toolbox.com/) and creat
 * [Boston Ruby Women](http://www.meetup.com/Boston-Ruby-Women/)
 * [Girl Develop It Boston](http://www.girldevelopit.com/chapters/boston): Free introductory workshops for women. 
 * [Boston Ruby on Rails](http://www.meetup.com/Rails-Boston/)
+
+####Conferences
+* [railsconf 2013 talks- Portland](http://www.railsconf.com/2013/talks.html)
 
 ####Hackathons 
 

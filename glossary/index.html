@@ -100,14 +100,18 @@
 <time datetime="2014-01-31T15:10:00-05:00" pubdate data-updated="true">Jan 31<span>st</span>, 2014</time></p>
   </header>
   
-  <p>This is where I will keep a running list of terms and concepts for personal reference. The list is by all means not exhaustive and isn&rsquo;t limited to Rails/Web Development. There are really awesome resources online if you&rsquo;re looking for a comprehensive list like <a href="http://www.webopedia.com/">Webopedia</a> or <a href="http://www.wikipedia.org/">Wikipedia</a>.</p>
+  <p><a name="return"></a>
+This is where I will keep a running list of terms and concepts for personal reference. The list is by all means not exhaustive and isn&rsquo;t limited to Rails/Web Development. There are really awesome resources online if you&rsquo;re looking for a comprehensive list like <a href="http://www.webopedia.com/">Webopedia</a> or <a href="http://www.wikipedia.org/">Wikipedia</a>.</p>
+
+<p><a href="#rails">Ruby on Rails</a> | <a href="#pm">Product Planning</a> | <a href="#webdev">Web Development</a></p>
 
 <h2>Some basic Internet and Web terms</h2>
 
 <ul>
 <li><strong>API</strong>:</li>
-<li>Ajax</li>
+<li><strong>Ajax</strong>: Originally asynchronous JavaScript and XML. Now refers more broadly to web development where methods within a page call back to the server and make smaller changes to a page rather than calling for a complete refresh every time.</li>
 <li><strong>Boolean Logic</strong>: system of standardized operators used to connect search terms. Will include AND, OR, NOT, and sometimes NEAR.</li>
+<li><strong>Basecamp</strong>: A collaboration tool developed by 37signals and DHH. DHH realized that the underlying framework could be used for a lot of other projects, and that became the foundation of Rails.</li>
 <li><strong>Browse/browser</strong>: browsing a page is guessing which words and links on the page pertain to your interests. It&rsquo;s the opposite of searching. Browsers enable you to view web pages and other documents on the internet. They translate HTML encoded files into text, images, sounds, etc. Common browsers include Firefox, Internet Explorer, Mozilla, Safari, Opera, and Chrome.</li>
 <li><strong>Cache</strong>: Space where web pages you have visited are stored in your computer. When you use GO, BACK, or any means to revisit a document, the browser first checks to see if it is in the cache and will retrieve it from there because it&rsquo;s much faster than retrieving it from the server.</li>
 <li><strong>Cached Link</strong>: In search engines, like Google, Bing, and Yahoo! Search, there is usually a cached link that lets you view the version of a page that the search engine has stored in a database. The live page on the web may differ that the cached version, since the cached version dates to whenever the search engine&rsquo;s spider last visited the page and detected the modified content. You can use the cached link to see when a page was last crawled.</li>
@@ -116,6 +120,7 @@
 <li><strong>Cloud Computing</strong>: distributed computing over a network. It lets one run an app or program on many connected computers at the same time.</li>
 <li><strong>Cookie</strong>: A message from a web server that is sent and stored by your browser on your computer. When your computer talks to the original server, the cookie is sent back, allowing it to respond to you according to its contents. Cookies can provide customized web pages according to a profile of your interests. Chrome autofilling in your name and address on a form is from a cookie.</li>
 <li><strong>Custom Search Engine (CSE)</strong>*: This is a Google service. You can create a custom search engine that is made to search within a group of websites or pages.</li>
+<li><strong>DOM</strong>: Document Object Model. Standard API for manipulating HTML documents in a web browser.</li>
 <li><strong>Top Level Domain (TLD)</strong>: This is a heirarchical scheme that is used to indicate a category of a webpage from the network. Common domains are .edu (education), .gov (the Feds, people), .net (network related), .com (commerical), .org (nonprofit). There are, of course, lots of others.</li>
 <li><strong>Domain Name, Domain Name Server, DNS Entry</strong>: The domain name gives you who &ldquo;published&rdquo; a page and made it public by putting it on the web. The domain name is translated in huge tables that are standardized across the internet into numeric IP addresses that are unique to the host computer. These tables are maintained by Domain Name Servers. When you ask the browser to find a URL, the browser consults the table on the domain name server that is connected to that computer.</li>
 <li><strong>Download</strong>: Copy something from the primary source to a peripheral one.</li>
@@ -140,69 +145,97 @@
 </ul>
 
 
-<h2>Ruby</h2>
-
-<ul>
-<li>gems</li>
-<li>modules</li>
-</ul>
-
+<p><a name="rails"></a></p>
 
 <h2>Ruby on Rails</h2>
 
+<p><a href="#return">Return to top</a></p>
+
 <ul>
-<li>Heroku</li>
-<li>Engine Yard</li>
-<li>MVC model</li>
-<li>SASS</li>
-<li>database-agnostic</li>
-<li>Application servers: Thin, Mongrel, Passenger, Unicorn, Pow</li>
-<li>Active Record: ORM tool to abstract database handling. Implementation of Active Record architectural pattern.</li>
-<li>Active Resource: like an Active Record for REST based web-services. Provides a wrapper around REST actions. Can act like a transparent proxy between a business entity and a REST based service.</li>
-<li>Active Support: set of utility classes and standard library extensions that are useful. They range from caching to dates, time zones, text etc.</li>
-<li>Bundler: manages gem dependencies in a repeatable way across multiple machines. Automatically looks for and installs/updates all gems needed by the application when it is deployed on a machine.</li>
-<li>Capistrano: tool for executing command on groups of servers over SSH. Used mainly in deploying web applications and is capable or recognizing different types of server environments (staging vs production etc).</li>
-<li>CoffeeScript: A little language that compiles into Javascripty. It&rsquo;s really popular and the default method of writing Javascript in a Rails Application.</li>
-<li>Controller: collection of actions in an MVC application. Routes direct a request to a Controller&rsquo;s action. From there, the controller is used to manage the user&rsquo;s request and determine with business logic is to be executed in an application.</li>
-<li>Cucumber: Lets you describe how software should behave in plain text. Text is written in DSL and serves as documentation, automated tests and development aid. Cucumber and RSpec are the main tools used for BDD in Rails projects.</li>
-<li>DSL: Domain specific language dedicated to a particular problem or solution. Ex: Cucumber, Rake, Haml, etc.</li>
-<li>ERB: Embedded Ruby. Simple and powerful templating system for Ruby. Part of the Ruby core and allows one to place ruby within other files.</li>
-<li>Factory Girl: gem that is useful for creating object factories in an automated fashion. Useful in testing or even for populating an application when deployed.</li>
-<li>Gem: a Ruby gem is a package. They&rsquo;re like an app-store for your development needs where a ton of awesome gems are freely available! The number of awesome useful gems gives Ruby developers a huge advantage over other frameworks.</li>
-<li>Generate Command:</li>
-<li>Gherkin- DSL that emerged from the Cucumber project. It&rsquo;s designed to succinctly describe behavoir.</li>
-<li>Git: free open source distributed version control system. Written by Linus Torvalds. Used alongside Github.</li>
-<li>Haml: HTML abstraction language. Functions as a replacement for PHP, ASP, and ERB.</li>
-<li>Heroku: cloud based platform PaaS, had one of the first to have Ruby on Rails support.</li>
-<li>jQuery: Javascript framework of choice for web developers everywhere. Fast framework that leverages CSS style selectors to allow developers to traverse, animate, and handle events in the HTML DOM while abstracting browser specific quirks as far as possible. It&rsquo;s the default Javascript framework used in Rails 3 applications.</li>
-<li>Memcached: distributed open source caching system. In-memory key-value store for small chunks of arbitrary data (strings, objects) from the results of database call, API calls, and page rendering. It is a generic store and can be used in any situation where caching is needed. Other object stores: Redis.</li>
-<li>Merb: MVC framework, but lighter barebones version. Compare to Rails and Sinatra.</li>
-<li>Open classes/monkey patching &mdash; open classes is a feature of Ruby. Lets you open and add methods to existing classes. Active Support library uses this feature to add a lot of its helper functions on the ruby core classes.</li>
-<li>Paperclip: complete and easy file attachment library for active record. Provides validation features based on the properties of the file like size, type, etc. Has basic image manipulation like creating thumbnails etc. Dependency: ImageMagick: awesome image manipulation libary.</li>
-<li>Prototype: Javascript framework that helps with dynamic web applications. Originally default javascript framework.</li>
-<li>Rack: Gem that provides a simple interface between a web-server and the Ruby web framework. Rack is used in Rails, Sinatra, and Merb.</li>
-<li>Rake: the Ruby version of &lsquo;make&rsquo; but more developer friendly. Uses Ruby syntax instead of XML files or makefile syntax to define tasks.</li>
-<li>REST (Representational State Transfer): set of principles that define how Web standards, such as HTTP and URIs, are supposed to be used. It&rsquo;s more of a concept than an abstraction. Rails exploits REST concepts.</li>
-<li>RJS: Ruby Javascript. Ruby helper used to generate Javascript to decorate HTML pages. Mainly used in AJAX calls. This violates UJS bc it uses Ruby helpers to generate Javascript to dump into HTML attributes.</li>
-<li>Routing: deals with translation of a URL request to a specific action in the application. In Rails it&rsquo;s the job of the Router to recognize URLs, avoiding the need for hardcoded strings in Views.</li>
-<li>RSpec: Behavoir Driven tool for Ruby programmers. It helps you do the RDD part, focusing on the documentation and design aspects of TDD. It uses a DSL to simplify design and implementation tests.</li>
-<li>Ruby Debug: debugger for ruby applications.</li>
-<li>RVM: use to install manage, and work with muliple versions of Ruby and multiple gemsets.</li>
-<li>SASS &amp; SCSS: CSS abstraction languages. They are compiled down to CSS. They allow you to use variables, modules, and include other files.</li>
-<li>Sinatra: minimalist web framework.</li>
-<li>Test::Unit Default testing library in Ruby. Not really used&mdash; people use BDD style tools like RSpec.</li>
-<li>UJS: Unobstructive Javascript. A general approach to use Javascript in web pages.
+<li><strong>37 Signals</strong>: the company where Rails was born, emerging from their Basecamp product.</li>
+<li><strong>Acceptance Testing</strong>: test cases that are written in a way that describes a use case. Cucumber is a good tool for acceptance testing. You work with your stake holder to develop tests that represent use cases. When the test is complete the feature should be accepted. This kind of testing is focused around the people outside the code development accepting features.</li>
+<li><strong>Application servers</strong>: Thin, Mongrel, Passenger, Unicorn, Pow. They interact with your Ruby code and respond to requests. They are integrated with web servers like Nginx and Apache to serve your application on the internet.</li>
+<li><strong>Authentication</strong>: process of matching credentials to a person and verifying them. Purely about identifying who the user is&mdash; not what they can do. Devise is a good athentication library/gem for that.</li>
+<li><strong>ActionController</strong>: The part of the Rails library that directly interacts with incoming HTTP requests, including routing, parameter passing, session management, and deciding how to render a response. Controller objects are how a Rails developer interacts with ActionController.</li>
+<li><strong>ActionMailer</strong>: The part of the Rails library that manages incoming and outgoing email.</li>
+<li><strong>ActionPack</strong>: Combination of ActionController and ActionView, which provides a complete package for dealing with and responding to HTTP requests.</li>
+<li><strong>ActionView</strong>: generates responses to HTTP requests</li>
+<li><strong>Authorization</strong>: process of determining what a specific user can do. Usually involves permission or role based sytems. CanCan is a good authorization library for that.</li>
+<li><strong>Active Record</strong>: ORM tool to abstract database handling. Implementation of Active Record architectural pattern. Handles mapping between the database and Ruby classes. This is pretty much the foundation of Rails.</li>
+<li><strong>Active Resource</strong>: like an Active Record for REST based web-services. Provides a wrapper around REST actions. Can act like a transparent proxy between a business entity and a REST based service.</li>
+<li><strong>Active Support</strong>: set of utility classes and standard library extensions that are useful. They range from caching to dates, time zones, text etc.</li>
+<li><em>*acts_as</em>: common naming convention in Rails, typically with plug-ins, to indicate that part of a model operates using code that is elsewhere.</li>
+<li><strong>aggregation</strong>:</li>
+<li><strong>adapter</strong>: code the connects ActiveRecord to a specific database.</li>
+<li><strong>Builder</strong>: an API used to generate XML files from Ruby objects.</li>
+<li><strong>Bundler</strong>: manages gem dependencies in a repeatable way across multiple machines. Automatically looks for and installs/updates all gems needed by the application when it is deployed on a machine. It reads a Gemfile and calculates a set of version requirements to make all specific gems live happily ever after. It will prevent version conflicts and the infamous &lsquo;gem already activated error&rsquo;. It does not require libraries, simply just makes them available. It can be used outside of rails&mdash; you can use it when you do any ruby work.</li>
+<li><strong>Capistrano</strong>: tool for executing command on groups of servers over SSH. Used mainly in deploying web applications and is capable or recognizing different types of server environments (staging vs production etc). You can easily write your own tasks similar to writing a rake task. It&rsquo;s the preferred way to deploy Rails applications.</li>
+<li><strong>Capybara</strong>: gem designed to provide an abstraction layer between different browser drivers. Used in integration testing to interact with the web server. Provides an API to navigate between pages, click buttons, fill in forms, and other user interactions. Has adapters for many different browser drivers. Some drivers include Selenium, rack-test, and webrat.</li>
+<li><strong>Compass</strong>: library built around SASS abstractions. Provides mixins for many common things like styling buttons and forms. It&rsquo;s easy to extend and comes with many built in functions. Blueprint CSS framework is bundled by default.</li>
+<li><strong>CoffeeScript</strong>: A little language that compiles into Javascripty. It&rsquo;s really popular and the default method of writing Javascript in a Rails Application.</li>
+<li><strong>Controller</strong>: collection of actions in an MVC application. Routes direct a request to a Controller&rsquo;s action. From there, the controller is used to manage the user&rsquo;s request and determine with business logic is to be executed in an application.</li>
+<li><strong>Cucumber</strong>: Test framework for creating plain english acceptance tests. Used for integration testing web applications. Test suite ofeten used in Continuous Integration. It uses a language called Gherkin to parse files into lines and match them with regular expressions. The regular expressions are then matched with code blocks. Your test code lives in these blocks. Lets you describe how software should behave in plain text. Text is written in DSL and serves as documentation, automated tests and development aid. Cucumber and RSpec are the main tools used for BDD in Rails projects. Cucumber tests are divided up into &ldquo;Feature&rdquo; files. Each &ldquo;Feature&rdquo; has many &ldquo;scenarios&rdquo;. Features are like use cases. Scenarios are different permutations of that use case.</li>
+<li><strong>duck typing</strong>: A way of determining what type an object is by looking at what it contains and how it behaves. It&rsquo;s built into the Ruby language.</li>
+<li><strong>DHH</strong>: David Heinemeier Hansson, creator of Rails and lead developer. loudthinking.com</li>
+<li><strong>DSL</strong>: Domain specific language dedicated to a particular problem or solution. Ex: Cucumber, Rake, Haml, etc. They are crafted to solve one or more problems very eloquently and nothing more. They are usually wrappers around more complicated methods that make it easier to express the intent of the underlying code from a programmer&rsquo;s perspective.</li>
+<li><strong>Edge Rails</strong>: The latest (and sometimes greatest) version of Rails. Exciting for advanced developers, potentially explosive for beginners.</li>
+<li><strong>ERB</strong>: Embedded Ruby. Simple and powerful templating system for Ruby. Part of the Ruby core and allows one to place ruby within other files.</li>
+<li><strong>Factories</strong>: Factory Girl &amp; Machinist: gem that is useful for creating object factories in an automated fashion. Useful in testing or even for populating an application when deployed. Used in test suites and population scripts. They provide a default set of attributes and allow programmers to specify the attributes they care about at creation time.</li>
+<li><strong>Gem</strong>: a Ruby gem is a package. They&rsquo;re like an app-store for your development needs where a ton of awesome gems are freely available! The number of awesome useful gems gives Ruby developers a huge advantage over other frameworks.</li>
+<li><strong>Generate Command</strong>: used as a shortcut for installing and creating models, controllers, actions, routes, and initializers to save the developer time when creating an application. Rails provides a set of templates that can be used to generate code. Gems can also provide their own generators.</li>
+<li><strong>Gherkin</strong>: DSL that emerged from the Cucumber project. It&rsquo;s designed to succinctly describe behavoir.</li>
+<li><strong>Git</strong>: free open source distributed version control system. Written by Linus Torvalds. Used alongside Github. Each user has a complete copy of the repository. Most developers use github exlusively.</li>
+<li><strong>Haml</strong>: HTML abstraction language. Functions as a replacement for PHP, ASP, and ERB. It&rsquo;s great for structuring documents and horrible to content. You can also include ruby code inside templates.</li>
+<li><strong>Heroku</strong>: cloud based platform PaaS, had one of the first to have Ruby on Rails support.</li>
+<li><strong>jQuery</strong>: Javascript framework of choice for web developers everywhere. Fast framework that leverages CSS style selectors to allow developers to traverse, animate, and handle events in the HTML DOM while abstracting browser specific quirks as far as possible. It&rsquo;s the default Javascript framework used in Rails 3 applications.</li>
+<li><strong>Layout</strong>: outer aspects of HTML document. Layout includes the header, nagivation, footer, but not main content of a page.</li>
+<li><em>*lighttpd</em>: web server designed to be smaller and more efficient than Apache. If you want to run Rails through FastCGI, lighttpd is a good option.</li>
+<li><strong>Metaprogramming</strong>: dynamically generating code at runtime. It&rsquo;s why Rails feels the way it does. ActiveRecord associations to dynamically add methods to your classes based on how to declare. It&rsquo;s possible in Ruby because Ruby is a dynamic language interpreted at run time.</li>
+<li><strong>Memcached</strong>: distributed open source caching system. In-memory key-value store for small chunks of arbitrary data (strings, objects) from the results of database call, API calls, and page rendering. It is a generic store and can be used in any situation where caching is needed. Other object stores: Redis.</li>
+<li><strong>Matz</strong>: Yukihiro Matsumoto, creator and maintainer of Ruby.</li>
+<li><strong>MINASWAN</strong>: &ldquo;Matz is nice, so we are nice&rdquo;. Key principle of Ruby culture.</li>
+<li><strong>Merb</strong>: MVC framework, but lighter barebones version. Compare to Rails and Sinatra.</li>
+<li><strong>Migration</strong>: a database migration. It&rsquo;s a set of change to the database that can be executed and reversed to provide consistency to the database structure, like adding a column or table. Migrations are marked with a timestamp so each db knows the most recent change that was made.</li>
+<li><strong>Model</strong>: representation of a database table. used for storing, querying, and manipulating data in application.</li>
+<li><strong>MVC</strong>: Model, View, Controller. Software pattern that separates the representation of information from the user&rsquo;s interaction with it. Generally, the controller determines which models to interact with and which views are used to display the data.</li>
+<li><strong>Open classes/monkey patching</strong>: Open classes is a feature of Ruby. Lets you open and add methods to existing classes. Active Support library uses this feature to add a lot of its helper functions on the ruby core classes.</li>
+<li><strong>Page</strong>: completed HTML document that is returned from a web application and displayed in the user&rsquo;s browser. Typically corresponds to a specific URL on a web site/application.</li>
+<li><strong>Paperclip</strong>: complete and easy file attachment library for active record. Provides validation features based on the properties of the file like size, type, etc. Has basic image manipulation like creating thumbnails etc. Dependency: ImageMagick: awesome image manipulation libary.</li>
+<li><strong>Prototype</strong>: Javascript framework that helps with dynamic web applications. Originally default javascript framework.</li>
+<li><strong>Rack</strong>: Gem that provides a simple interface between a web-server and the Ruby web framework. Rack is used in Rails, Sinatra, and Merb.</li>
+<li><strong>Rake</strong>: the Ruby version of &lsquo;make&rsquo; but more developer friendly. Uses Ruby syntax instead of XML files or makefile syntax to define tasks. It&rsquo;s a software task management tool that allows you to define tasks that are often repeated such as running database migrations and deploying code to servers.</li>
+<li><strong>Request</strong>: When a user&rsquo;s browser asks for a response from your web application.</li>
+<li><strong>Resource</strong>: An object you can create, read, update, and delete (CRUD). Usually referenced as part of RESTful application design.</li>
+<li><strong>REST (Representational State Transfer)</strong>: set of principles that define how Web standards, such as HTTP and URIs, are supposed to be used. It&rsquo;s more of a concept than an abstraction. Rails exploits REST concepts. A style of architecture for distributed systems such as the web. Designed around the idea that an application has designated objects that you can create, read, update, and delete (CRUD).</li>
+<li><strong>RJS</strong>: Ruby Javascript. Ruby helper used to generate Javascript to decorate HTML pages. Mainly used in AJAX calls. This violates UJS bc it uses Ruby helpers to generate Javascript to dump into HTML attributes.</li>
+<li><strong>Routes</strong>: URLs that your web application responds to.</li>
+<li><strong>Routing</strong>: deals with translation of a URL request to a specific action in the application. In Rails it&rsquo;s the job of the Router to recognize URLs, avoiding the need for hardcoded strings in Views. A decision making process of a web app that handles incoming requests and determines which actions should happen as the result of the request.</li>
+<li><strong>RSpec</strong>: Behavoir Driven tool for Ruby programmers. It helps you do the RDD part, focusing on the documentation and design aspects of TDD. It uses a DSL to simplify design and implementation tests. It&rsquo;s a unit testing framework. It&rsquo;s based around the idea that test should describe behavior of classes in an English like way. Test files are called &ldquo;specs&rdquo;. Spec files are divided into &ldquo;examples&rdquo;.</li>
+<li><strong>Ruby</strong>: dynamic, reflective, general-purpose object-oriented programming language created by Yukihiro Matsomoto in 1995.</li>
+<li><strong>Ruby Debug</strong>: debugger for ruby applications.</li>
+<li><strong>RVM</strong>: use to install manage, and work with muliple versions of Ruby and multiple gemsets. It&rsquo;s a set of bash script designed to allow you to switch out Ruby interpreters on the fly. Makes it very easy to install different implementations.</li>
+<li><strong>SASS &amp; SCSS</strong>: CSS abstraction languages. They are compiled down to CSS. They allow you to use variables, modules, and include other files. Cleans up CSS syntax significantly. Lets developers spend their time writing more readable code without having to deal with writing plain CSS.</li>
+<li><strong>Scaffolding</strong>: shortcut in Rails that creates controller, set of actions, views, and routes for resources. Frowned upon by experienced developers.</li>
+<li><strong>Selenium</strong>: a library that simulates user interaction with a browser. It runs the full browser. It works best with Firefox, but can also work with Chrome and friends. Commands are sent across as Javascript which the browser evaluates to complete each action. It&rsquo;s the most complete solution for simulating a user for your web app.</li>
+<li><strong>Sinatra</strong>: minimalist web framework.</li>
+<li><strong>Test::Unit</strong>: Default testing library in Ruby. Not really used&mdash; people use BDD style tools like RSpec.</li>
+<li><strong>UJS</strong>: This is separation of Church and State. Unobstructive Javascript. A general approach to use Javascript in web pages. It separates Javascript from the HTML. Putting Javascript in HTML makes it harder to maintain.
   [1] Separation of behavior from the markup: HTML is meant to describe structure of doc and should not contain programmatic elements.
   [2] Should not pollute the global namespace. UJS Code should add as little as possible to the global object or global namespace of the environment in which it runs.
   [3] Degrade graceflly: if the browser rendering the document does not have the capability needed then the code should be able to degrade gracefully without break the rest of the application.</li>
-<li>Vim: text editor popular among the Ruby folk. I should probably look into this.</li>
-<li>Web servers: Apache, nginx, Lighthttpd, Thin. Thin is both a web and application server. PaaS providers like Heroku have allowed this part of web app development to be abstracted out.</li>
-<li>Webrat: headless browser that is used in web app testing. It lets you run in browser tests with associated overhead of actually instantiating a browser. It does not execute javascript but is great for doing tests for simple websites without much JS interactions.</li>
-<li>Will_Paginate: most popular pagination library for Rails. Also supports Merb and Sinatra. Has varieta of formatting options and can accept an active record object or even a simple array. Very configurable and can be easily extended to do AJAX pagination as well.</li>
+<li><strong>Vim</strong>: text editor popular among the Ruby folk. I should probably look into this.</li>
+<li><strong>View</strong>: describes HTML response of a request but doesn&rsquo;t include the outer HTML layout of the page, simply the HTML that is unique to the page.</li>
+<li><strong>Web servers</strong>: Apache, nginx, Lighthttpd, Thin. Thin is both a web and application server. PaaS providers like Heroku have allowed this part of web app development to be abstracted out.</li>
+<li><strong>Webrat</strong>: headless browser that is used in web app testing. It lets you run in browser tests with associated overhead of actually instantiating a browser. It does not execute javascript but is great for doing tests for simple websites without much JS interactions. It&rsquo;s the most basic driver and perfect for interacting with simple websites. It&rsquo;s the original headless browser.</li>
+<li><strong>Will_Paginate</strong>: most popular pagination library for Rails. Also supports Merb and Sinatra. Has varieta of formatting options and can accept an active record object or even a simple array. Very configurable and can be easily extended to do AJAX pagination as well.</li>
 </ul>
 
 
-<h2>Product Planning</h2>
+<p><a name="pm"></a></p>
+
+<h2>Product Management</h2>
+
+<p><a href="#return">Return to top</a></p>
 
 <ul>
 <li>User stories</li>
@@ -212,32 +245,59 @@
 </ul>
 
 
-<h2>Revision Control</h2>
-
-<ul>
-<li>Git</li>
-<li>Github</li>
-<li>Perforce</li>
-<li>Subversion</li>
-</ul>
-
+<p><a name="webdev"></a></p>
 
 <h2>Web Development</h2>
 
+<p><a href="#return">Return to top</a></p>
+
 <ul>
-<li>BDD</li>
-<li>TDD</li>
+<li><strong>ACID</strong>: Atomicity, Consistency, Isolation, Durability. A set of principles, usually implemented with relational databases and transactions, that are intended to ensure data reliability. Rails is not designed with ACID as a priority, though transactions are available as a plug-in.</li>
+<li><strong>Agile</strong>: software development techniques that tend to focus on smaller-scale iterative development rather than top down design and implementation.</li>
+<li><strong>Benchmark</strong>: code used to determine and compare performance. Generic benchmarks used to test things like CPU performance are the most common usage.</li>
+<li><strong>BDD</strong>: essentially the same as TDD except you use a different set of tools to express code in terms of user facing behavior. Rspec and Cucumber are part of BDD toolbox.</li>
+<li><strong>TDD</strong>: method of developing software where requirements are first written as tests. It makes the developer spend more time thinking about the code upfront while providing a solid test suite for the entire application. These tests define actions the software should take and expected results. Once the tests are written, developers can begin to build software to properly return the correct results of each test. The idea behind this is that using TDD lets development be much more consistent when you have a set of tests that all code must run against. Changes to software that break a test quickly show where broken code was introduced.</li>
+<li><strong>cron</strong>: A unix approach to scheduling tasks that need to run on a regular basis. Cron jobs are managed through the crontab configuration file, and the cron daemon makes sure they get executed as requested. Rails itself doesn&rsquo;t use cron.</li>
+<li><strong>CVS</strong>: Not an American pharmacy store. Concurrent Versioning System that&rsquo;s used to manage different versions or programs and related files. Rails usually just uses subversion or git.</li>
+<li><strong>DRY</strong>: Don&rsquo;t repeat yourself: a central principle in Rails development.</li>
+<li><strong>Firebug</strong>: Firefox plug-in for debugging JavaScript.</li>
+<li><strong>JSON</strong>: JavaScript Object Notation, a text-based format for exchanging objects. Seen as a programming-oriented complement/competitor to XML. It&rsquo;s also a subset of YAML.</li>
 <li>DDD</li>
 <li>REST</li>
-<li>DRY</li>
 <li>CoffeeScript</li>
 <li>web framework</li>
+<li>DNS</li>
+<li>ISS</li>
+<li>load balancers</li>
+<li>sticky routing</li>
+<li>round robin</li>
+<li>clustering</li>
+<li>fault tolerance</li>
+<li>server hardware setup</li>
+<li>web farms</li>
+<li>cache farms (memcached win32, velocity)</li>
+<li>SMTP</li>
+<li>MSMQ</li>
+<li>database mail queuing</li>
+<li>n*log(n) sorying algorithm: quick sort, merge sort. pros and cons of both.</li>
+<li>Big O</li>
+<li>Singleton Design Pattern</li>
+<li>Factory Design Pattern</li>
+<li>Memory (Stack vs Heap)</li>
+<li>Recursion</li>
+<li>Regex
+*</li>
 </ul>
 
 
+<p><a name="networking"></a></p>
+
 <h2>Networking</h2>
 
+<p><a href="#return">Return to top</a></p>
+
 <ul>
+<li><em>*HTTPS</em>: encrypted HTML. Hypertext Transfer Protocol over Secure Socket Layer. Works like HTTP except that the web server adds a layer of encryption using public key certificates, it runs on port 443, and browsers are typically more cautious about caching information that arrived over HTTPS.</li>
 <li>sessions</li>
 <li>caching</li>
 <li>state management</li>
@@ -252,7 +312,11 @@
 </ul>
 
 
+<p><a name="operating systems"></a></p>
+
 <h2>Operating Systems</h2>
+
+<p><a href="#return">Return to top</a></p>
 
 <ul>
 <li>Processes</li>
@@ -272,7 +336,11 @@
 </ul>
 
 
+<p><a name="math"></a></p>
+
 <h2>Math</h2>
+
+<p><a href="#return">Return to top</a></p>
 
 <ul>
 <li>basic discrete mathematics: counting problems, probability problems</li>
@@ -281,7 +349,11 @@
 </ul>
 
 
+<p><a name="algorithms"></a></p>
+
 <h2>Algorithms</h2>
+
+<p><a href="#return">Return to top</a></p>
 
 <ul>
 <li>Famous classes of NP-Complete problems</li>
@@ -296,7 +368,11 @@
 </ul>
 
 
+<p><a name="data structures"></a></p>
+
 <h2>Data Structures</h2>
+
+<p><a href="#return">Return to top</a></p>
 
 <ul>
 <li>Linked Lists</li>
@@ -309,7 +385,11 @@
 </ul>
 
 
+<p><a name="graphs"></a></p>
+
 <h2>Graphs</h2>
+
+<p><a href="#return">Return to top</a></p>
 
 <ul>
 <li>ways to represent a graph in memory: objects and pointers, matrix, adjacency list. know the pros and cons of each.</li>
@@ -320,7 +400,11 @@
 </ul>
 
 
+<p><a name="trees"></a></p>
+
 <h2>Trees</h2>
+
+<p><a href="#return">Return to top</a></p>
 
 <ul>
 <li>Basic tree construction</li>
@@ -332,7 +416,11 @@
 </ul>
 
 
+<p><a name="architecture"></a></p>
+
 <h2>Architecture</h2>
+
+<p><a href="#return">Return to top</a></p>
 
 <ul>
 <li>Versatility</li>
@@ -346,27 +434,7 @@
 <li>Dependency</li>
 <li>Process</li>
 <li>Data Access</li>
-<li><p>Types: Enterprise Applications, Systems, End-user applications, programming languages</p></li>
-<li><p>n*log(n) sorying algorithm: quick sort, merge sort. pros and cons of both.</p></li>
-<li>Big O</li>
-<li>Singleton Design Pattern</li>
-<li>Factory Design Pattern</li>
-<li>Memory (Stack vs Heap)</li>
-<li>Recursion</li>
-<li><p>Regex</p></li>
-<li><p>DNS</p></li>
-<li>ISS</li>
-<li>load balancers</li>
-<li>sticky routing</li>
-<li>round robin</li>
-<li>clustering</li>
-<li>fault tolerance</li>
-<li>server hardware setup</li>
-<li>web farms</li>
-<li>cache farms (memcached win32, velocity)</li>
-<li>SMTP</li>
-<li>MSMQ</li>
-<li>database mail queuing</li>
+<li>Types: Enterprise Applications, Systems, End-user applications, programming languages</li>
 </ul>
 
 

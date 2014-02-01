@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 <a name="return"></a>
-This is where I will keep a running list of terms and concepts for personal reference. The list is by all means not exhaustive and isn't limited to Rails/Web Development. There are really awesome resources online if you're looking for a comprehensive list like [Webopedia](http://www.webopedia.com/) or [Wikipedia](http://www.wikipedia.org/).
+This is where I keep a running list of terms and concepts for personal reference. The list is by all means not exhaustive and isn't limited to Rails/Web Development. There are really awesome resources online if you're looking for a comprehensive list like [Webopedia](http://www.webopedia.com/) or [Wikipedia](http://www.wikipedia.org/).
 
 [Ruby on Rails](#rails) | [Product Planning](#pm) | [Web Development](#webdev)
 
@@ -149,12 +149,13 @@ This is where I will keep a running list of terms and concepts for personal refe
 * **TDD**: method of developing software where requirements are first written as tests. It makes the developer spend more time thinking about the code upfront while providing a solid test suite for the entire application. These tests define actions the software should take and expected results. Once the tests are written, developers can begin to build software to properly return the correct results of each test. The idea behind this is that using TDD lets development be much more consistent when you have a set of tests that all code must run against. Changes to software that break a test quickly show where broken code was introduced.
 * **cron**: A unix approach to scheduling tasks that need to run on a regular basis. Cron jobs are managed through the crontab configuration file, and the cron daemon makes sure they get executed as requested. Rails itself doesn't use cron.
 * **CVS**: Not an American pharmacy store. Concurrent Versioning System that's used to manage different versions or programs and related files. Rails usually just uses subversion or git.
+* DDD
 * **DRY**: Don't repeat yourself: a central principle in Rails development.
 * **Firebug**: Firefox plug-in for debugging JavaScript.
 * **JSON**: JavaScript Object Notation, a text-based format for exchanging objects. Seen as a programming-oriented complement/competitor to XML. It's also a subset of YAML.
-* DDD
+* redirect
 * REST
-* CoffeeScript
+* **SOAP**: Originally Simple Object Access Protocol. Not so simple. Not necessarily bound to objects.
 * web framework
 * DNS
 * ISS

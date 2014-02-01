@@ -20,7 +20,7 @@ footer: true
 ##Objective 
 [Return to top](#return)
 
-My goal is to gain competency and knowledge of best practices in web development by learning and implementing a web development framework. However, it can take hours, days, and weeks to become proficient in the best practices of a specific framework even for experienced developers. This is why I would like to design an independent study where I can devote time to doing so. Why do I want to teach myself Rails specifically? A few reasons: 
+My goal is to gain competency and knowledge of best practices in web development by learning and implementing a web development framework. However, it can take hours, days, and weeks to become proficient in the best practices of a specific framework even for experienced developers. This is why I'm designing an independent study where I can devote time to doing so. Why do I want to teach myself Rails specifically? A few reasons: 
 
 * Ruby on Rails is an open-source web framework based on the Ruby programming language. 
 * Rails is a database-agnostic MVC framework that chooses convention over configuration, which means that it's strongly opinionated when it comes to architectural decisions, naming conventions, paths and patterns.

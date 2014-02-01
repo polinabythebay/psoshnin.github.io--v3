@@ -448,7 +448,7 @@ Choose several of the following [areas](https://www.ruby-toolbox.com/) and creat
 
 ####Community
 
-* [Hacker News](https://news.ycombinator.com/): Ladies you should really follow this. It's like reddit w/o the bullshit. 
+* [Hacker News](https://news.ycombinator.com/): Ladies you should really follow this. It's like reddit with less bullshit. 
 * [Reddit](http://www.reddit.com/): There are good subreddits out there to discover. 
 * [Stack Overflow](http://stackoverflow.com/)
 * [Confreaks](http://confreaks.com/)

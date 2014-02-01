@@ -1,0 +1,16 @@
+---
+layout: post
+title: "title"
+date: 2014-02-01 17:28:11 -0500
+comments: true
+categories: 
+---
+
+	<div id="tag_list">
+    	Tags:
+    	<ul id="tags_ul">
+	{% for t in page.tags  %}
+        	<li><a href="/tags/{{t}}/">{{t}}</a></li>
+	{% endfor %}
+    	</ul>
+	</div>

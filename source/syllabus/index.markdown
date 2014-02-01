@@ -46,7 +46,7 @@ By the end of the semester, through coursework and projects I aim to have a comp
 * Behavior-driven-development
 * **Product Planning**: user stories, use cases, wireframes, and mockups
 * Exposure to web **APIs**: Twitter, Gmail, Google Maps, MailChimp, Stripe, etc. 
-* Take steps towards learning the keys to becoming a successful developer in the modern open source driven Rails Community.
+* Take steps towards learning the ropes of becoming a successful developer in the modern open source driven Rails Community.
 
 
 <a name="overview"></a>

@@ -4,7 +4,7 @@
   <title><![CDATA[Polina Soshnin]]></title>
   <link href="http://psoshnin.github.io/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-02-13T22:16:26-05:00</updated>
+  <updated>2014-02-13T22:21:40-05:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Week Three: two simple apps]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/02/13/week-three-two-simple-apps/"/>
+    <updated>2014-02-13T22:18:24-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/13/week-three-two-simple-apps</id>
+    <content type="html"><![CDATA[<p>First app:</p>
+
+<p>learning how to use Twitter Bootstrap with Rails</p>
+
+<p><a href="http://polina-rails-bootstrap.herokuapp.com/">http://polina-rails-bootstrap.herokuapp.com/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Week Two: RESTful Microframework in Ruby]]></title>

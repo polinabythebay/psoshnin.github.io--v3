@@ -7,6 +7,8 @@ sharing: true
 footer: true
 ---
 
+This is my syllabus for a course I created for myself to learn Ruby on Rails. Feel free to take inspiration from it and implement your own courses. 
+
 <a name="return"></a>
 [Objective](#objective) | [Goals](#goals) | [Overview](#overview) | [Course Materials](#materials)
 

@@ -7,6 +7,6 @@ sharing: true
 footer: true
 ---
 
-Hello! My name is Polina. I'm a senior at Wellesley. I'm from Alaska. I like to back-country ski and go on culinary adventures. I really like Rails. I created this blog so I can blog about the ins and outs of learning to develop with Rails. 
+Hackito ergo sum -- in pseudo latin, "I hack therefore I am". I like to think of hacking as a yearning to excel in a meaningful field, which may involve engaging in benign and amusing shenanigans from time to time. 
 
-
+I'm Polina and this is my blog. I like to post about topics I'm interested in and hacks I've done. If you'd like to get in touch: me [at] polina [dot] io.

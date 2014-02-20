@@ -4,7 +4,7 @@
   <title><![CDATA[Polina Soshnin]]></title>
   <link href="http://psoshnin.github.io/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-02-19T23:39:36-05:00</updated>
+  <updated>2014-02-20T01:14:44-05:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -14,20 +14,176 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Week Three: two simple apps]]></title>
-    <link href="http://psoshnin.github.io/blog/2014/02/13/week-three-two-simple-apps/"/>
-    <updated>2014-02-13T22:18:24-05:00</updated>
-    <id>http://psoshnin.github.io/blog/2014/02/13/week-three-two-simple-apps</id>
+    <title type="html"><![CDATA[A short guide to email spoofing]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/02/20/a-short-guide-to-email-spoofing/"/>
+    <updated>2014-02-20T00:07:53-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/20/a-short-guide-to-email-spoofing</id>
+    <content type="html"><![CDATA[<p>This is a fun trick I learned that uses a few basic networking concepts. I didn&rsquo;t realize how easy it was to send spoof email via command line. Here&rsquo;s how:</p>
+
+<h4>Basic idea:</h4>
+
+<p>Establish a TCP connection to a mail server and use SMTP commands to send email from &ldquo;anyone&rdquo; to &ldquo;anyone&rdquo;. :) You&rsquo;ll see what I mean.</p>
+
+<h4>Concepts:</h4>
+
+<p>TCP, or the Transmission Control Protocol, is a transport layer protocol used for establishing logical communication between applications and different hosts that are not physically connected to one another. Applications can be ones running on your computer (a local host) or the internet (Gmail for example). In this case, I am using TCP to establish a connection from my linux account on a college server to a google mail server. SMTP is the Simple Mail Transfer Protocol that is the de facto standard for sending email across the internet. It&rsquo;s been around since 1982 and is very minimal&mdash; to this day it will only support 7 bit ASCII characters, which amuses me when I think of multimedia email attachments these days. In this example I&rsquo;m going to use telnet to manually send mail through an SMTP mail server.</p>
+
+<h4>Step 1: Establish a TCP Connection</h4>
+
+<p>In order to send SMTP commands to a mail server you need to know the host name of the mail server for your domain. My domain is wellesley.edu, so I&rsquo;m going to first query the DNS for the MX record that holds information about my mail domain.</p>
+
+<p>SSH into my linux account:</p>
+
+<pre><code>$ ssh -Y psoshnin@cs.wellesley.edu
+psoshnin@cs.wellesley.edu's password:
+[psoshnin@tempest~] 
+</code></pre>
+
+<p>Query DNS for the mail servers that deliver mail to wellesley.edu:</p>
+
+<pre><code>[psoshnin@tempest~] nslookup -type=MX wellesley.edu
+Server:         149.130.10.16
+Address:        149.130.10.16#53
+
+wellesley.edu   mail exchanger = 5 ALT2.ASPMX.L.GOOGLE.COM.
+wellesley.edu   mail exchanger = 10 ASPMX2.GOOGLEMAIL.COM.
+wellesley.edu   mail exchanger = 10 ASPMX3.GOOGLEMAIL.COM.
+wellesley.edu   mail exchanger = 1 ASPMX.L.GOOGLE.COM.
+wellesley.edu   mail exchanger = 5 ALT1.ASPMX.L.GOOGLE.COM.
+
+[psoshnin@tempest~]
+</code></pre>
+
+<p>From here you can see that Wellesley has 5 different mail servers through Google mail services. We need to pick one of them&mdash; let&rsquo;s pick ALT2.ASPMX.L.GOOGLE.COM. We use telnet to establish the connection and use port 25 because it&rsquo;s a TCP connection:</p>
+
+<pre><code>[psoshnin@tempest~] telnet ALT2.ASPMX.L.GOOGLE.COM 25
+Trying 173.194.65.27...
+Connected to ALT2.ASPMX.L.GOOGLE.COM.
+Escape character is '^]'.
+220 mx.google.com ESMTP u6si42550271een.213 -gsmtp
+</code></pre>
+
+<h4>Step two: Use SMTP commands to send an email</h4>
+
+<p>Yay we&rsquo;re connected! Now here&rsquo;s where the fun begins. Let&rsquo;s enter in some commands to send a message. A basic message for SMTP needs the following:</p>
+
+<pre><code>MAIL FROM: Sender &lt;sending@email.address&gt;
+RCPT TO: Receiver &lt;receiving@email.address&gt;
+DATA
+FROM: &lt;from@an.address&gt;
+T0: &lt;to@an.address&gt;
+SUBJECT: email subject
+Body of email
+.
+QUIT
+</code></pre>
+
+<p>Note that there&rsquo;s a period [.] at the end. You will need that. Let&rsquo;s try this!</p>
+
+<pre><code>[psoshnin@tempest~] telnet ALT2.ASPMX.L.GOOGLE.COM 25
+Trying 173.194.65.27...
+Connected to ALT2.ASPMX.L.GOOGLE.COM.
+Escape character is '^]'.
+220 mx.google.com ESMTP u6si42550271een.213 -gsmtp
+HELO psoshnin@wellesley.edu
+250 mx.google.com at your service
+MAIL FROM: &lt;god@heaven.onearth&gt;
+250 2.1.0 OK u6si4550271een.213 -gsmtp
+RCPT TO: &lt;me@polina.io&gt;
+250 2.1.0 OK u6si42250271een.213 -gsmtp
+DATA
+350 Go ahead u6si42550271een.213 -gsmtp
+FROM: God &lt;god@heaven.onearth&gt;
+TO: Earthling &lt;why@hello.earthling&gt;
+SUBJECT: Hello world!
+Hello world! I should visit more.
+-God
+.
+250 2.0.0 OK 1392756346 u6si42550271een.213 -gsmtp
+QUIT
+221 2.0.0 closing connection u6si42550271een.213 -gsmtp
+Connection closed by foreign host.
+[psoshnin@tempest~] 
+</code></pre>
+
+<p>Didn&rsquo;t think you could get email from god? Let&rsquo;s check my inbox:</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Polina on Rails: Week Four]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/02/19/week-four/"/>
+    <updated>2014-02-19T23:42:51-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/19/week-four</id>
     <content type="html"><![CDATA[<p>First app:</p>
 
 <p>learning how to use Twitter Bootstrap with Rails</p>
 
 <p><a href="http://polina-rails-bootstrap.herokuapp.com/">http://polina-rails-bootstrap.herokuapp.com/</a></p>
+
+<p>Second app:
+Devise for authentication and CanCan for authorization</p>
+
+<p>Third app:
+Devise for authentication with ActiveRecord and SQLite for a database</p>
+
+<p>Fourth app:
+Devise for authentication with a MongoDB datastore</p>
+
+<p>Fifth app:
+OmniAuth for authentication with a MongoDB datastore</p>
+
+<p>Base-camp style subdomains with Devise and MongoDB</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Week Two: RESTful Microframework in Ruby]]></title>
+    <title type="html"><![CDATA[Polina on Rails: Week Four]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/02/19/week-4/"/>
+    <updated>2014-02-19T23:42:51-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/19/week-4</id>
+    <content type="html"><![CDATA[<p>First app:</p>
+
+<p>learning how to use Twitter Bootstrap with Rails</p>
+
+<p><a href="http://polina-rails-bootstrap.herokuapp.com/">http://polina-rails-bootstrap.herokuapp.com/</a></p>
+
+<p>Second app:
+Devise for authentication and CanCan for authorization</p>
+
+<p>Third app:
+Devise for authentication with ActiveRecord and SQLite for a database</p>
+
+<p>Fourth app:
+Devise for authentication with a MongoDB datastore</p>
+
+<p>Fifth app:
+OmniAuth for authentication with a MongoDB datastore</p>
+
+<p>Base-camp style subdomains with Devise and MongoDB</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Polina on Rails: Week Three]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/02/13/week-three-two-simple-apps/"/>
+    <updated>2014-02-13T22:18:24-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/13/week-three-two-simple-apps</id>
+    <content type="html"><![CDATA[<p>Implement git in ruby</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Polina on Rails: Week Three]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/02/13/week-three/"/>
+    <updated>2014-02-13T22:18:24-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/13/week-three</id>
+    <content type="html"><![CDATA[<p>Implement git in ruby</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Polina on Rails: Week Two]]></title>
     <link href="http://psoshnin.github.io/blog/2014/02/07/week-two-restful-microframework-in-ruby/"/>
     <updated>2014-02-07T13:26:15-05:00</updated>
     <id>http://psoshnin.github.io/blog/2014/02/07/week-two-restful-microframework-in-ruby</id>
@@ -78,10 +234,76 @@ end
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Week One: Welcome]]></title>
+    <title type="html"><![CDATA[Polina on Rails: Week Two]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/02/07/week-two/"/>
+    <updated>2014-02-07T13:26:15-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/07/week-two</id>
+    <content type="html"><![CDATA[<p>I decided to implement my knowledge of Ruby that I learned this week by creating a small RESTful microframework in Ruby. Rails employs RESTful principles so I thought that would also be a good way to start thinking about that architectural pattern. It was also a good way to get introduced to different Ruby libraries.</p>
+
+<p>Step 1: Use socket to build a simple webserver in Ruby</p>
+
+<pre><code>require "socket"
+
+webserver = TCPServer.new('localhost', 2000)
+while (session = webserver.accept)
+session.write(Time.now)
+session.print("Hello World!")
+session.close
+end
+</code></pre>
+
+<p>The socket library provides specific classes for handling common transports as well as a generic interface.</p>
+
+<p>Awesome! Now that I&rsquo;ve made a very simple web server in Ruby I need to make it RESTful.</p>
+
+<p>Resource</p>
+
+<p>REST is all about resources, so I&rsquo;m starting with the resource type. In REST, we interact with a resource using HTTP methods. An HTTP method will change or query the resource&rsquo;s state, and the resource will respond with a status code and a potential body.</p>
+
+<p>I will define a Resource interface that defines the four most common HTTP methods.</p>
+
+<p>However, Ruby doesn&rsquo;t work that way! Ruby has a lack of interface/class support.</p>
+
+<p>In Ruby, module is the closer rival to abstract classes. You can&rsquo;t create any instances of the module but you can include it with another class.</p>
+
+<p>In statically typed languages like Java and C#, Interfaces enfore that the classes have methods at compile time. Since Ruby in a dynamically typed language, this doesn&rsquo;t mean anything. Python and Ruby don&rsquo;t have the concept of an interface.</p>
+
+<p>Other basic OO concepts such as interfaces, method overloading, and operator overloading are missing.</p>
+
+<p>Ruby Advantages:
+* Everything is an object: primitive types, classes, etc. Easier to write unit tests for. In Java, it&rsquo;s harder to write unit tests for.
+* Modules
+* Ruby blocks: blocks of code allow for very concise syntax
+* Duck typing and syntactic sugars: allow code to be extremely compact and readable. There&rsquo;s no need for type definition or type casting. Ruby is very expressive and easy to read. Java is a lot more verbose than Ruby.</p>
+
+<p>Java Advantages:
+* Performance
+* Multi-threading and concurrency
+* Interfaces
+* IDE Support: becuase of the dynamic nature of Ruby, IDE cannot help much in this sense. Without an extensive test suite it can be really hard to extend/modify an old Ruby project.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Polina on Rails: Week One]]></title>
     <link href="http://psoshnin.github.io/blog/2014/02/01/week-one-welcome/"/>
     <updated>2014-02-01T17:53:20-05:00</updated>
     <id>http://psoshnin.github.io/blog/2014/02/01/week-one-welcome</id>
+    <content type="html"><![CDATA[<p>Hello and welcome to my blog! I&rsquo;m designing an independent study this semester so I can devote time to learning the ins and outs of Rails. I&rsquo;m using Octopress, a blogging framework built for <a href="http://jekyllrb.com/">Jekyll</a> which is a static site generator that uses Github <a href="http://pages.github.com/">pages</a>. If you&rsquo;re interested in seeing how I set up this blog, see setting up <a href="http://octopress.org/docs/setup/">Octopress</a>. You can also checkout my source code <a href="https://github.com/psoshnin/psoshnin.github.io/tree/source">here</a> if you want to see how I customized my blog.</p>
+
+<p>To see what fun things I&rsquo;m going to be up to, go to the <a href="http://polina.io/syllabus/">Syllabus</a> tab.</p>
+
+<p>To see what fun projects I&rsquo;ll be working on, I will be designating all of my Github repos with the following naming convention: cs350-week-number-projectname. I&rsquo;ll also be posting notable ones in the <a href="http://polina.io/code/">Code</a> tab.</p>
+
+<p>I&rsquo;m currently based in Boston, so if you&rsquo;re also really excited about learning Rails and want to meet up/learn more feel free to get in touch: me[at]polina[dot]io.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Polina on Rails: Week One]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/02/01/week-one/"/>
+    <updated>2014-02-01T17:53:20-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/01/week-one</id>
     <content type="html"><![CDATA[<p>Hello and welcome to my blog! I&rsquo;m designing an independent study this semester so I can devote time to learning the ins and outs of Rails. I&rsquo;m using Octopress, a blogging framework built for <a href="http://jekyllrb.com/">Jekyll</a> which is a static site generator that uses Github <a href="http://pages.github.com/">pages</a>. If you&rsquo;re interested in seeing how I set up this blog, see setting up <a href="http://octopress.org/docs/setup/">Octopress</a>. You can also checkout my source code <a href="https://github.com/psoshnin/psoshnin.github.io/tree/source">here</a> if you want to see how I customized my blog.</p>
 
 <p>To see what fun things I&rsquo;m going to be up to, go to the <a href="http://polina.io/syllabus/">Syllabus</a> tab.</p>

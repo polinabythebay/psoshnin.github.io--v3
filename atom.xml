@@ -4,7 +4,7 @@
   <title><![CDATA[Polina Soshnin]]></title>
   <link href="http://psoshnin.github.io/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-02-20T01:14:44-05:00</updated>
+  <updated>2014-02-20T10:26:51-05:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -138,98 +138,11 @@ OmniAuth for authentication with a MongoDB datastore</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Polina on Rails: Week Four]]></title>
-    <link href="http://psoshnin.github.io/blog/2014/02/19/week-4/"/>
-    <updated>2014-02-19T23:42:51-05:00</updated>
-    <id>http://psoshnin.github.io/blog/2014/02/19/week-4</id>
-    <content type="html"><![CDATA[<p>First app:</p>
-
-<p>learning how to use Twitter Bootstrap with Rails</p>
-
-<p><a href="http://polina-rails-bootstrap.herokuapp.com/">http://polina-rails-bootstrap.herokuapp.com/</a></p>
-
-<p>Second app:
-Devise for authentication and CanCan for authorization</p>
-
-<p>Third app:
-Devise for authentication with ActiveRecord and SQLite for a database</p>
-
-<p>Fourth app:
-Devise for authentication with a MongoDB datastore</p>
-
-<p>Fifth app:
-OmniAuth for authentication with a MongoDB datastore</p>
-
-<p>Base-camp style subdomains with Devise and MongoDB</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Polina on Rails: Week Three]]></title>
-    <link href="http://psoshnin.github.io/blog/2014/02/13/week-three-two-simple-apps/"/>
-    <updated>2014-02-13T22:18:24-05:00</updated>
-    <id>http://psoshnin.github.io/blog/2014/02/13/week-three-two-simple-apps</id>
-    <content type="html"><![CDATA[<p>Implement git in ruby</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Polina on Rails: Week Three]]></title>
     <link href="http://psoshnin.github.io/blog/2014/02/13/week-three/"/>
     <updated>2014-02-13T22:18:24-05:00</updated>
     <id>http://psoshnin.github.io/blog/2014/02/13/week-three</id>
     <content type="html"><![CDATA[<p>Implement git in ruby</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Polina on Rails: Week Two]]></title>
-    <link href="http://psoshnin.github.io/blog/2014/02/07/week-two-restful-microframework-in-ruby/"/>
-    <updated>2014-02-07T13:26:15-05:00</updated>
-    <id>http://psoshnin.github.io/blog/2014/02/07/week-two-restful-microframework-in-ruby</id>
-    <content type="html"><![CDATA[<p>I decided to implement my knowledge of Ruby that I learned this week by creating a small RESTful microframework in Ruby. Rails employs RESTful principles so I thought that would also be a good way to start thinking about that architectural pattern. It was also a good way to get introduced to different Ruby libraries.</p>
-
-<p>Step 1: Use socket to build a simple webserver in Ruby</p>
-
-<pre><code>require "socket"
-
-webserver = TCPServer.new('localhost', 2000)
-while (session = webserver.accept)
-session.write(Time.now)
-session.print("Hello World!")
-session.close
-end
-</code></pre>
-
-<p>The socket library provides specific classes for handling common transports as well as a generic interface.</p>
-
-<p>Awesome! Now that I&rsquo;ve made a very simple web server in Ruby I need to make it RESTful.</p>
-
-<p>Resource</p>
-
-<p>REST is all about resources, so I&rsquo;m starting with the resource type. In REST, we interact with a resource using HTTP methods. An HTTP method will change or query the resource&rsquo;s state, and the resource will respond with a status code and a potential body.</p>
-
-<p>I will define a Resource interface that defines the four most common HTTP methods.</p>
-
-<p>However, Ruby doesn&rsquo;t work that way! Ruby has a lack of interface/class support.</p>
-
-<p>In Ruby, module is the closer rival to abstract classes. You can&rsquo;t create any instances of the module but you can include it with another class.</p>
-
-<p>In statically typed languages like Java and C#, Interfaces enfore that the classes have methods at compile time. Since Ruby in a dynamically typed language, this doesn&rsquo;t mean anything. Python and Ruby don&rsquo;t have the concept of an interface.</p>
-
-<p>Other basic OO concepts such as interfaces, method overloading, and operator overloading are missing.</p>
-
-<p>Ruby Advantages:
-* Everything is an object: primitive types, classes, etc. Easier to write unit tests for. In Java, it&rsquo;s harder to write unit tests for.
-* Modules
-* Ruby blocks: blocks of code allow for very concise syntax
-* Duck typing and syntactic sugars: allow code to be extremely compact and readable. There&rsquo;s no need for type definition or type casting. Ruby is very expressive and easy to read. Java is a lot more verbose than Ruby.</p>
-
-<p>Java Advantages:
-* Performance
-* Multi-threading and concurrency
-* Interfaces
-* IDE Support: becuase of the dynamic nature of Ruby, IDE cannot help much in this sense. Without an extensive test suite it can be really hard to extend/modify an old Ruby project.</p>
 ]]></content>
   </entry>
   
@@ -281,21 +194,6 @@ end
 * Multi-threading and concurrency
 * Interfaces
 * IDE Support: becuase of the dynamic nature of Ruby, IDE cannot help much in this sense. Without an extensive test suite it can be really hard to extend/modify an old Ruby project.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Polina on Rails: Week One]]></title>
-    <link href="http://psoshnin.github.io/blog/2014/02/01/week-one-welcome/"/>
-    <updated>2014-02-01T17:53:20-05:00</updated>
-    <id>http://psoshnin.github.io/blog/2014/02/01/week-one-welcome</id>
-    <content type="html"><![CDATA[<p>Hello and welcome to my blog! I&rsquo;m designing an independent study this semester so I can devote time to learning the ins and outs of Rails. I&rsquo;m using Octopress, a blogging framework built for <a href="http://jekyllrb.com/">Jekyll</a> which is a static site generator that uses Github <a href="http://pages.github.com/">pages</a>. If you&rsquo;re interested in seeing how I set up this blog, see setting up <a href="http://octopress.org/docs/setup/">Octopress</a>. You can also checkout my source code <a href="https://github.com/psoshnin/psoshnin.github.io/tree/source">here</a> if you want to see how I customized my blog.</p>
-
-<p>To see what fun things I&rsquo;m going to be up to, go to the <a href="http://polina.io/syllabus/">Syllabus</a> tab.</p>
-
-<p>To see what fun projects I&rsquo;ll be working on, I will be designating all of my Github repos with the following naming convention: cs350-week-number-projectname. I&rsquo;ll also be posting notable ones in the <a href="http://polina.io/code/">Code</a> tab.</p>
-
-<p>I&rsquo;m currently based in Boston, so if you&rsquo;re also really excited about learning Rails and want to meet up/learn more feel free to get in touch: me[at]polina[dot]io.</p>
 ]]></content>
   </entry>
   

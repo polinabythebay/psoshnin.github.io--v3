@@ -9,7 +9,8 @@
   <meta name="author" content="Polina Soshnin">
 
   
-  <meta name="description" content="This is a fun trick I learned that uses a few basic networking concepts. I didn&rsquo;t realize how easy it was to send spoof email via command line &hellip;">
+  <meta name="description" content="Topic: Application for a startup prelaunch signup site Discussion: different kinds of emails! :)
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,6 +82,76 @@
   <div id="main">
     <div id="content">
       
+
+
+    <article class="post">
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/21/week-six/">Week-six</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-21T02:46:39-05:00" pubdate data-updated="true">Feb 21<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Topic: Application for a startup prelaunch signup site</p>
+
+<p>Discussion: different kinds of emails! :)</p>
+</div>
+  
+  
+
+</article>
+
+
+    <article class="post">
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/21/week-five/">Week-five</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-21T02:44:59-05:00" pubdate data-updated="true">Feb 21<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Site with subscription billing using Stripe, and Recurly</p>
+</div>
+  
+  
+
+</article>
 
 
     <article class="post">
@@ -231,25 +302,11 @@ Connection closed by foreign host.
   </header>
 
 
-  <div class="entry-content"><p>First app:</p>
+  <div class="entry-content"><h4>Topic: Make an app with twitter bootstrap, Devise, and CanCan</h4>
 
-<p>learning how to use Twitter Bootstrap with Rails</p>
+<p><a href="http://polina-rails3-devise-cancan.herokuapp.com/">http://polina-rails3-devise-cancan.herokuapp.com/</a></p>
 
-<p><a href="http://polina-rails-bootstrap.herokuapp.com/">http://polina-rails-bootstrap.herokuapp.com/</a></p>
-
-<p>Second app:
-Devise for authentication and CanCan for authorization</p>
-
-<p>Third app:
-Devise for authentication with ActiveRecord and SQLite for a database</p>
-
-<p>Fourth app:
-Devise for authentication with a MongoDB datastore</p>
-
-<p>Fifth app:
-OmniAuth for authentication with a MongoDB datastore</p>
-
-<p>Base-camp style subdomains with Devise and MongoDB</p>
+<p>Next&mdash;> make a very simple subscription site with stripe and recurly</p>
 </div>
   
   
@@ -283,7 +340,11 @@ OmniAuth for authentication with a MongoDB datastore</p>
   </header>
 
 
-  <div class="entry-content"><p>Implement git in ruby</p>
+  <div class="entry-content"><h3>Topic: Make an app with twitter bootstrap</h3>
+
+<p><a href="http://polina-rails-bootstrap.herokuapp.com/">http://polina-rails-bootstrap.herokuapp.com/</a></p>
+
+<p>Next on the list&mdash;> use Devise and twitter bootstrap and make a simple membership authorization site with CanCan</p>
 </div>
   
   
@@ -317,49 +378,38 @@ OmniAuth for authentication with a MongoDB datastore</p>
   </header>
 
 
-  <div class="entry-content"><p>I decided to implement my knowledge of Ruby that I learned this week by creating a small RESTful microframework in Ruby. Rails employs RESTful principles so I thought that would also be a good way to start thinking about that architectural pattern. It was also a good way to get introduced to different Ruby libraries.</p>
+  <div class="entry-content"><h3>Topic: make an app with Devise</h3>
 
-<p>Step 1: Use socket to build a simple webserver in Ruby</p>
+<p>Talk about making these two apps:</p>
 
-<pre><code>require "socket"
+<p>[1] Devise for authentication with ActiveRecord and SQLite for a database</p>
 
-webserver = TCPServer.new('localhost', 2000)
-while (session = webserver.accept)
-session.write(Time.now)
-session.print("Hello World!")
-session.close
-end
-</code></pre>
+<p>Devise: ready made authentication and user management
+RSpec: popular framework for unit testing
+Cucumber: use for integration testing and BDD</p>
 
-<p>The socket library provides specific classes for handling common transports as well as a generic interface.</p>
+<p>This combination is the foundation of lots of real-world Rails applications. Devise will let you sign up a new user and create an account. It will also require a visitor to log in before allowing access to an application. RSpec lets you test your code. Integration tests built with Cucumber let you figure out if the app&rsquo;s specs work as expected. Cucumber tests the app from the point of view of the user.</p>
 
-<p>Awesome! Now that I&rsquo;ve made a very simple web server in Ruby I need to make it RESTful.</p>
+<p>How to create a specific gemset:
+$ rvm use ruby-2.0.0@rails3-devise-rspec-cucumber &mdash;create
+$ gem install rails</p>
 
-<p>Resource</p>
+<p>This is very helpful:
+$ echo &ldquo;ruby-2.0.0&rdquo; > .ruby-version
+$ echo &ldquo;rails3-devise-rspec-cucumber&rdquo; > .ruby-gemset</p>
 
-<p>REST is all about resources, so I&rsquo;m starting with the resource type. In REST, we interact with a resource using HTTP methods. An HTTP method will change or query the resource&rsquo;s state, and the resource will respond with a status code and a potential body.</p>
+<p>Devise provides <em>authentication</em>. This makes sure that the app securely identifies users and makes sure the user is really who they are. Devise also provides user management and implements features to let the user sign up to create/edit an account.</p>
 
-<p>I will define a Resource interface that defines the four most common HTTP methods.</p>
+<p>Devise does not provide <em>authorization</em>. Authorization determines if an authenticated user should have access to the secured resources. Once you&rsquo;ve authenticated a user, you can use CanCan to limit access to users to certain types of content on your site.</p>
 
-<p>However, Ruby doesn&rsquo;t work that way! Ruby has a lack of interface/class support.</p>
+<p>CanCan is the most popular gem for authorization. I&rsquo;m not using it in this application.</p>
 
-<p>In Ruby, module is the closer rival to abstract classes. You can&rsquo;t create any instances of the module but you can include it with another class.</p>
+<p>Next on the list&mdash;> Build a pretty app with Twitter Bootstrap!</p>
 
-<p>In statically typed languages like Java and C#, Interfaces enfore that the classes have methods at compile time. Since Ruby in a dynamically typed language, this doesn&rsquo;t mean anything. Python and Ruby don&rsquo;t have the concept of an interface.</p>
-
-<p>Other basic OO concepts such as interfaces, method overloading, and operator overloading are missing.</p>
-
-<p>Ruby Advantages:
-* Everything is an object: primitive types, classes, etc. Easier to write unit tests for. In Java, it&rsquo;s harder to write unit tests for.
-* Modules
-* Ruby blocks: blocks of code allow for very concise syntax
-* Duck typing and syntactic sugars: allow code to be extremely compact and readable. There&rsquo;s no need for type definition or type casting. Ruby is very expressive and easy to read. Java is a lot more verbose than Ruby.</p>
-
-<p>Java Advantages:
-* Performance
-* Multi-threading and concurrency
-* Interfaces
-* IDE Support: becuase of the dynamic nature of Ruby, IDE cannot help much in this sense. Without an extensive test suite it can be really hard to extend/modify an old Ruby project.</p>
+<p>Related apps I&rsquo;ve made:
+* An app that uses Devise for authentication with a MongoDB datastore
+* OmniAuth for authentication with a MongoDB datastore
+* Basecamp-style subdomains with Devise and MongoDB</p>
 </div>
   
   
@@ -400,6 +450,20 @@ end
 <p>To see what fun projects I&rsquo;ll be working on, I will be designating all of my Github repos with the following naming convention: cs350-week-number-projectname. I&rsquo;ll also be posting notable ones in the <a href="http://polina.io/code/">Code</a> tab.</p>
 
 <p>I&rsquo;m currently based in Boston, so if you&rsquo;re also really excited about learning Rails and want to meet up/learn more feel free to get in touch: me[at]polina[dot]io.</p>
+
+<p>Shortcut to creating posts on octopress:</p>
+
+<pre><code>rake new_post["title"]
+rake new_page[super-awesome]
+rake new_page[super-awesome/page.html]
+
+rake generate
+rake deploy
+rake watch
+rake preview
+</code></pre>
+
+<p>Difference between rake watch and rake preview?</p>
 </div>
   
   

@@ -6,26 +6,12 @@ comments: true
 categories: 
 ---
 
-First app:
+####Topic: Make an app with twitter bootstrap, Devise, and CanCan
 
-learning how to use Twitter Bootstrap with Rails
-
-http://polina-rails-bootstrap.herokuapp.com/
-
-Second app:
-Devise for authentication and CanCan for authorization
-
-Third app:
-Devise for authentication with ActiveRecord and SQLite for a database
-
-Fourth app:
-Devise for authentication with a MongoDB datastore
-
-Fifth app:
-OmniAuth for authentication with a MongoDB datastore
+http://polina-rails3-devise-cancan.herokuapp.com/
 
 
-Base-camp style subdomains with Devise and MongoDB
+Next--> make a very simple subscription site with stripe and recurly
 
 
 

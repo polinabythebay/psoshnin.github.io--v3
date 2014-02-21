@@ -6,47 +6,39 @@ comments: true
 categories: 
 ---
 
-I decided to implement my knowledge of Ruby that I learned this week by creating a small RESTful microframework in Ruby. Rails employs RESTful principles so I thought that would also be a good way to start thinking about that architectural pattern. It was also a good way to get introduced to different Ruby libraries. 
+###Topic: make an app with Devise 
 
-Step 1: Use socket to build a simple webserver in Ruby
+Talk about making these two apps:
 
-	require "socket"
- 
-	webserver = TCPServer.new('localhost', 2000)
-	while (session = webserver.accept)
-  	session.write(Time.now)
-  	session.print("Hello World!")
-  	session.close
-	end
+[1] Devise for authentication with ActiveRecord and SQLite for a database
+	
+Devise: ready made authentication and user management
+RSpec: popular framework for unit testing
+Cucumber: use for integration testing and BDD
 
-The socket library provides specific classes for handling common transports as well as a generic interface. 
+This combination is the foundation of lots of real-world Rails applications. Devise will let you sign up a new user and create an account. It will also require a visitor to log in before allowing access to an application. RSpec lets you test your code. Integration tests built with Cucumber let you figure out if the app's specs work as expected. Cucumber tests the app from the point of view of the user. 
 
-Awesome! Now that I've made a very simple web server in Ruby I need to make it RESTful. 
+How to create a specific gemset:
+$ rvm use ruby-2.0.0@rails3-devise-rspec-cucumber --create
+$ gem install rails
 
-Resource
+This is very helpful:
+$ echo "ruby-2.0.0" > .ruby-version
+$ echo "rails3-devise-rspec-cucumber" > .ruby-gemset
 
-REST is all about resources, so I'm starting with the resource type. In REST, we interact with a resource using HTTP methods. An HTTP method will change or query the resource's state, and the resource will respond with a status code and a potential body. 
+Devise provides *authentication*. This makes sure that the app securely identifies users and makes sure the user is really who they are. Devise also provides user management and implements features to let the user sign up to create/edit an account.
 
-I will define a Resource interface that defines the four most common HTTP methods. 
+Devise does not provide *authorization*. Authorization determines if an authenticated user should have access to the secured resources. Once you've authenticated a user, you can use CanCan to limit access to users to certain types of content on your site.
 
-However, Ruby doesn't work that way! Ruby has a lack of interface/class support. 
+CanCan is the most popular gem for authorization. I'm not using it in this application.
 
-In Ruby, module is the closer rival to abstract classes. You can't create any instances of the module but you can include it with another class. 
+Next on the list--> Build a pretty app with Twitter Bootstrap!
 
-In statically typed languages like Java and C#, Interfaces enfore that the classes have methods at compile time. Since Ruby in a dynamically typed language, this doesn't mean anything. Python and Ruby don't have the concept of an interface. 
+Related apps I've made:
+* An app that uses Devise for authentication with a MongoDB datastore
+* OmniAuth for authentication with a MongoDB datastore
+* Basecamp-style subdomains with Devise and MongoDB
 
-Other basic OO concepts such as interfaces, method overloading, and operator overloading are missing. 
 
-Ruby Advantages:
-* Everything is an object: primitive types, classes, etc. Easier to write unit tests for. In Java, it's harder to write unit tests for. 
-* Modules
-* Ruby blocks: blocks of code allow for very concise syntax
-* Duck typing and syntactic sugars: allow code to be extremely compact and readable. There's no need for type definition or type casting. Ruby is very expressive and easy to read. Java is a lot more verbose than Ruby. 
-
-Java Advantages:
-* Performance
-* Multi-threading and concurrency
-* Interfaces
-* IDE Support: becuase of the dynamic nature of Ruby, IDE cannot help much in this sense. Without an extensive test suite it can be really hard to extend/modify an old Ruby project. 
 
 

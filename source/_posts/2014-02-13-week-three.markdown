@@ -6,7 +6,12 @@ comments: true
 categories: 
 ---
 
-Implement git in ruby
+###Topic: Make an app with twitter bootstrap 
 
 
+http://polina-rails-bootstrap.herokuapp.com/
+
+
+
+Next on the list--> use Devise and twitter bootstrap and make a simple membership authorization site with CanCan
 

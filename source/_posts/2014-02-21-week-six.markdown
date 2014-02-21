@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "week-six"
+title: "Polina on Rails: Week Six"
 date: 2014-02-21 02:46:39 -0500
 comments: true
 categories: 

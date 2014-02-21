@@ -4,7 +4,7 @@
   <title><![CDATA[Polina Soshnin]]></title>
   <link href="http://psoshnin.github.io/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-02-21T03:29:50-05:00</updated>
+  <updated>2014-02-21T13:15:18-05:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -12,35 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Planning Hackathons]]></title>
-    <link href="http://psoshnin.github.io/blog/2014/02/21/planning-hackathons/"/>
-    <updated>2014-02-21T02:57:56-05:00</updated>
-    <id>http://psoshnin.github.io/blog/2014/02/21/planning-hackathons</id>
-    <content type="html"><![CDATA[<p>A discussion on hackathon planning and how to cater the traditional hack model to those who don&rsquo;t identify with the traditional &ldquo;hacker&rdquo; profile.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Polina on Rails: Week Six]]></title>
-    <link href="http://psoshnin.github.io/blog/2014/02/21/week-six/"/>
-    <updated>2014-02-21T02:46:39-05:00</updated>
-    <id>http://psoshnin.github.io/blog/2014/02/21/week-six</id>
-    <content type="html"><![CDATA[<p>Topic: Application for a startup prelaunch signup site</p>
-
-<p>Discussion: different kinds of emails! :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Polina on Rails: Week Five]]></title>
-    <link href="http://psoshnin.github.io/blog/2014/02/21/week-five/"/>
-    <updated>2014-02-21T02:44:59-05:00</updated>
-    <id>http://psoshnin.github.io/blog/2014/02/21/week-five</id>
-    <content type="html"><![CDATA[<p>Site with subscription billing using Stripe, and Recurly</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[A short guide to email spoofing]]></title>

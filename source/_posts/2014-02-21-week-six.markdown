@@ -4,6 +4,7 @@ title: "Polina on Rails: Week Six"
 date: 2014-02-21 02:46:39 -0500
 comments: true
 categories: 
+published: false
 ---
 
 Topic: Application for a startup prelaunch signup site

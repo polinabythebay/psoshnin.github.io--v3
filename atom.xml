@@ -4,7 +4,7 @@
   <title><![CDATA[Polina Soshnin]]></title>
   <link href="http://psoshnin.github.io/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-02-21T13:15:18-05:00</updated>
+  <updated>2014-02-22T21:57:39-05:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[writing cucumber scenarios]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/02/22/writing-cucumber-scenarios/"/>
+    <updated>2014-02-22T16:12:28-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/22/writing-cucumber-scenarios</id>
+    <content type="html"><![CDATA[<p>Two approaches to writing cucumber scenarios</p>
+
+<p>The newest (and recommended approach) uses Capybara to write the code &ldquo;steps&rdquo; that turn Cucumber scenarios into executable specs. Older versions of Cucumber provide web_steps.rb that implement common features.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A short guide to email spoofing]]></title>
@@ -141,38 +152,56 @@ Connection closed by foreign host.
     <link href="http://psoshnin.github.io/blog/2014/02/07/week-two/"/>
     <updated>2014-02-07T13:26:15-05:00</updated>
     <id>http://psoshnin.github.io/blog/2014/02/07/week-two</id>
-    <content type="html"><![CDATA[<h3>Topic: make an app with Devise</h3>
+    <content type="html"><![CDATA[<p>This week I will be talking about making an app that uses Devise for authentication with ActiveRecord and SQLite for a database. I will also be using Test Driven Development (TDD), so I will be including RSpec and Cucumber as well.</p>
 
-<p>Talk about making these two apps:</p>
+<h4>Background:</h4>
 
-<p>[1] Devise for authentication with ActiveRecord and SQLite for a database</p>
+<p>Devise is a ready made authentication and user managment gem. RSpec is a popular framework for unit testing and Cucumber is used for integration testing and Behavior Driven Development (BDD). This combination of basic gems is the foundation for lots of real-world Rails applications, which is why I&rsquo;m starting with them. Professional grade applications use TDD and BDD methodologies so I hope as I continue my study of Rails I can incorporate them into my applications and they will be become second nature (hopefully).</p>
 
-<p>Devise: ready made authentication and user management
-RSpec: popular framework for unit testing
-Cucumber: use for integration testing and BDD</p>
+<p>The basic function of Devise is to let you sign up a new user and create an account for them to store in your database. Devise will also require a visitor to login before allowing access to an application. RSpec lets you test your code so it won&rsquo;t break after you ship it. Cucumber lets you figure out if the app&rsquo;s specs work as expected. It will test the app from the point of view of the user.</p>
 
-<p>This combination is the foundation of lots of real-world Rails applications. Devise will let you sign up a new user and create an account. It will also require a visitor to log in before allowing access to an application. RSpec lets you test your code. Integration tests built with Cucumber let you figure out if the app&rsquo;s specs work as expected. Cucumber tests the app from the point of view of the user.</p>
+<p>Tips and Tricks I learned this week:</p>
 
-<p>How to create a specific gemset:
-$ rvm use ruby-2.0.0@rails3-devise-rspec-cucumber &mdash;create
-$ gem install rails</p>
+<p>How to create a specific gemset:</p>
 
-<p>This is very helpful:
-$ echo &ldquo;ruby-2.0.0&rdquo; > .ruby-version
-$ echo &ldquo;rails3-devise-rspec-cucumber&rdquo; > .ruby-gemset</p>
+<pre><code>$ rvm use ruby-2.0.0@rails3-devise-rspec-cucumber --create
+$ gem install rails
+</code></pre>
 
-<p>Devise provides <em>authentication</em>. This makes sure that the app securely identifies users and makes sure the user is really who they are. Devise also provides user management and implements features to let the user sign up to create/edit an account.</p>
+<p>This is very helpful. It will automatically put you in the gemset that belongs to that project.</p>
+
+<pre><code>$ echo "ruby-2.0.0" &gt; .ruby-version
+$ echo "rails3-devise-rspec-cucumber" &gt; .ruby-gemset
+</code></pre>
+
+<p>Let me stress that Devise provides <em>authentication</em>. This makes sure that the app securely identifies users and makes sure the user is really who they are. Devise also provides user management and implements features to let the user sign up to create/edit an account.</p>
 
 <p>Devise does not provide <em>authorization</em>. Authorization determines if an authenticated user should have access to the secured resources. Once you&rsquo;ve authenticated a user, you can use CanCan to limit access to users to certain types of content on your site.</p>
 
-<p>CanCan is the most popular gem for authorization. I&rsquo;m not using it in this application.</p>
+<p>CanCan is the most popular gem for authorization. I&rsquo;m not using it in this application, but I will be using it soon! Check out Week Four for my application using CanCan.</p>
 
-<p>Next on the list&mdash;> Build a pretty app with Twitter Bootstrap!</p>
+<p>Related apps I&rsquo;ve made:</p>
 
-<p>Related apps I&rsquo;ve made:
-* An app that uses Devise for authentication with a MongoDB datastore
-* OmniAuth for authentication with a MongoDB datastore
-* Basecamp-style subdomains with Devise and MongoDB</p>
+<ul>
+<li><p>An app that uses Devise for authentication with a MongoDB datastore</p>
+
+<p>  Install Mongo on your computer-> most popular NoSQL db
+  Use -T and -O to skip Test::Unit and Active::Record files</p>
+
+<p>  Use cucumber-rails generator to set up files needed for cucumber
+  $ rails generate cucumber:install &mdash;capybara &mdash;rspec &mdash;skip-database</p>
+
+<p>  &mdash;capybara specifies Capybara instead of default Webrat for acceptance testing
+  &mdash;rspec enables RSpec matchers for your step definitions
+  if you used -o flag, the &mdash;skip-database option allows Cucumber generator to go without a database.ymp file</p>
+
+<p>  Need a db cleaner to reset your app db for testing</p>
+
+<p>  Check how many instances of mongo are running: ps -ax | grep mongo</p></li>
+<li><p>OmniAuth for authentication with a MongoDB datastore</p></li>
+<li>Basecamp-style subdomains with Devise and MongoDB</li>
+</ul>
+
 ]]></content>
   </entry>
   

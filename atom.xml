@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Polina Soshnin]]></title>
+  <title><![CDATA[     ]]></title>
   <link href="http://psoshnin.github.io/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-02-22T21:57:39-05:00</updated>
+  <updated>2014-02-27T15:27:56-05:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -14,13 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[writing cucumber scenarios]]></title>
-    <link href="http://psoshnin.github.io/blog/2014/02/22/writing-cucumber-scenarios/"/>
-    <updated>2014-02-22T16:12:28-05:00</updated>
-    <id>http://psoshnin.github.io/blog/2014/02/22/writing-cucumber-scenarios</id>
-    <content type="html"><![CDATA[<p>Two approaches to writing cucumber scenarios</p>
-
-<p>The newest (and recommended approach) uses Capybara to write the code &ldquo;steps&rdquo; that turn Cucumber scenarios into executable specs. Older versions of Cucumber provide web_steps.rb that implement common features.</p>
+    <title type="html"><![CDATA[Polina on Rails: Week Five]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/02/21/week-five/"/>
+    <updated>2014-02-21T02:44:59-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/21/week-five</id>
+    <content type="html"><![CDATA[<p>Site with subscription billing using Stripe, and Recurly</p>
 ]]></content>
   </entry>
   

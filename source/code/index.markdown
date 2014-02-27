@@ -7,17 +7,19 @@ sharing: true
 footer: true
 ---
 
-This is the page where I will post about my coding projects, yay!
 
-These are my current rails projects:
+Code for independent study:
 
-GiveRails.org
+####Week Two:
+* [devise-rspec-cucumber](https://github.com/psoshnin/cs350-week-two-devise-rspec-cucumber)
+* [devise-mongoid](https://github.com/psoshnin/cs350-week-two-devise-mongoid)
+* [omniauth-mongoid](https://github.com/psoshnin/cs350-week-two-onmiauth-mongoid)
 
-HackWellesley.org
+####Week Three:
+* [Twitter bootstrap with Rails3](https://github.com/psoshnin/cs350-week-three-rails-bootstrap)
 
-A few heroku apps:
+####Week Four:
+* [devise-cancan-bootstrap](https://github.com/psoshnin/cs250-week-four-devise-cancan-bootstrap-rails3)
 
-http://polina-rails-bootstrap.herokuapp.com/
 
-http://polina-rails3-devise-cancan.herokuapp.com/
 

@@ -10,3 +10,5 @@ footer: true
 Hackito ergo sum -- in pseudo latin, "I hack therefore I am". I like to think of hacking as a yearning to excel in a meaningful field, which may involve engaging in benign and amusing shenanigans from time to time. 
 
 I'm Polina and this is my blog. I like to post about topics I'm interested in and hacks I've done. If you'd like to get in touch: me [at] polina [dot] io.
+
+Spring 2014: I'm doing an independent study where I'm teaching myself Rails. You can follow that project by looking at the "Polina on Rails" posts. :)

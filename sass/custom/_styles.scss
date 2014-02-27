@@ -1,6 +1,13 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 
+//for a banner
+header[role="banner"] {
+     background-image: url(/images/banner03.jpg);
+     background-repeat: no-repeat;
+     height: 110px;
+     //width: 1090px;
+}
 
 div#tag_list {
     font-size: 12pt;

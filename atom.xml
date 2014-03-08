@@ -4,7 +4,7 @@
   <title><![CDATA[     ]]></title>
   <link href="http://psoshnin.github.io/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-02-27T17:17:24-05:00</updated>
+  <updated>2014-03-08T13:55:29-05:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -19,6 +19,153 @@
     <updated>2014-02-21T02:44:59-05:00</updated>
     <id>http://psoshnin.github.io/blog/2014/02/21/week-five</id>
     <content type="html"><![CDATA[<p>Site with subscription billing using Stripe, and Recurly</p>
+
+<p>A web application with recurring billing using Stripe. This can be used for a membership site, subscription site, or a SaaS site (software as a service)</p>
+
+<p>What I&rsquo;m going to use for this tutorial:</p>
+
+<p>Stripe &mdash; recurring billing
+Devise &mdash; user management and authentication
+CanCan with Rolify for authorization (Rolify gives you role-based authorization)
+Twitter Bootstrap &mdash; front end framework for CSS styling</p>
+
+<p>Membership sites: restrict access to content</p>
+
+<pre><code>Articles, videos, forums
+</code></pre>
+
+<p>SaaS limit use of web-based software</p>
+
+<pre><code>Revenue model is the same: subscription based services, usually payed monthly
+</code></pre>
+
+<p>Basic functionality that all SaaS, membership, subscription based web applications need:</p>
+
+<ul>
+<li>Content/web functionality to deliver</li>
+<li>Landing pages to convert visitors to paying customers</li>
+<li>User management to register/remove users</li>
+<li>access control to limit site wide access</li>
+<li>authorization management to restrict access to content or services based on role or other characteristics</li>
+<li>account management to maintain records/subscription status</li>
+<li>recurring billing system for periodic payment transactions</li>
+</ul>
+
+
+<h4>Features my site will have:</h4>
+
+<ul>
+<li>tiered pricing for multiple subscription plans</li>
+<li>optional &ldquo;free trial&rdquo; subscription</li>
+<li>Stripe with no local cc storage</li>
+<li>PCI compliance using Stripe JS library</li>
+<li>Stripe for recurring billing, retries for payment failing, subscription cancelling</li>
+<li>Paid subscriptions created after successful cc transactions</li>
+<li>subscribers can upgrade/downgrade plans</li>
+<li>subscribers can cancel subscription plans</li>
+<li>configure the subscription renewal period (it defaults to one month)</li>
+<li>administrator can change subscription plan or delete user</li>
+</ul>
+
+
+<h4>What I do not have:</h4>
+
+<ul>
+<li>Basecamp style subdomains (each user gets their own subdomain)</li>
+<li>multitenancy database segmentation (using Apartment gem)</li>
+</ul>
+
+
+<h4>Architecture of application:</h4>
+
+<ul>
+<li>User management with Devise (register/remove users)</li>
+<li>Authentication with Devise (login/logout)</li>
+<li>Authorization management with CanCan and Rolify (access determined by role, in this case subscription plan)</li>
+<li>account management to maintain records of subscription status</li>
+<li>recurring billing with Stripe</li>
+<li>landing pages</li>
+<li>content or service pages</li>
+</ul>
+
+
+<p>How we&rsquo;re creating our account managment system: we need to keep subscription records: we&rsquo;ll combine Stripe for user management and Devise for our account management.</p>
+
+<h4>Two ways to build a recurring billing system:</h4>
+
+<ul>
+<li><p>Build a complete billing managment system in your application. You would need to build a mechanism for checking for expiring subscriptions (daily cron job) and something to initiate payment requests through stripe when a user&rsquo;s account is due. This means you would only use Stripe for processing cc transactions.</p></li>
+<li><p>Stripe provides complete recurring billing, so we&rsquo;ll use Stripe&rsquo;s API to supply a billing management system for us.</p></li>
+</ul>
+
+
+<h4>Key challenges/requirements</h4>
+
+<ul>
+<li><p>Make sure recurring billing and account managment are in sync. Stripe provides webhooks to make sure this happens. Stripe will initiate an HTTP request to our app and that will tell us we can change a subscription status.</p></li>
+<li><p>PCI compliance: key requirement for any ecommerce site. This will minimize risk of customer cc exposure. Your website will meet PCI compliance if you accept payment information through the Stripe JS library and serve your payment page through SSL.</p></li>
+</ul>
+
+
+<p>Thinking through this problem as an engineer:</p>
+
+<p>Software engineers attempt to model real-world objects and behavoirs in their applications and because of that they try to choose descriptive names for the objects and methods they use in order to reduce ambiguity and increase the understanding of the purpose of the application. In this example our most important object will be a &ldquo;User&rdquo; but it could also be an &ldquo;Account&rdquo; or a &ldquo;Member&rdquo;.</p>
+
+<p>Attributes of the User:</p>
+
+<pre><code>Important:
+-email address
+-password
+-cc number/Stripe customer id number
+- role id/subscription plan
+    Role model supplied by Rolify gem
+
+Less important:
+-name
+-creation date
+-other meta data etc
+</code></pre>
+
+<p>All of these attributes could be in themselves separate objects that are associated through our user through a key/value pair. But in this application the attributes will just be attributes, not separate objects.</p>
+
+<p>Instead of having a cc number in our application we&rsquo;re going to have a Stripe customer id that serves as an indirect reference to a credit card number. That will let us ask Stripe to bill the user.</p>
+
+<h4>Accounts for this app:</h4>
+
+<ul>
+<li>Recurring billing: Stripe</li>
+<li>Merchant account: a line of credit that allows a business to accept cc payments from its customers. A merchant account doesn&rsquo;t actually hold money. It&rsquo;s just a holding ground for cc payments.&ndash; Stripe</li>
+<li>Hosting: Heroku</li>
+<li>Email: Gmail</li>
+<li>Source control repository: Git</li>
+</ul>
+
+
+<h4>SSL</h4>
+
+<ul>
+<li>wise to host any webapp that requires login through an ssl connection. This requires setting up SSL and applying for an SSL certificate if necessary</li>
+</ul>
+
+
+<h4>Infrastructure for email</h4>
+
+<ul>
+<li>company email</li>
+<li>email sent from the app (&ldquo;transactional email&rdquo;)</li>
+<li>broadcast email for newsletters and announcements</li>
+</ul>
+
+
+<p>There&rsquo;s no good answer for all three types. General I use Gmail for company email, Mandrill forTransactional email, and MailChimp for mailing list (marketing type emails).</p>
+
+<p>git diff, hg diff</p>
+
+<p>Domain registration: NameCheap</p>
+
+<h4>Git workflow protips:</h4>
+
+<p>If you&rsquo;re working commercially or on an open source project you should get in the habit of creating a git branch each time you begin work to implement a feature. When the new feature is complete you can merge the branch and squash the commits to your comrads see just one commit for the entire feature.</p>
 ]]></content>
   </entry>
   
@@ -129,6 +276,28 @@ Connection closed by foreign host.
 <p><a href="http://polina-rails3-devise-cancan.herokuapp.com/">http://polina-rails3-devise-cancan.herokuapp.com/</a></p>
 
 <p>Next&mdash;> make a very simple subscription site with stripe and recurly</p>
+
+<p>Authentication:
+* adds the Devise gem to the Gemfile
+* runs $ rails generate devise:install
+* uses Devise to generate a User model and database migration
+* prevents logging of passwords
+* adds a sign-in form that uses SimpleForm and Twitter Bootstrap</p>
+
+<p>Authorization:
+* adds the CanCan and Rolify gems to the Gemfile
+* creates the CanCan Ability class
+* configures CanCan exception handling
+* sets up User roles with Rolify</p>
+
+<p>User Managment:
+* adds a name attribute to the User model
+* limits mass-assignment operations with the attr_accessible method
+* provides custom views for registering and editing users</p>
+
+<p>Stripe-specific fields:
+* customer_id to store Stripe customer id
+* last_4_digits to let customer know which cc they&rsquo;re using</p>
 ]]></content>
   </entry>
   

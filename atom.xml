@@ -4,7 +4,7 @@
   <title><![CDATA[     ]]></title>
   <link href="http://psoshnin.github.io/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-03-08T13:55:29-05:00</updated>
+  <updated>2014-03-08T17:07:04-05:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[title]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/03/08/title/"/>
+    <updated>2014-03-08T17:05:49-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/03/08/title</id>
+    <content type="html"><![CDATA[<p>yay, it&rsquo;s a blog!!!!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Polina on Rails: Week Five]]></title>

@@ -17,23 +17,32 @@
 	{ "word": "reading",
 		"children": [
 			{"word": "Hacker News."},
-			{"word": "NPR."},
-			{"word": "The Economist."}
+			{"word": "NPR."}
+			
 			]
 	},
 	{
 	"word": "writing",
 		"children": [
-			{"word": "clean code."},
-			{"word": "short stories."}
+			{"word": "clean code."}
+			
 			]
 	},
 
+	
+	{ "word": "following",
+		"children": [
+			{"word": "Project Loon."},
+			{"word": "cryptocurrencies."}
+			
+			]
+	},
 	{
 	"word": "learning",
 		"children": [
 			
-			{"word": "Ruby on Rails."}
+			{"word": "Ruby on Rails."},
+			{"word": "linear algebra."}
 			]
 	}
 	]
@@ -42,8 +51,8 @@
 {
 "word": "would love to",
 "children": [
-{"word": "grab a coffee."},
-{"word": "change the world."},
+{"word": "find local coffee."},
+{"word": "leave the world a better place."},
 {"word": "hear from you."}
 ]
 }

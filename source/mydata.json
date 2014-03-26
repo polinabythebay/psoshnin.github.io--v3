@@ -1,0 +1,48 @@
+{
+"word": "I",
+"children": [
+{
+"word": "am",
+"children": [
+{"word": "Polina Soshnin."},
+{"word": "a computer science major at Wellesley."},
+{"word": "an aspiring software engineer."},
+{"word": "creative."}
+]
+},
+{
+"word": "enjoy",
+"children": [
+{
+"word": "reading",
+"children": [
+{"word": "Hacker News."},
+{"word": "NPR."},
+{"word": "The Economist."}
+]
+},
+{
+"word": "writing",
+"children": [
+{"word": "code."},
+{"word": "short stories."}
+]
+},
+{
+"word": "learning",
+"children": [
+{"word": "everything."}
+]
+}
+]
+},
+{
+"word": "would love to",
+"children": [
+{"word": "grab a coffee."},
+{"word": "change the world."},
+{"word": "hear from you."}
+]
+}
+]
+}

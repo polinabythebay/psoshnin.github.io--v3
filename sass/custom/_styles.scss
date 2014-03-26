@@ -2,13 +2,13 @@
 // Add styles here to make changes without digging in too much
 
 //for a banner
-//header[role="banner"] {
- //     background-image: url(/images/banner03.jpg);
- //      background-repeat: no-repeat;
-  //    height: 110px;
-     //width: 1090px;
- //     position: relative;
-//}
+header[role="banner"] {
+      background-image: url(/images/banner03.jpg);
+      background-repeat: no-repeat;
+     height: 110px;
+    //    width: 1090px;
+        position: relative;
+}
 
 div#tag_list {
     font-size: 12pt;

@@ -38,7 +38,7 @@ var canvas = d3.select("body").append("svg")
 var tree = d3.layout.tree()
 .size([height-100, width-350]);
 
-d3.json("mydata.json", function (data) {
+d3.json("aboutme.json", function (data) {
 
 var nodes = tree.nodes(data);
 var links = tree.links(nodes);
@@ -75,7 +75,6 @@ node.append("text")
 return d.word;
 });
 });
-
 </script>
 
 
@@ -85,8 +84,6 @@ return d.word;
 <a href="http://www.linkedin.com/in/polinasoshnin" title="LinkedIn"><img src="images/linkedin.png"/></a>
 <a href="https://github.com/psoshnin" title="Github"><img src="images/github01.png"/></a>
 <a href="https://twitter.com/907code" title="Twitter"><img src="images/twitter.png"/></a>
-
-
 </footer>
 </body>
 

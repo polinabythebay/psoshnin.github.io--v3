@@ -25,7 +25,8 @@
 	{
 	"word": "writing",
 		"children": [
-			{"word": "clean code."}
+			{"word": "clean code."},
+			{"word": "Rails apps."}
 			
 			]
 	},

@@ -6,36 +6,39 @@
 "children": [
 {"word": "Polina Soshnin."},
 {"word": "a computer science major at Wellesley."},
-{"word": "an aspiring software engineer."},
-{"word": "creative."}
+{"word": "an aspiring software engineer."}
+
 ]
 },
+
 {
 "word": "enjoy",
 "children": [
-{
-"word": "reading",
-"children": [
-{"word": "Hacker News."},
-{"word": "NPR."},
-{"word": "The Economist."}
-]
+	{ "word": "reading",
+		"children": [
+			{"word": "Hacker News."},
+			{"word": "NPR."},
+			{"word": "The Economist."}
+			]
+	},
+	{
+	"word": "writing",
+		"children": [
+			{"word": "clean code."},
+			{"word": "short stories."}
+			]
+	},
+
+	{
+	"word": "learning",
+		"children": [
+			
+			{"word": "Ruby on Rails."}
+			]
+	}
+	]
 },
-{
-"word": "writing",
-"children": [
-{"word": "code."},
-{"word": "short stories."}
-]
-},
-{
-"word": "learning",
-"children": [
-{"word": "everything."}
-]
-}
-]
-},
+
 {
 "word": "would love to",
 "children": [

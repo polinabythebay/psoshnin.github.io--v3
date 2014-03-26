@@ -1,10 +1,13 @@
 html {
-background-color: #efefef;
+//background-color: #efefef;
+
+background-color: #009999;
 }
 
 footer {
 font-family: 'Raleway Dots', sans-serif;
-color: #888;
+//color: #888;
+color: #000000;
 margin-right: 2em;
 margin-top: -5em;
 text-align: right;
@@ -31,9 +34,9 @@ border-radius: 0%;
 
 text {
 stroke: rgba(0, 0, 0, 0);
-fill: #888;
+fill: #000;
 font-family: 'Nixie One', serif;
-font-size: 1.07em;
+font-size: 1.17em;
 -webkit-transition: all .2s ease-in-out;
 -moz-transition: all .2s ease-in-out;
 -o-transition: all .2s ease-in-out;

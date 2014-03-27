@@ -4,6 +4,7 @@ title: "Polina on Rails: Week Four"
 date: 2014-02-19 23:42:51 -0500
 comments: true
 categories: 
+published: false
 ---
 
 ####Topic: Make an app with twitter bootstrap, Devise, and CanCan

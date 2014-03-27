@@ -4,6 +4,7 @@ title: "Polina on Rails: Week Three"
 date: 2014-02-13 22:18:24 -0500
 comments: true
 categories: 
+published: false
 ---
 
 ###Topic: Make an app with twitter bootstrap 

@@ -1,0 +1,289 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'git-it' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose cache add [ 'git-it', null ]
+5 verbose cache add name=undefined spec="git-it" args=["git-it",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'git-it',
+6 verbose parsed url   path: 'git-it',
+6 verbose parsed url   href: 'git-it' }
+7 silly lockFile d6dba06f-git-it git-it
+8 verbose lock git-it /Users/Goddess/.npm/d6dba06f-git-it.lock
+9 silly lockFile d6dba06f-git-it git-it
+10 silly lockFile d6dba06f-git-it git-it
+11 verbose addNamed [ 'git-it', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 941e117c-git-it git-it@
+14 verbose lock git-it@ /Users/Goddess/.npm/941e117c-git-it.lock
+15 silly addNameRange { name: 'git-it', range: '*', hasData: false }
+16 verbose url raw git-it
+17 verbose url resolving [ 'https://registry.npmjs.org/', './git-it' ]
+18 verbose url resolved https://registry.npmjs.org/git-it
+19 info trying registry request attempt 1 at 18:38:42
+20 http GET https://registry.npmjs.org/git-it
+21 http 200 https://registry.npmjs.org/git-it
+22 silly registry.get cb [ 200,
+22 silly registry.get   { date: 'Fri, 28 Mar 2014 01:38:43 GMT',
+22 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+22 silly registry.get     etag: '"E9D6ENYFX4QPP8WW43BY5ZAAN"',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     'cache-control': 'max-age=1',
+22 silly registry.get     'content-length': '15211',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     age: '7185',
+22 silly registry.get     'x-served-by': 'cache-v41-ASH, cache-lax1420-LAX',
+22 silly registry.get     'x-cache': 'MISS, MISS',
+22 silly registry.get     'x-cache-hits': '0, 0',
+22 silly registry.get     'x-timer': 'S1395963538.512143612,VS0,VS-621,VE-596,VE7184706',
+22 silly registry.get     vary: 'Accept',
+22 silly registry.get     'keep-alive': 'timeout=10, max=50',
+22 silly registry.get     connection: 'Keep-Alive' } ]
+23 silly addNameRange number 2 { name: 'git-it', range: '*', hasData: true }
+24 silly addNameRange versions [ 'git-it',
+24 silly addNameRange   [ '0.0.0',
+24 silly addNameRange     '1.0.1',
+24 silly addNameRange     '1.0.2',
+24 silly addNameRange     '1.0.4',
+24 silly addNameRange     '1.0.5',
+24 silly addNameRange     '1.0.6',
+24 silly addNameRange     '1.1.7',
+24 silly addNameRange     '1.1.8',
+24 silly addNameRange     '1.1.9',
+24 silly addNameRange     '1.2.0',
+24 silly addNameRange     '1.2.1' ] ]
+25 verbose addNamed [ 'git-it', '1.2.1' ]
+26 verbose addNamed [ '1.2.1', '1.2.1' ]
+27 silly lockFile 3be8284b-git-it-1-2-1 git-it@1.2.1
+28 verbose lock git-it@1.2.1 /Users/Goddess/.npm/3be8284b-git-it-1-2-1.lock
+29 silly lockFile 11f333bd-pmjs-org-git-it-git-it-1-2-1-tgz https://registry.npmjs.org/git-it/-/git-it-1.2.1.tgz
+30 verbose lock https://registry.npmjs.org/git-it/-/git-it-1.2.1.tgz /Users/Goddess/.npm/11f333bd-pmjs-org-git-it-git-it-1-2-1-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/git-it/-/git-it-1.2.1.tgz',
+31 verbose addRemoteTarball   '05d71057e5fb54895fbc53e89bc4cc77c4e0b6a5' ]
+32 info retry fetch attempt 1 at 18:38:43
+33 verbose fetch to= /var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/tmp.tgz
+34 http GET https://registry.npmjs.org/git-it/-/git-it-1.2.1.tgz
+35 http 200 https://registry.npmjs.org/git-it/-/git-it-1.2.1.tgz
+36 verbose tar unpack /var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/tmp.tgz
+37 silly lockFile 02d4de26-3258-0-32494799653068185-package tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/package
+38 verbose lock tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/package /Users/Goddess/.npm/02d4de26-3258-0-32494799653068185-package.lock
+39 silly lockFile d9e94b33-3258-0-32494799653068185-tmp-tgz tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/tmp.tgz
+40 verbose lock tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/tmp.tgz /Users/Goddess/.npm/d9e94b33-3258-0-32494799653068185-tmp-tgz.lock
+41 silly gunzTarPerm modes [ '755', '644' ]
+42 silly gunzTarPerm extractEntry package.json
+43 silly gunzTarPerm extractEntry .npmignore
+44 silly gunzTarPerm extractEntry README.md
+45 silly gunzTarPerm extractEntry LICENSE
+46 silly gunzTarPerm extractEntry git-it.js
+47 silly gunzTarPerm extractEntry ghcc.png
+48 silly gunzTarPerm extractEntry problems/its_a_small_world/setup.js
+49 silly gunzTarPerm extractEntry problems/its_a_small_world/solution.js
+50 silly gunzTarPerm extractEntry problems/its_a_small_world/verify.js
+51 silly gunzTarPerm extractEntry problems/its_a_small_world/problem.txt
+52 silly gunzTarPerm extractEntry problems/branches_arent_just_for_birds/setup.js
+53 silly gunzTarPerm extractEntry problems/branches_arent_just_for_birds/solution.js
+54 silly gunzTarPerm extractEntry problems/branches_arent_just_for_birds/verify.js
+55 silly gunzTarPerm extractEntry problems/branches_arent_just_for_birds/problem.txt
+56 silly gunzTarPerm extractEntry problems/forks_and_clones/setup.js
+57 silly gunzTarPerm extractEntry problems/forks_and_clones/solution.js
+58 silly gunzTarPerm extractEntry problems/forks_and_clones/verify.js
+59 silly gunzTarPerm extractEntry problems/forks_and_clones/problem.txt
+60 silly gunzTarPerm extractEntry problems/get_git/setup.js
+61 silly gunzTarPerm extractEntry problems/get_git/solution.js
+62 silly gunzTarPerm extractEntry problems/get_git/verify.js
+63 silly gunzTarPerm extractEntry problems/get_git/problem.txt
+64 silly gunzTarPerm extractEntry problems/githubbin/setup.js
+65 silly gunzTarPerm extractEntry problems/githubbin/solution.js
+66 silly gunzTarPerm extractEntry problems/githubbin/verify.js
+67 silly gunzTarPerm extractEntry problems/githubbin/problem.txt
+68 silly gunzTarPerm extractEntry problems/commit_to_it/setup.js
+69 silly gunzTarPerm extractEntry problems/commit_to_it/solution.js
+70 silly gunzTarPerm extractEntry problems/commit_to_it/verify.js
+71 silly gunzTarPerm extractEntry problems/commit_to_it/problem.txt
+72 silly gunzTarPerm extractEntry problems/merge_tada/setup.js
+73 silly gunzTarPerm extractEntry problems/merge_tada/solution.js
+74 silly gunzTarPerm extractEntry problems/merge_tada/verify.js
+75 silly gunzTarPerm extractEntry problems/merge_tada/problem.txt
+76 silly gunzTarPerm extractEntry problems/pull_never_out_of_date/setup.js
+77 silly gunzTarPerm extractEntry problems/pull_never_out_of_date/solution.js
+78 silly gunzTarPerm extractEntry problems/pull_never_out_of_date/verify.js
+79 silly gunzTarPerm extractEntry problems/pull_never_out_of_date/problem.txt
+80 silly gunzTarPerm extractEntry problems/remote_control/setup.js
+81 silly gunzTarPerm extractEntry problems/remote_control/solution.js
+82 silly gunzTarPerm extractEntry problems/remote_control/verify.js
+83 silly gunzTarPerm extractEntry problems/remote_control/problem.txt
+84 silly gunzTarPerm extractEntry problems/repository/setup.js
+85 silly gunzTarPerm extractEntry problems/repository/solution.js
+86 silly gunzTarPerm extractEntry problems/repository/verify.js
+87 silly gunzTarPerm extractEntry problems/repository/problem.txt
+88 silly gunzTarPerm extractEntry problems/requesting_you_pull_please/setup.js
+89 silly gunzTarPerm extractEntry problems/requesting_you_pull_please/solution.js
+90 silly gunzTarPerm extractEntry problems/requesting_you_pull_please/verify.js
+91 silly gunzTarPerm extractEntry problems/requesting_you_pull_please/problem.txt
+92 silly gunzTarPerm extractEntry dev-doc.md
+93 silly gunzTarPerm extractEntry help.txt
+94 silly gunzTarPerm extractEntry menu.json
+95 silly gunzTarPerm extractEntry docu.md
+96 silly gunzTarPerm extractEntry git-it-ss.png
+97 silly lockFile 02d4de26-3258-0-32494799653068185-package tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/package
+98 silly lockFile 02d4de26-3258-0-32494799653068185-package tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/package
+99 silly lockFile d9e94b33-3258-0-32494799653068185-tmp-tgz tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/tmp.tgz
+100 silly lockFile d9e94b33-3258-0-32494799653068185-tmp-tgz tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/tmp.tgz
+101 verbose tar pack [ '/Users/Goddess/.npm/git-it/1.2.1/package.tgz',
+101 verbose tar pack   '/var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/package' ]
+102 verbose tarball /Users/Goddess/.npm/git-it/1.2.1/package.tgz
+103 verbose folder /var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/package
+104 silly lockFile 02d4de26-3258-0-32494799653068185-package tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/package
+105 verbose lock tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/package /Users/Goddess/.npm/02d4de26-3258-0-32494799653068185-package.lock
+106 silly lockFile 3186267b-ess-npm-git-it-1-2-1-package-tgz tar:///Users/Goddess/.npm/git-it/1.2.1/package.tgz
+107 verbose lock tar:///Users/Goddess/.npm/git-it/1.2.1/package.tgz /Users/Goddess/.npm/3186267b-ess-npm-git-it-1-2-1-package-tgz.lock
+108 silly lockFile 02d4de26-3258-0-32494799653068185-package tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/package
+109 silly lockFile 02d4de26-3258-0-32494799653068185-package tar:///var/folders/22/3qnv1kh94fxdw6j6qs_5fmh00000gn/T/npm-65792-k4yXqcad/1395970723258-0.32494799653068185/package
+110 silly lockFile 3186267b-ess-npm-git-it-1-2-1-package-tgz tar:///Users/Goddess/.npm/git-it/1.2.1/package.tgz
+111 silly lockFile 3186267b-ess-npm-git-it-1-2-1-package-tgz tar:///Users/Goddess/.npm/git-it/1.2.1/package.tgz
+112 silly lockFile bb3d22e4-Goddess-npm-git-it-1-2-1-package /Users/Goddess/.npm/git-it/1.2.1/package
+113 verbose lock /Users/Goddess/.npm/git-it/1.2.1/package /Users/Goddess/.npm/bb3d22e4-Goddess-npm-git-it-1-2-1-package.lock
+114 silly lockFile bb3d22e4-Goddess-npm-git-it-1-2-1-package /Users/Goddess/.npm/git-it/1.2.1/package
+115 silly lockFile bb3d22e4-Goddess-npm-git-it-1-2-1-package /Users/Goddess/.npm/git-it/1.2.1/package
+116 verbose tar unpack /Users/Goddess/.npm/git-it/1.2.1/package.tgz
+117 silly lockFile 10c6060f-Goddess-npm-git-it-1-2-1-package tar:///Users/Goddess/.npm/git-it/1.2.1/package
+118 verbose lock tar:///Users/Goddess/.npm/git-it/1.2.1/package /Users/Goddess/.npm/10c6060f-Goddess-npm-git-it-1-2-1-package.lock
+119 silly lockFile 3186267b-ess-npm-git-it-1-2-1-package-tgz tar:///Users/Goddess/.npm/git-it/1.2.1/package.tgz
+120 verbose lock tar:///Users/Goddess/.npm/git-it/1.2.1/package.tgz /Users/Goddess/.npm/3186267b-ess-npm-git-it-1-2-1-package-tgz.lock
+121 silly gunzTarPerm modes [ '755', '644' ]
+122 silly gunzTarPerm extractEntry package.json
+123 silly gunzTarPerm extractEntry .npmignore
+124 silly gunzTarPerm extractEntry README.md
+125 silly gunzTarPerm extractEntry LICENSE
+126 silly gunzTarPerm extractEntry git-it.js
+127 silly gunzTarPerm extractEntry ghcc.png
+128 silly gunzTarPerm extractEntry problems/its_a_small_world/setup.js
+129 silly gunzTarPerm extractEntry problems/its_a_small_world/solution.js
+130 silly gunzTarPerm extractEntry problems/its_a_small_world/verify.js
+131 silly gunzTarPerm extractEntry problems/its_a_small_world/problem.txt
+132 silly gunzTarPerm extractEntry problems/branches_arent_just_for_birds/setup.js
+133 silly gunzTarPerm extractEntry problems/branches_arent_just_for_birds/solution.js
+134 silly gunzTarPerm extractEntry problems/branches_arent_just_for_birds/verify.js
+135 silly gunzTarPerm extractEntry problems/branches_arent_just_for_birds/problem.txt
+136 silly gunzTarPerm extractEntry problems/forks_and_clones/setup.js
+137 silly gunzTarPerm extractEntry problems/forks_and_clones/solution.js
+138 silly gunzTarPerm extractEntry problems/forks_and_clones/verify.js
+139 silly gunzTarPerm extractEntry problems/forks_and_clones/problem.txt
+140 silly gunzTarPerm extractEntry problems/get_git/setup.js
+141 silly gunzTarPerm extractEntry problems/get_git/solution.js
+142 silly gunzTarPerm extractEntry problems/get_git/verify.js
+143 silly gunzTarPerm extractEntry problems/get_git/problem.txt
+144 silly gunzTarPerm extractEntry problems/githubbin/setup.js
+145 silly gunzTarPerm extractEntry problems/githubbin/solution.js
+146 silly gunzTarPerm extractEntry problems/githubbin/verify.js
+147 silly gunzTarPerm extractEntry problems/githubbin/problem.txt
+148 silly gunzTarPerm extractEntry problems/commit_to_it/setup.js
+149 silly gunzTarPerm extractEntry problems/commit_to_it/solution.js
+150 silly gunzTarPerm extractEntry problems/commit_to_it/verify.js
+151 silly gunzTarPerm extractEntry problems/commit_to_it/problem.txt
+152 silly gunzTarPerm extractEntry problems/merge_tada/setup.js
+153 silly gunzTarPerm extractEntry problems/merge_tada/solution.js
+154 silly gunzTarPerm extractEntry problems/merge_tada/verify.js
+155 silly gunzTarPerm extractEntry problems/merge_tada/problem.txt
+156 silly gunzTarPerm extractEntry problems/pull_never_out_of_date/setup.js
+157 silly gunzTarPerm extractEntry problems/pull_never_out_of_date/solution.js
+158 silly gunzTarPerm extractEntry problems/pull_never_out_of_date/verify.js
+159 silly gunzTarPerm extractEntry problems/pull_never_out_of_date/problem.txt
+160 silly gunzTarPerm extractEntry problems/remote_control/setup.js
+161 silly gunzTarPerm extractEntry problems/remote_control/solution.js
+162 silly gunzTarPerm extractEntry problems/remote_control/verify.js
+163 silly gunzTarPerm extractEntry problems/remote_control/problem.txt
+164 silly gunzTarPerm extractEntry problems/repository/setup.js
+165 silly gunzTarPerm extractEntry problems/repository/solution.js
+166 silly gunzTarPerm extractEntry problems/repository/verify.js
+167 silly gunzTarPerm extractEntry problems/repository/problem.txt
+168 silly gunzTarPerm extractEntry problems/requesting_you_pull_please/setup.js
+169 silly gunzTarPerm extractEntry problems/requesting_you_pull_please/solution.js
+170 silly gunzTarPerm extractEntry problems/requesting_you_pull_please/verify.js
+171 silly gunzTarPerm extractEntry problems/requesting_you_pull_please/problem.txt
+172 silly gunzTarPerm extractEntry dev-doc.md
+173 silly gunzTarPerm extractEntry help.txt
+174 silly gunzTarPerm extractEntry menu.json
+175 silly gunzTarPerm extractEntry docu.md
+176 silly gunzTarPerm extractEntry git-it-ss.png
+177 silly lockFile 10c6060f-Goddess-npm-git-it-1-2-1-package tar:///Users/Goddess/.npm/git-it/1.2.1/package
+178 silly lockFile 10c6060f-Goddess-npm-git-it-1-2-1-package tar:///Users/Goddess/.npm/git-it/1.2.1/package
+179 silly lockFile 3186267b-ess-npm-git-it-1-2-1-package-tgz tar:///Users/Goddess/.npm/git-it/1.2.1/package.tgz
+180 silly lockFile 3186267b-ess-npm-git-it-1-2-1-package-tgz tar:///Users/Goddess/.npm/git-it/1.2.1/package.tgz
+181 verbose chmod /Users/Goddess/.npm/git-it/1.2.1/package.tgz 644
+182 verbose chown /Users/Goddess/.npm/git-it/1.2.1/package.tgz [ 501, 20 ]
+183 silly lockFile 11f333bd-pmjs-org-git-it-git-it-1-2-1-tgz https://registry.npmjs.org/git-it/-/git-it-1.2.1.tgz
+184 silly lockFile 11f333bd-pmjs-org-git-it-git-it-1-2-1-tgz https://registry.npmjs.org/git-it/-/git-it-1.2.1.tgz
+185 silly lockFile 3be8284b-git-it-1-2-1 git-it@1.2.1
+186 silly lockFile 3be8284b-git-it-1-2-1 git-it@1.2.1
+187 silly lockFile 941e117c-git-it git-it@
+188 silly lockFile 941e117c-git-it git-it@
+189 silly resolved [ { name: 'git-it',
+189 silly resolved     version: '1.2.1',
+189 silly resolved     description: 'Terminal app for learning Git and GitHub',
+189 silly resolved     main: 'index.js',
+189 silly resolved     bin: { 'git-it': './git-it.js' },
+189 silly resolved     scripts: {},
+189 silly resolved     repository: { type: 'git', url: 'https://github.com/jlord/git-it.git' },
+189 silly resolved     author: { name: 'Jessica Lord' },
+189 silly resolved     license: 'BSD-2-Clause',
+189 silly resolved     bugs: { url: 'https://github.com/jlord/git-it/issues' },
+189 silly resolved     dependencies:
+189 silly resolved      { 'concat-stream': '~1.2.1',
+189 silly resolved        'github-oauth': '0.0.4',
+189 silly resolved        request: '~2.30.0',
+189 silly resolved        'workshopper-jlord': '0.0.0' },
+189 silly resolved     readme: '# Git-it\n\n![ss](https://raw2.github.com/jlord/git-it/master/git-it-ss.png) \n\nA [workshopper](https://github.com/rvagg/workshopper) module for learning Git and GitHub - Social coding, y\'all. These modules run a little app in your terminal and users work their way through the challenges. See [nodeschool.io](http://nodeschool.io) for more.\n\n**For developer documentation, see [dev-doc.md](#).**\n\n## Hello, future Forkers, Branchers and Pull Requesters! \n\nThis app runs in your Terminal (Mac) or Bash (Windows) and has challenges for learning Git and GitHub. It uses the _real_ terminal (so you\'ll be learning the awesome command line), it uses _real_ Git and GitHub which means when you finish all of the challenges you\'ll have _real_ repositories on your GitHub account and green squares on your [contribution chart](https://github.com/blog/1360-introducing-contributions).\n\n![contributions](https://raw2.github.com/jlord/git-it/master/ghcc.png)\n\n#### What you\'ll need to run this:\n\n_A few development essentials, all are free and/or free and open source._\n\n- **Git**, this is your tracker of changes! If you\'re on Windows, download the free [GitHub for Windows](http://windows.github.com), which includes Git, and use the Git Shell for your terminal. If you\'re on a Mac you can download [GitHub for Mac](http://mac.github.com) (from Preferences, install the command line tool) or standalone [Git](http://git-scm.com/downloads).\n- **Node.js**, this is what this app is written in so you\'ll need this to run it. It\'s an engine for running JavaScript on servers (your computer is a server!) and will live quietly in the background. You can download it [here](http://nodejs.org/download/) (For most, you can just pick the Windows .msi or Mac .pkg option).\n- **Editor**, if you don\'t have one already, you\'ll need a text editor for editing code. A few options: [Sublime Text](http://www.sublimetext.com/2), [Textmate](http://macromates.com/download), [Brackets](http://brackets.io/).\n\n#### Install Git-it\n\nOnce you have the essentials above, install Git-it. \n\n- Open up a terminal window and install Git-it globally on your computer (so that you can run it from anywhere). [NPM](http://www.npmjs.org) delivers Node.js modules (that\'s what this app is) to your computer from the command line, real easy like (it is included when you install Node.js):\n\n```bash\n$ npm install -g git-it\n```\n- Once it\'s done installing components, you can run it:\n- _If you run into trouble with this command it may be due to permissions on your computer, try adding \'sudo\':_ `sudo npm install -g git-it`\n\n```bash\n$ git-it\n```\n- This should load the menu. You\'re ready to go! \n\n#### How it Works\n\n- Use the arrows to select the first challenge and press \'Enter\'. \n- Read the challenge text, do as it says and when you\'re done type `git-it verify` to see if you\'ve completed the challenge correctly.\n- If the challenge components were not completed correctly, Git-it returns some text to help you know what went wrong.\n- For some challenges you\'ll need to open new terminal windows and then run Git-it inside the window you\'ve just opened. Git-it can run from any  (or mutiple) terminal windows and always saves your completed status. You\'ll need to run it from where you\'re doing your Git work, so it\'s OK to move around like that.\n- Scroll up! When the challenge loads, it scrolls to the bottom. Scroll up to the top of the challenge to not miss steps.\n\n**If you have any questions about something, just create a [new issue](https://github.com/jlord/git-it/issues/new).**\n\n#### Tips\n\n**Code snippets** often times look like `$ some code-stuff --here`. The dollar sign identifies the line as one a user would enter into the the command line, but you don\'t actually include it when you type it into terminal. In this case, you\'d actually just type `some code-stuff --here`.\n\n**Variables** are indicated by `<VARIABLENAME>` in code snippets. When you actually use the line of code, replace it, including the <>, with your variable. For instance to make a new folder in terminal the format is, `mkdir <FOLDERNAME>`, so if you wanted to make a folder named \'octocat\', you\'d type: `mkdir octocat`.\n\n**Command line, terminal, bash** all basically mean the same thing: the MS-DOS, Doogie Howser looking screen full of words and numbers. It\'s awesomely powerful. You can do a lot of things from your terminal like delete, rename, copy or create files and folders; run scripts and send things back and forth between servers (like the ones storing things on GitHub.com) and your computer (also a server!).\n\n\n#### Topics Covered in Git-it\n\n- Basic **command line** such as: cd, mkdir\n- Creating a **local repository**\n- Checking **status**, **adding** and **committing** changes\n- Creating **remote repositories** on GitHub.com\n- **Forking** repositories\n- **Connecting local repositories to remote ones** on GitHub.com\n- **Pushing** and **pulling** to sync changes to GitHub.com\n- Creating **branches** for features/changes\n- Adding and working with a **collaborator** (Hi, @reporobot!)\n- Creating a **pull request**\n- **Merging** and **deleting** branches\n',
+189 silly resolved     readmeFilename: 'README.md',
+189 silly resolved     homepage: 'https://github.com/jlord/git-it',
+189 silly resolved     _id: 'git-it@1.2.1',
+189 silly resolved     dist: { shasum: '05d71057e5fb54895fbc53e89bc4cc77c4e0b6a5' },
+189 silly resolved     _from: 'git-it@',
+189 silly resolved     _resolved: 'https://registry.npmjs.org/git-it/-/git-it-1.2.1.tgz' } ]
+190 info install git-it@1.2.1 into /usr/local/lib
+191 info installOne git-it@1.2.1
+192 info /usr/local/lib/node_modules/git-it unbuild
+193 verbose tar unpack /Users/Goddess/.npm/git-it/1.2.1/package.tgz
+194 silly lockFile 0b912876-sr-local-lib-node-modules-git-it tar:///usr/local/lib/node_modules/git-it
+195 verbose lock tar:///usr/local/lib/node_modules/git-it /Users/Goddess/.npm/0b912876-sr-local-lib-node-modules-git-it.lock
+196 silly lockFile 3186267b-ess-npm-git-it-1-2-1-package-tgz tar:///Users/Goddess/.npm/git-it/1.2.1/package.tgz
+197 verbose lock tar:///Users/Goddess/.npm/git-it/1.2.1/package.tgz /Users/Goddess/.npm/3186267b-ess-npm-git-it-1-2-1-package-tgz.lock
+198 silly gunzTarPerm modes [ '755', '644' ]
+199 error Error: EACCES, mkdir '/usr/local/lib/node_modules/git-it'
+199 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/git-it']
+199 error   errno: 3,
+199 error   code: 'EACCES',
+199 error   path: '/usr/local/lib/node_modules/git-it',
+199 error   fstream_type: 'Directory',
+199 error   fstream_path: '/usr/local/lib/node_modules/git-it',
+199 error   fstream_class: 'DirWriter',
+199 error   fstream_stack:
+199 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+199 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+199 error      'Object.oncomplete (fs.js:107:15)' ] }
+200 error Please try running this command again as root/Administrator.
+201 error System Darwin 13.0.0
+202 error command "node" "/usr/local/bin/npm" "install" "-g" "git-it"
+203 error cwd /Users/Goddess/Google Drive/macbook_pro_goddess/cs/github/rails/portfolio/octopress
+204 error node -v v0.10.26
+205 error npm -v 1.4.3
+206 error path /usr/local/lib/node_modules/git-it
+207 error fstream_path /usr/local/lib/node_modules/git-it
+208 error fstream_type Directory
+209 error fstream_class DirWriter
+210 error code EACCES
+211 error errno 3
+212 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/git-it'
+213 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+213 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+213 error fstream_stack Object.oncomplete (fs.js:107:15)
+214 verbose exit [ 3, true ]

@@ -4,7 +4,7 @@
   <title><![CDATA[Somehow the Bee Flies]]></title>
   <link href="http://psoshnin.github.io/atom.xml" rel="self"/>
   <link href="http://psoshnin.github.io/"/>
-  <updated>2014-03-28T15:11:58-07:00</updated>
+  <updated>2014-04-07T03:00:34-04:00</updated>
   <id>http://psoshnin.github.io/</id>
   <author>
     <name><![CDATA[Polina Soshnin]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A short guide to email spoofing]]></title>
-    <link href="http://psoshnin.github.io/blog/2014/02/19/a-short-guide-to-email-spoofing/"/>
-    <updated>2014-02-19T21:07:53-08:00</updated>
-    <id>http://psoshnin.github.io/blog/2014/02/19/a-short-guide-to-email-spoofing</id>
+    <link href="http://psoshnin.github.io/blog/2014/02/20/a-short-guide-to-email-spoofing/"/>
+    <updated>2014-02-20T00:07:53-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/20/a-short-guide-to-email-spoofing</id>
     <content type="html"><![CDATA[<p>This is a fun trick I learned that uses a few basic networking concepts. I didn&rsquo;t realize how easy it was to send spoof email via command line. Here&rsquo;s how:</p>
 
 <h4>Basic idea:</h4>
@@ -113,7 +113,7 @@ Connection closed by foreign host.
   <entry>
     <title type="html"><![CDATA[Polina on Rails: Week Two]]></title>
     <link href="http://psoshnin.github.io/blog/2014/02/07/week-two/"/>
-    <updated>2014-02-07T10:26:15-08:00</updated>
+    <updated>2014-02-07T13:26:15-05:00</updated>
     <id>http://psoshnin.github.io/blog/2014/02/07/week-two</id>
     <content type="html"><![CDATA[<p>This week I will be talking about making an app that uses Devise for authentication with ActiveRecord and SQLite for a database. I will also be using Test Driven Development (TDD), so I will be including RSpec and Cucumber as well.</p>
 
@@ -171,7 +171,7 @@ $ echo "rails3-devise-rspec-cucumber" &gt; .ruby-gemset
   <entry>
     <title type="html"><![CDATA[Polina on Rails: Week One]]></title>
     <link href="http://psoshnin.github.io/blog/2014/02/01/week-one/"/>
-    <updated>2014-02-01T14:53:20-08:00</updated>
+    <updated>2014-02-01T17:53:20-05:00</updated>
     <id>http://psoshnin.github.io/blog/2014/02/01/week-one</id>
     <content type="html"><![CDATA[<p>Hello and welcome to my blog! I&rsquo;m designing an independent study this semester so I can devote time to learning the ins and outs of Rails. I&rsquo;m using Octopress, a blogging framework built for <a href="http://jekyllrb.com/">Jekyll</a> which is a static site generator that uses Github <a href="http://pages.github.com/">pages</a>. If you&rsquo;re interested in seeing how I set up this blog, see setting up <a href="http://octopress.org/docs/setup/">Octopress</a>. You can also checkout my source code <a href="https://github.com/psoshnin/psoshnin.github.io/tree/source">here</a> if you want to see how I customized my blog.</p>
 

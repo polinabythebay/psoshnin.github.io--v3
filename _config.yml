@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://psoshnin.github.io
-title: Somehow the Bee Flies 
-subtitle: Polina's blog on the internet of things  
+title: polina i/o
+subtitle: a blog on the internet of things  
 author: Polina Soshnin
 simple_search: http://google.com/search
-description: This is Polina's personal blog  
+description: personal blog of Polina Soshnin  
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in

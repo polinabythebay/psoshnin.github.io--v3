@@ -7,19 +7,17 @@ sharing: true
 footer: true
 ---
 
-I'm Polina and this is my blog-in-progress. The title of my blog is inspired from an amusing [TED talk](http://www.ted.com/talks/jonathan_zittrain_the_web_is_a_random_act_of_kindness) on how the internet works.
+I'm Polina and this is my blog-in-progress. 
 
-* Interests & Topics to explore: 
+* Interests & Topics I like to explore: 
 
 	* currency <--> data <--> value 
-	* Improve the quality and usability of information on the Web. Particularly in the following areas: city, gov, education, healthcare.
-	* Truly democratize tech: give everyone, regardless of gender, race, nationality, or socioeconomic background, the encouragement and resources to learn & understand how today's technology works and empower them to use it in new creative ways.
-	* Rethink traditional payment systems.
+	* Improving the quality and usability of information on the Web. 
+	* Rethinking traditional transaction systems.
 	* API design and implementation
-	* cryptocurrencies
+	* Cryptocurrencies
 	* Project Loon
 	* Raspberry Pi
-
 
 If you'd like to get in touch: me [at] polina [dot] io.
 

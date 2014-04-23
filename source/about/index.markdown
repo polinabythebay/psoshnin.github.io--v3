@@ -15,6 +15,7 @@ I'm Polina and this is my blog-in-progress.
 	* Improving the quality and usability of information on the Web. 
 	* Rethinking traditional transaction systems.
 	* API design and implementation
+	* Ruby on Rails
 	* Cryptocurrencies
 	* Project Loon
 	* Raspberry Pi

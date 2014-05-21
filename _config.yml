@@ -3,8 +3,8 @@
 # ----------------------- #
 
 url: http://psoshnin.github.io
-title: polina i/o
-subtitle: a blog on the internet of things  
+title: polina soshnin
+subtitle: personal blog  
 author: Polina Soshnin
 simple_search: http://google.com/search
 description: personal blog of Polina Soshnin  
@@ -62,6 +62,20 @@ default_asides: [ asides/about.html, custom/asides/twitter_widget.html, asides/r
 #   3rd Party Settings    #
 # ----------------------- #
 
+#navigation for octoflat
+navigation:
+- text: Home
+  url: /
+- text: Projects
+  url: /code
+- text: Blog Archive
+  url: /blog/archives
+- text: Syllabus
+  url: /syllabus
+
+
+
+
 # Github repositories
 github_user: psoshnin
 github_repo_count: 0
@@ -71,6 +85,9 @@ github_skip_forks: true
 # Twitter
 twitter_user: 907code
 twitter_tweet_button: false 
+
+#linkedin
+linkedin_user: polinasoshnin
 
 # Google +1
 google_plus_one: false

@@ -1,21 +1,5 @@
-<ul class="main-navigation">
-
-	<li><a href="{{ root_url }}/">Home</a></li>
-
-  	<li><a href="{{ root_url }}/blog">Blog</a></li>
- 
-  	<li><a href="{{ root_url }}/code">Projects</a></li>
- 
-  	<li><a href="{{ root_url }}/about">About</a></li>
-  	
-  	<li><a href="{{ root_url }}/syllabus">Syllabus</a></li>
-  	
-	<!--<li><a href="/tags/">Tags</a></li> -->
-
-  	<li><a href="{{ root_url }}/archives">Archives</a></li>
-
-  	<!--<li><a href="{{ root_url }}/glossary">Glossary</a></li> -->
-  
+<ul class="nav">
+    {% for link in site.navigation %}
+        <li {% if page.url == link.url %}class="active"{% endif %}><a href="{{ link.url }}">{{ link.text }}</a></li>
+    {% endfor %}
 </ul>
-
-

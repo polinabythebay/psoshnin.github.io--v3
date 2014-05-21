@@ -22,12 +22,15 @@ In order to send SMTP commands to a mail server you need to know the host name o
 
 SSH into my linux account:
 
+```
 	$ ssh -Y psoshnin@cs.wellesley.edu
 	psoshnin@cs.wellesley.edu's password:
 	[psoshnin@tempest~] 
+```
 
 Query DNS for the mail servers that deliver mail to wellesley.edu:
 
+```
 	[psoshnin@tempest~] nslookup -type=MX wellesley.edu
 	Server:			149.130.10.16
 	Address:		149.130.10.16#53
@@ -39,19 +42,23 @@ Query DNS for the mail servers that deliver mail to wellesley.edu:
 	wellesley.edu 	mail exchanger = 5 ALT1.ASPMX.L.GOOGLE.COM.
 
 	[psoshnin@tempest~]
+```
 
 From here you can see that Wellesley has 5 different mail servers through Google mail services. We need to pick one of them-- let's pick ALT2.ASPMX.L.GOOGLE.COM. We use telnet to establish the connection and use port 25 because it's a TCP connection:
 
+```
 	[psoshnin@tempest~] telnet ALT2.ASPMX.L.GOOGLE.COM 25
 	Trying 173.194.65.27...
 	Connected to ALT2.ASPMX.L.GOOGLE.COM.
 	Escape character is '^]'.
 	220 mx.google.com ESMTP u6si42550271een.213 -gsmtp
+```
 
 ####Step two: Use SMTP commands to send an email
 
 Yay we're connected! Now here's where the fun begins. Let's enter in some commands to send a message. A basic message for SMTP needs the following:
 
+```
 	MAIL FROM: Sender <sending@email.address>
 	RCPT TO: Receiver <receiving@email.address>
 	DATA
@@ -61,9 +68,11 @@ Yay we're connected! Now here's where the fun begins. Let's enter in some comman
 	Body of email
 	.
 	QUIT
+```
 
 Note that there's a period [.] at the end. You will need that. Let's try this!
 
+```
 	[psoshnin@tempest~] telnet ALT2.ASPMX.L.GOOGLE.COM 25
 	Trying 173.194.65.27...
 	Connected to ALT2.ASPMX.L.GOOGLE.COM.
@@ -88,8 +97,9 @@ Note that there's a period [.] at the end. You will need that. Let's try this!
 	221 2.0.0 closing connection u6si42550271een.213 -gsmtp
 	Connection closed by foreign host.
 	[psoshnin@tempest~] 
+```
 
-Didn't think you could get email from god? Let's check my inbox:
+
 
 
 

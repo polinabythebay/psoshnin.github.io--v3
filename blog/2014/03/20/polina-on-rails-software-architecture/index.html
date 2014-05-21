@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Polina on Rails: Week One - polina on rails</title>
+  <title>software architecture primer - polina on rails</title>
   <meta name="author" content="Polina Soshnin">
 
    
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://psoshnin.github.io/blog/2014/02/01/week-one">
+  <link rel="canonical" href="http://psoshnin.github.io/blog/2014/03/20/polina-on-rails-software-architecture">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -89,7 +89,7 @@
 
   <header>
   <div class="jumbotron">
-    Polina on Rails: Week One
+    Software Architecture Primer
 	<h5>
 
 
@@ -102,40 +102,59 @@
   
 
 
-<i class="icon-calendar-empty"></i> <time datetime="2014-02-01T17:53:20-05:00" pubdate data-updated="true">Feb 1<span>st</span>, 2014</time></h5>
+<i class="icon-calendar-empty"></i> <time datetime="2014-03-20T22:45:56-04:00" pubdate data-updated="true">Mar 20<span>th</span>, 2014</time></h5>
   </div>
 </header>
   <div class="row-fluid">
     <div class="span12">
-      <p>Hello and welcome to my blog! I&rsquo;m designing an independent study this semester so I can devote time to learning the ins and outs of Rails. I&rsquo;m using Octopress, a blogging framework built for <a href="http://jekyllrb.com/">Jekyll</a> which is a static site generator that uses Github <a href="http://pages.github.com/">pages</a>. If you&rsquo;re interested in seeing how I set up this blog, see setting up <a href="http://octopress.org/docs/setup/">Octopress</a>. You can also checkout my source code <a href="https://github.com/psoshnin/psoshnin.github.io/tree/source">here</a> if you want to see how I customized my blog.</p>
+      <p>Software Architecture</p>
 
-<p>To see what fun things I&rsquo;m going to be up to, go to the <a href="http://polina.io/syllabus/">Syllabus</a> tab.</p>
+<p>Stack Overflow architectures:
+<a href="http://www.dev-metal.com/architecture-stackoverflow/">http://www.dev-metal.com/architecture-stackoverflow/</a></p>
 
-<p>To see what fun projects I&rsquo;ll be working on, I will be designating all of my Github repos with the following naming convention: cs350-week-number-projectname. I&rsquo;ll also be posting notable ones in the <a href="http://polina.io/code/">Code</a> tab.</p>
+<p>Three main concepts:</p>
 
-<p>I&rsquo;m currently based in Boston, so if you&rsquo;re also really excited about learning Rails and want to meet up/learn more feel free to get in touch: me[at]polina[dot]io.</p>
+<pre><code> Stakeholders
 
-<p>Shortcut to creating posts on octopress:</p>
+ Viewpoints
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rake new_post["title"]
-</span><span class='line'>$ rake new_page[super-awesome]
-</span><span class='line'>$ rake new_page[super-awesome/page.html]
-</span><span class='line'>
-</span><span class='line'>$ rake generate
-</span><span class='line'>$ rake deploy
-</span><span class='line'>$ rake watch
-</span><span class='line'>$ rake preview</span></code></pre></td></tr></table></div></figure>
+ Perspectives
+</code></pre>
 
+<p>Sketch functional structure of system</p>
 
+<pre><code> Start grouping components into processes- where processes will run in data center
+ Operations group-- system management components
+ Data-- adds main data stores and annotates data flows between key components
 
+ Problems:
+      The developers are distracted by operational components; servers, disk arrays
+      Worry about the way the app will be deployed to data center
+      IT people like the system management software but keep asking questions about the data flows
+</code></pre>
+
+<p>Consider the system&rsquo;s architecture through a number of distinct views</p>
+
+<pre><code> Communicate a system in a partitioned fashion
+ ex Functional Structure, Information organization, Deployment environment
+ Still problem: which views to use and how to create each one
+      Solution: use template views (architectural viewpoints)
+                Guide to process of developing views that describe architecture
+</code></pre>
+
+<p>Two main questions to answer;
+1. what a system does?
+2. How does it provide its services</p>
+
+<pre><code> How quickly it runs, how secure it is, how available it is, how easy is it to modify, many different nonfunctional factors--&gt; quality properties
+</code></pre>
+
+<p>Quality properties&mdash;> cross-cutting concerns</p>
+
+<p>Achieving your quality goals affects all of your different template views</p>
+
+<p>Architectural viewpoint&mdash; addresses the needs and views of stakeholders
+Architectural perspective&mdash; addresses performance, security, availability</p>
 
     </div>
   </div>
@@ -151,14 +170,6 @@
         <p class="meta">
         
         
-
-
-
-  <a href="/blog/categories/rails/"><span class="badge">Rails</span></a>
-
-  <a href="/blog/categories/ruby/"><span class="badge">Ruby</span></a>
-
-
 
 
         </p>
@@ -184,8 +195,10 @@
       <div class="span12">
         <p class="meta">
           
+            <a class="basic-alignment left" href="/blog/2014/03/15/polina-on-rails-of-a-poet-and-a-computer-scientist/" title="Previous Post: Poets and Computer Scientists">&laquo; Poets and Computer Scientists</a>
           
-            <a class="basic-alignment right" href="/blog/2014/02/07/polina-on-rails-devise-and-cancan/" title="Next Post: Devise and CanCan">Devise and CanCan &raquo;</a>
+          
+            <a class="basic-alignment right" href="/blog/2014/03/26/polina-on-rails-javascript-roulette/" title="Next Post: Javascript Roulette">Javascript Roulette &raquo;</a>
           
         </p>
       </div>

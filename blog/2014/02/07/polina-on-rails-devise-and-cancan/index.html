@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Polina on Rails: Week Two - polina soshnin</title>
+  <title>Devise and CanCan - polina on rails</title>
   <meta name="author" content="Polina Soshnin">
 
    
@@ -19,12 +19,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://psoshnin.github.io/blog/2014/02/07/week-two">
+  <link rel="canonical" href="http://psoshnin.github.io/blog/2014/02/07/polina-on-rails-devise-and-cancan">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="polina soshnin" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="polina on rails" type="application/atom+xml">
   <script src="/js/jquery.js"></script>
   <script src="/js/bootstrap-collapse.js"></script>
   <script src="/js/modernizr-2.0.js"></script>
@@ -89,7 +89,7 @@
 
   <header>
   <div class="jumbotron">
-    Polina on Rails: Week Two
+    Devise and CanCan
 	<h5>
 
 
@@ -109,53 +109,58 @@
     <div class="span12">
       <p>This week I will be talking about making an app that uses Devise for authentication with ActiveRecord and SQLite for a database. I will also be using Test Driven Development (TDD), so I will be including RSpec and Cucumber as well.</p>
 
-<h4>Background:</h4>
+<h2>Background:</h2>
 
-<p>Devise is a ready made authentication and user managment gem. RSpec is a popular framework for unit testing and Cucumber is used for integration testing and Behavior Driven Development (BDD). This combination of basic gems is the foundation for lots of real-world Rails applications, which is why I&rsquo;m starting with them. Professional grade applications use TDD and BDD methodologies so I hope as I continue my study of Rails I can incorporate them into my applications and they will be become second nature (hopefully).</p>
-
-<p>The basic function of Devise is to let you sign up a new user and create an account for them to store in your database. Devise will also require a visitor to login before allowing access to an application. RSpec lets you test your code so it won&rsquo;t break after you ship it. Cucumber lets you figure out if the app&rsquo;s specs work as expected. It will test the app from the point of view of the user.</p>
+<p>Devise is a ready made authentication and user managment gem. RSpec is a popular framework for unit testing and Cucumber is used for integration testing and Behavior Driven Development (BDD). This combination of basic gems is the foundation for lots of real-world Rails applications, which is why I&rsquo;m starting with them. Professional grade applications use TDD and BDD methodologies so I hope as I continue my study of Rails I can incorporate them into my applications and they will be become second nature (hopefully).
+The basic function of Devise is to let you sign up a new user and create an account for them to store in your database. Devise will also require a visitor to login before allowing access to an application. RSpec lets you test your code so it won&rsquo;t break after you ship it. Cucumber lets you figure out if the app&rsquo;s specs work as expected. It will test the app from the point of view of the user.</p>
 
 <p>Tips and Tricks I learned this week:</p>
 
 <p>How to create a specific gemset:</p>
 
-<pre><code>$ rvm use ruby-2.0.0@rails3-devise-rspec-cucumber --create
-$ gem install rails
-</code></pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm use ruby-2.0.0@rails3-devise-rspec-cucumber --create
+</span><span class='line'>$ gem install rails</span></code></pre></td></tr></table></div></figure>
+
 
 <p>This is very helpful. It will automatically put you in the gemset that belongs to that project.</p>
 
-<pre><code>$ echo "ruby-2.0.0" &gt; .ruby-version
-$ echo "rails3-devise-rspec-cucumber" &gt; .ruby-gemset
-</code></pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ echo "ruby-2.0.0" &gt; .ruby-version
+</span><span class='line'>$ echo "rails3-devise-rspec-cucumber" &gt; .ruby-gemset</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Let me stress that Devise provides <em>authentication</em>. This makes sure that the app securely identifies users and makes sure the user is really who they are. Devise also provides user management and implements features to let the user sign up to create/edit an account.</p>
 
 <p>Devise does not provide <em>authorization</em>. Authorization determines if an authenticated user should have access to the secured resources. Once you&rsquo;ve authenticated a user, you can use CanCan to limit access to users to certain types of content on your site.</p>
 
-<p>CanCan is the most popular gem for authorization. I&rsquo;m not using it in this application, but I will be using it soon! Check out Week Four for my application using CanCan.</p>
+<p>CanCan is a popular gem for authorization.</p>
 
 <p>Related apps I&rsquo;ve made:</p>
 
 <ul>
 <li><p>An app that uses Devise for authentication with a MongoDB datastore</p>
 
-<p>  Install Mongo on your computer-> most popular NoSQL db
-  Use -T and -O to skip Test::Unit and Active::Record files</p>
-
-<p>  Use cucumber-rails generator to set up files needed for cucumber
-  $ rails generate cucumber:install &mdash;capybara &mdash;rspec &mdash;skip-database</p>
-
-<p>  &mdash;capybara specifies Capybara instead of default Webrat for acceptance testing
-  &mdash;rspec enables RSpec matchers for your step definitions
-  if you used -o flag, the &mdash;skip-database option allows Cucumber generator to go without a database.ymp file</p>
-
-<p>  Need a db cleaner to reset your app db for testing</p>
-
-<p>  Check how many instances of mongo are running: ps -ax | grep mongo</p></li>
-<li><p>OmniAuth for authentication with a MongoDB datastore</p></li>
-<li>Basecamp-style subdomains with Devise and MongoDB</li>
+<ul>
+<li>Install Mongo on your computer-> most popular NoSQL db</li>
+<li>Use -T and -O to skip Test::Unit and Active::Record files</li>
+<li>Use cucumber-rails generator to set up files needed for cucumber</li>
+<li>Capybara specifies Capybara instead of default Webrat for acceptance testing</li>
+<li>rspec enables RSpec matchers for your step definitions</li>
+<li>if you used -o flag, the &mdash;skip-database option allows Cucumber generator to go without a database.ymp file</li>
+<li>Need a db cleaner to reset your app db for testing</li>
+<li>Check how many instances of mongo are running: ps -ax | grep mongo</li>
 </ul>
+</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rails generate cucumber:install --capybara --rspec --skip-database</span></code></pre></td></tr></table></div></figure>
+
+
 
 
     </div>
@@ -217,8 +222,8 @@ $ echo "rails3-devise-rspec-cucumber" &gt; .ruby-gemset
       <div class="row-fluid">
         <footer class="footer-page" role="contentinfo">
           <p>
-  Copyright &copy; 2014 - Polina Soshnin -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> - Theme by <a href="http://alexgaribay.com">Alex Garibay</a>
+  &copy; 2014 - Made with &#x2661; by Polina -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> 
 </p>
 
 

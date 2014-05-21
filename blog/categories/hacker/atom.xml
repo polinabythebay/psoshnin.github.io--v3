@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: hacker | polina on rails]]></title>
+  <link href="http://psoshnin.github.io/blog/categories/hacker/atom.xml" rel="self"/>
+  <link href="http://psoshnin.github.io/"/>
+  <updated>2014-05-20T23:35:09-04:00</updated>
+  <id>http://psoshnin.github.io/</id>
+  <author>
+    <name><![CDATA[Polina Soshnin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[On being a female hacker]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/05/12/polina-on-rails-on-being-a-female-hacker/"/>
+    <updated>2014-05-12T23:15:37-04:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/05/12/polina-on-rails-on-being-a-female-hacker</id>
+    <content type="html"><![CDATA[<p>What are hackers like? Why are there so few women hackers?</p>
+
+<p>Hackdom is an abstract, and at first a bit mysterious-seeming gateway to a whole world with an intricate logic of its own.</p>
+
+<p>Hackers build things.</p>
+
+<p>Hackers solve problems and build things, and they believe in freedom and voluntary mutual help.</p>
+
+<p>The world is full of fascinating problems waiting to be solved. Hackers get a thrill from solving problems, sharpening their skills, and exercising their intelligence.</p>
+
+<h3>What hackers believe</h3>
+
+<p>Hackers hold the belief that even though you may not know all of what you need to solve a problem, if you tackle a piece of it and learn from that, you&rsquo;ll learn enough to solve the next piece.</p>
+
+<p>No problem should ever have to be solved twice.</p>
+
+<p>It&rsquo;s a moral duty for you to share information, solve problems, and then give solutions away just so other hackers can solve new problems instead of having to perpetually re-address old ones. Following that line of thought, hackers believe there shouldn&rsquo;t be legal, artificial technical, or institutional barriers to sharing information and solving problems.</p>
+
+<p>It&rsquo;s justified to use your hacking skills to support a family or even to get rich, but you don&rsquo;t forget your loyalty to your art and your fellow hackers while doing it.</p>
+
+<h3>Freedom is good</h3>
+
+<p>Hackers are naturally anti-authoritarian</p>
+
+<p>If you revere competence, you&rsquo;ll enjoy developing it in yourself and the hard work and long hours and dedication will seem worth it.</p>
+
+<p>Hackerdom is culture with no money economy &mdash; I find this interesting</p>
+
+<p>It runs on reputation. You can &ldquo;earn&rdquo; reputation bagdes through sites like StackOverFlow or HackerRank or by just getting known in the community through contributions on GitHub and the like. In doing so you try to solve interesting problems but ego or external validation aren&rsquo;t the goals here. You become respected by hackers by writing open source software that other hackers will think are fun and/or useful. Contributions work the same way: helping test and debug open source software will achieve similar goals. (This will also generate good karma :)</p>
+
+<p>Hackerdom is a gift culture: you don&rsquo;t achieve status and reputation by dominating others, or being superficially beautiful, or making other people jealous. You achieve status by giving away your time, creativity, and skill.</p>
+
+<p>Hackerdom doesn&rsquo;t have charismatic leaders&mdash; instead it has heroes and elders and historians.</p>
+
+<p>How to fit into this culture?
+Learn to write very well and understand how to effectively convey ideas. Understand how to exert mental discipline and a relaxed awareness of control &mdash; training in the martial arts is one way of doing this. I think many different types of disciplines can apply here.</p>
+
+<h3>Skills to have</h3>
+
+<p>It&rsquo;s best to learn the hacker five: Python, C/C++, Java, Perl, Lisp. These are the most important hacking languages and they all represent different approached to programming and will educate you in different ways.</p>
+
+<p>Learn C and Lisp (Scheme), then Java. C is very efficient of your machine&rsquo;s resources, but it requires you to do a lot of low-level management of memory by hand. Low level code tends to get complex and error prone. Python uses your machine&rsquo;s time less efficiently, but it uses your time more efficiently.</p>
+
+<p>Perl is worth learning because it&rsquo;s widely used in web pages and sysadmin. A lot of people use Perl to avoid C programming.</p>
+
+<p>Learning to program is like learning to write well in your natural language. The best way to do this is to read stuff written by the masters, write some things yourself, read a lot more, write a little more, until your code starts to look like the masters.</p>
+
+<p>Get open-source Unix/Linux and learn how to use and run it. I feel like if you went the mac route and learned how to use linux/unix commands that would work as well.</p>
+
+<p>Unix&mdash; operating system of the internet. You can&rsquo;t be a hacker without understanding unix.</p>
+]]></content>
+  </entry>
+  
+</feed>

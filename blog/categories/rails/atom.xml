@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rails | polina on rails]]></title>
+  <link href="http://psoshnin.github.io/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://psoshnin.github.io/"/>
+  <updated>2014-05-20T23:35:09-04:00</updated>
+  <id>http://psoshnin.github.io/</id>
+  <author>
+    <name><![CDATA[Polina Soshnin]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Polina on Rails: Week One]]></title>
+    <link href="http://psoshnin.github.io/blog/2014/02/01/week-one/"/>
+    <updated>2014-02-01T17:53:20-05:00</updated>
+    <id>http://psoshnin.github.io/blog/2014/02/01/week-one</id>
+    <content type="html"><![CDATA[<p>Hello and welcome to my blog! I&rsquo;m designing an independent study this semester so I can devote time to learning the ins and outs of Rails. I&rsquo;m using Octopress, a blogging framework built for <a href="http://jekyllrb.com/">Jekyll</a> which is a static site generator that uses Github <a href="http://pages.github.com/">pages</a>. If you&rsquo;re interested in seeing how I set up this blog, see setting up <a href="http://octopress.org/docs/setup/">Octopress</a>. You can also checkout my source code <a href="https://github.com/psoshnin/psoshnin.github.io/tree/source">here</a> if you want to see how I customized my blog.</p>
+
+<p>To see what fun things I&rsquo;m going to be up to, go to the <a href="http://polina.io/syllabus/">Syllabus</a> tab.</p>
+
+<p>To see what fun projects I&rsquo;ll be working on, I will be designating all of my Github repos with the following naming convention: cs350-week-number-projectname. I&rsquo;ll also be posting notable ones in the <a href="http://polina.io/code/">Code</a> tab.</p>
+
+<p>I&rsquo;m currently based in Boston, so if you&rsquo;re also really excited about learning Rails and want to meet up/learn more feel free to get in touch: me[at]polina[dot]io.</p>
+
+<p>Shortcut to creating posts on octopress:</p>
+
+<p>```
+$ rake new_post[&ldquo;title&rdquo;]
+$ rake new_page[super-awesome]
+$ rake new_page[super-awesome/page.html]</p>
+
+<p>$ rake generate
+$ rake deploy
+$ rake watch
+$ rake preview
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,91 +1,424 @@
 
-
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-<title>Polina Soshnin</title>
+  <meta charset="utf-8">
+  <title>polina soshnin</title>
+  <meta name="author" content="Polina Soshnin">
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-<link href='http://fonts.googleapis.com/css?family=Raleway+Dots' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="index.css">
+   
+  <meta name="description" content="personal blog of Polina Soshnin">
+  
+  <meta name="keywords" content="">
 
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+  
+  <link rel="canonical" href="http://psoshnin.github.io">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="polina soshnin" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <script src="/js/application.js"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
 
 </head>
 
-<body>
+<body   >
+  <div class="navbar navbar-inverse navbar-static-top">
+  	<div class="navbar-inner">
+  	  <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+  	  	<div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+  	      <ul class="nav">
+    
+        <li ><a href="/">Home</a></li>
+    
+        <li ><a href="/code">Code</a></li>
+    
+        <li ><a href="/blog/archives">Blog Archive</a></li>
+    
+        <li ><a href="/syllabus">Syllabus</a></li>
+    
+</ul>
 
-<script>
-var height = document.body.clientHeight || screen.availHeight;
-var width = document.body.clientWidth || screen.availWidth;
-height -= 150;
+<ul class="nav pull-right">
+    
+    <li><a href="http://github.com/psoshnin" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="http://linkedin.com/in/polinasoshnin" title="Linkedin Profile"><i class="icon-linkedin-sign social-navbar"></i></a></li>
+    
+    
+    <li><a href="http://twitter.com/907code" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    
+    
+    
+    
 
-if (width < 800) {
-width = 800;
-}
+    
+</ul>
 
-var canvas = d3.select("body").append("svg")
-.attr("width", width)
-.attr("height", height)
-.append("g")
-.attr("transform", "translate(50, 50)");
-
-var tree = d3.layout.tree()
-.size([height-100, width-350]);
-
-d3.json("aboutme.json", function (data) {
-
-var nodes = tree.nodes(data);
-var links = tree.links(nodes);
-
-var diagonal = d3.svg.diagonal()
-.projection(function (d) {
-return [d.y, d.x];
-});
-
-canvas.selectAll(".link")
-.data(links)
-.enter()
-.append("path")
-.attr("class", "link")
-.attr("fill", "none")
-.attr("stroke", "#ADADAD")
-.attr("d", diagonal);
-
-var node = canvas.selectAll(".node")
-.data(nodes)
-.enter()
-.append("g")
-.attr("class", "node")
-.attr("transform", function(d) {
-return "translate(" + d.y + "," + d.x + ")";
-});
-
-node.append("circle")
-.attr("r", 5)
-.attr("fill", "orangered");
-
-node.append("text")
-.text(function (d) {
-return d.word;
-});
-});
-</script>
+  	    </div>
+  	  </div>
+  	</div>
+  </div>
+  <div class="container" id="main">
+      <div class="row-fluid">
+        <div id="content">
+          <div class="jumbotron">
+  <div class="container">
+    
+      polina soshnin
+    
+    <h3 class="tagline">
+      
+        aspiring rubyist, pythonista
+      
+    </h3>
+  </div>
+</div>
 
 
-<footer>
-<a href="http://polina.io/blog/" title="Blog"><img src="images/blogwhite.png"/></a>
-<!--a href="mailto:me@polina.io" title="Gmail"><img src="images/gmail.png"/></a-->
-<a href="http://www.linkedin.com/in/polinasoshnin" title="LinkedIn"><img src="images/linkedin.png"/></a>
-<a href="https://github.com/psoshnin" title="Github"><img src="images/github01.png"/></a>
-<a href="https://twitter.com/907code" title="Twitter"><img src="images/twitter.png"/></a>
-<!--a href="https://www.taskrabbit.com/profile/polina-s--2" title="TaskRabbit"><img src="images/taskrabbit.jpg"/></a-->
-</footer>
+<div class="blog-index">
+  
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2014-02-20T00:07:53-05:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/02/20/a-short-guide-to-email-spoofing/">A short guide to email spoofing</a></h1>
+      <p>This is a fun trick I learned that uses a few basic networking concepts. I didn&rsquo;t realize how easy it was to send spoof email via command line. Here&rsquo;s how:</p>
+
+<h4>Basic idea:</h4>
+
+<p>Establish a TCP connection to a mail server and use SMTP commands to send email from &ldquo;anyone&rdquo; to &ldquo;anyone&rdquo;. :) You&rsquo;ll see what I mean.</p>
+
+<h4>Concepts:</h4>
+
+<p>TCP, or the Transmission Control Protocol, is a transport layer protocol used for establishing logical communication between applications and different hosts that are not physically connected to one another. Applications can be ones running on your computer (a local host) or the internet (Gmail for example). In this case, I am using TCP to establish a connection from my linux account on a college server to a google mail server. SMTP is the Simple Mail Transfer Protocol that is the de facto standard for sending email across the internet. It&rsquo;s been around since 1982 and is very minimal&mdash; to this day it will only support 7 bit ASCII characters, which amuses me when I think of multimedia email attachments these days. In this example I&rsquo;m going to use telnet to manually send mail through an SMTP mail server.</p>
+
+<h4>Step 1: Establish a TCP Connection</h4>
+
+<p>In order to send SMTP commands to a mail server you need to know the host name of the mail server for your domain. My domain is wellesley.edu, so I&rsquo;m going to first query the DNS for the MX record that holds information about my mail domain.</p>
+
+<p>SSH into my linux account:</p>
+
+<pre><code>$ ssh -Y psoshnin@cs.wellesley.edu
+psoshnin@cs.wellesley.edu's password:
+[psoshnin@tempest~] 
+</code></pre>
+
+<p>Query DNS for the mail servers that deliver mail to wellesley.edu:</p>
+
+<pre><code>[psoshnin@tempest~] nslookup -type=MX wellesley.edu
+Server:         149.130.10.16
+Address:        149.130.10.16#53
+
+wellesley.edu   mail exchanger = 5 ALT2.ASPMX.L.GOOGLE.COM.
+wellesley.edu   mail exchanger = 10 ASPMX2.GOOGLEMAIL.COM.
+wellesley.edu   mail exchanger = 10 ASPMX3.GOOGLEMAIL.COM.
+wellesley.edu   mail exchanger = 1 ASPMX.L.GOOGLE.COM.
+wellesley.edu   mail exchanger = 5 ALT1.ASPMX.L.GOOGLE.COM.
+
+[psoshnin@tempest~]
+</code></pre>
+
+<p>From here you can see that Wellesley has 5 different mail servers through Google mail services. We need to pick one of them&mdash; let&rsquo;s pick ALT2.ASPMX.L.GOOGLE.COM. We use telnet to establish the connection and use port 25 because it&rsquo;s a TCP connection:</p>
+
+<pre><code>[psoshnin@tempest~] telnet ALT2.ASPMX.L.GOOGLE.COM 25
+Trying 173.194.65.27...
+Connected to ALT2.ASPMX.L.GOOGLE.COM.
+Escape character is '^]'.
+220 mx.google.com ESMTP u6si42550271een.213 -gsmtp
+</code></pre>
+
+<h4>Step two: Use SMTP commands to send an email</h4>
+
+<p>Yay we&rsquo;re connected! Now here&rsquo;s where the fun begins. Let&rsquo;s enter in some commands to send a message. A basic message for SMTP needs the following:</p>
+
+<pre><code>MAIL FROM: Sender &lt;sending@email.address&gt;
+RCPT TO: Receiver &lt;receiving@email.address&gt;
+DATA
+FROM: &lt;from@an.address&gt;
+T0: &lt;to@an.address&gt;
+SUBJECT: email subject
+Body of email
+.
+QUIT
+</code></pre>
+
+<p>Note that there&rsquo;s a period [.] at the end. You will need that. Let&rsquo;s try this!</p>
+
+<pre><code>[psoshnin@tempest~] telnet ALT2.ASPMX.L.GOOGLE.COM 25
+Trying 173.194.65.27...
+Connected to ALT2.ASPMX.L.GOOGLE.COM.
+Escape character is '^]'.
+220 mx.google.com ESMTP u6si42550271een.213 -gsmtp
+HELO psoshnin@wellesley.edu
+250 mx.google.com at your service
+MAIL FROM: &lt;god@heaven.onearth&gt;
+250 2.1.0 OK u6si4550271een.213 -gsmtp
+RCPT TO: &lt;me@polina.io&gt;
+250 2.1.0 OK u6si42250271een.213 -gsmtp
+DATA
+350 Go ahead u6si42550271een.213 -gsmtp
+FROM: God &lt;god@heaven.onearth&gt;
+TO: Earthling &lt;why@hello.earthling&gt;
+SUBJECT: Hello world!
+Hello world! I should visit more.
+-God
+.
+250 2.0.0 OK 1392756346 u6si42550271een.213 -gsmtp
+QUIT
+221 2.0.0 closing connection u6si42550271een.213 -gsmtp
+Connection closed by foreign host.
+[psoshnin@tempest~] 
+</code></pre>
+
+<p>Didn&rsquo;t think you could get email from god? Let&rsquo;s check my inbox:</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2014-02-07T13:26:15-05:00" pubdate data-updated="true">Feb 7<span>th</span>, 2014</time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/02/07/week-two/">Polina on Rails: Week Two</a></h1>
+      <p>This week I will be talking about making an app that uses Devise for authentication with ActiveRecord and SQLite for a database. I will also be using Test Driven Development (TDD), so I will be including RSpec and Cucumber as well.</p>
+
+<h4>Background:</h4>
+
+<p>Devise is a ready made authentication and user managment gem. RSpec is a popular framework for unit testing and Cucumber is used for integration testing and Behavior Driven Development (BDD). This combination of basic gems is the foundation for lots of real-world Rails applications, which is why I&rsquo;m starting with them. Professional grade applications use TDD and BDD methodologies so I hope as I continue my study of Rails I can incorporate them into my applications and they will be become second nature (hopefully).</p>
+
+<p>The basic function of Devise is to let you sign up a new user and create an account for them to store in your database. Devise will also require a visitor to login before allowing access to an application. RSpec lets you test your code so it won&rsquo;t break after you ship it. Cucumber lets you figure out if the app&rsquo;s specs work as expected. It will test the app from the point of view of the user.</p>
+
+<p>Tips and Tricks I learned this week:</p>
+
+<p>How to create a specific gemset:</p>
+
+<pre><code>$ rvm use ruby-2.0.0@rails3-devise-rspec-cucumber --create
+$ gem install rails
+</code></pre>
+
+<p>This is very helpful. It will automatically put you in the gemset that belongs to that project.</p>
+
+<pre><code>$ echo "ruby-2.0.0" &gt; .ruby-version
+$ echo "rails3-devise-rspec-cucumber" &gt; .ruby-gemset
+</code></pre>
+
+<p>Let me stress that Devise provides <em>authentication</em>. This makes sure that the app securely identifies users and makes sure the user is really who they are. Devise also provides user management and implements features to let the user sign up to create/edit an account.</p>
+
+<p>Devise does not provide <em>authorization</em>. Authorization determines if an authenticated user should have access to the secured resources. Once you&rsquo;ve authenticated a user, you can use CanCan to limit access to users to certain types of content on your site.</p>
+
+<p>CanCan is the most popular gem for authorization. I&rsquo;m not using it in this application, but I will be using it soon! Check out Week Four for my application using CanCan.</p>
+
+<p>Related apps I&rsquo;ve made:</p>
+
+<ul>
+<li><p>An app that uses Devise for authentication with a MongoDB datastore</p>
+
+<p>  Install Mongo on your computer-> most popular NoSQL db
+  Use -T and -O to skip Test::Unit and Active::Record files</p>
+
+<p>  Use cucumber-rails generator to set up files needed for cucumber
+  $ rails generate cucumber:install &mdash;capybara &mdash;rspec &mdash;skip-database</p>
+
+<p>  &mdash;capybara specifies Capybara instead of default Webrat for acceptance testing
+  &mdash;rspec enables RSpec matchers for your step definitions
+  if you used -o flag, the &mdash;skip-database option allows Cucumber generator to go without a database.ymp file</p>
+
+<p>  Need a db cleaner to reset your app db for testing</p>
+
+<p>  Check how many instances of mongo are running: ps -ax | grep mongo</p></li>
+<li><p>OmniAuth for authentication with a MongoDB datastore</p></li>
+<li>Basecamp-style subdomains with Devise and MongoDB</li>
+</ul>
+
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2014-02-01T17:53:20-05:00" pubdate data-updated="true">Feb 1<span>st</span>, 2014</time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/02/01/week-one/">Polina on Rails: Week One</a></h1>
+      <p>Hello and welcome to my blog! I&rsquo;m designing an independent study this semester so I can devote time to learning the ins and outs of Rails. I&rsquo;m using Octopress, a blogging framework built for <a href="http://jekyllrb.com/">Jekyll</a> which is a static site generator that uses Github <a href="http://pages.github.com/">pages</a>. If you&rsquo;re interested in seeing how I set up this blog, see setting up <a href="http://octopress.org/docs/setup/">Octopress</a>. You can also checkout my source code <a href="https://github.com/psoshnin/psoshnin.github.io/tree/source">here</a> if you want to see how I customized my blog.</p>
+
+<p>To see what fun things I&rsquo;m going to be up to, go to the <a href="http://polina.io/syllabus/">Syllabus</a> tab.</p>
+
+<p>To see what fun projects I&rsquo;ll be working on, I will be designating all of my Github repos with the following naming convention: cs350-week-number-projectname. I&rsquo;ll also be posting notable ones in the <a href="http://polina.io/code/">Code</a> tab.</p>
+
+<p>I&rsquo;m currently based in Boston, so if you&rsquo;re also really excited about learning Rails and want to meet up/learn more feel free to get in touch: me[at]polina[dot]io.</p>
+
+<p>Shortcut to creating posts on octopress:</p>
+
+<pre><code>rake new_post["title"]
+rake new_page[super-awesome]
+rake new_page[super-awesome/page.html]
+
+rake generate
+rake deploy
+rake watch
+rake preview
+</code></pre>
+
+<p>Difference between rake watch and rake preview?</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+  
+  <div class="pagination">
+    
+
+    
+  </div>
+</div>
+
+
+        </div>
+      </div>
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <p>
+  Copyright &copy; 2014 - Polina Soshnin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> - Theme by <a href="http://alexgaribay.com">Alex Garibay</a>
+</p>
+
+
+        </footer>
+      </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
 </body>
-
 </html>

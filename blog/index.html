@@ -5,12 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>polina i/o</title>
+  <title>polina soshnin</title>
   <meta name="author" content="Polina Soshnin">
 
+   
+  <meta name="description" content="personal blog of Polina Soshnin">
   
-  <meta name="description" content="This is a fun trick I learned that uses a few basic networking concepts. I didn&rsquo;t realize how easy it was to send spoof email via command line &hellip;">
-  
+  <meta name="keywords" content="">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -18,105 +19,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://psoshnin.github.io/blog/">
+  <link rel="canonical" href="http://psoshnin.github.io/blog">
   <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="polina i/o" type="application/atom+xml">
+  <link href="/atom.xml" rel="alternate" title="polina soshnin" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <script src="/js/application.js"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-
-	
-
-<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-
-<!--<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css"-->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
 
 </head>
 
 <body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">polina i/o</a></h1>
-  
-    <h2>a blog on the internet of things</h2>
-  
-
-
-
-<!-- Image Map  
-
-<div class="imgmap_css_container" id="imgmap2014227154933">
-
-
-<a style="position: absolute; top: 2px; left: 20px; width: 100px; height: 30px;"  alt="image-map-octopress" title="image-map-octopress" href="http://octopress.org/" target="" ></a>
-
-<a style="position: absolute; top: 2px; left: 180px; width: 116px; height: 30px;"  alt="image-map-welcome" title="image-map-welcome" href="http://polina.io/about/" target="" >
-</a>
-
-<a style="position: absolute; top: 2px; left: 450px; width: 74px; height: 14px;"  alt="image-map-github" title="image-map-github" href="https://github.com/psoshnin" target="" ><em>github</em></a>
-
-<a style="position: absolute; top: 2px; left: 600px; width: 200px; height: 12px;"  alt="image-map-twitter" title="image-map-twitter" href="https://twitter.com/907code" target="" ><em>twitter</em></a>
-
-<a style="position: absolute; top: 4px; left: 800px; width: 96px; height: 12px;"  alt="image-map-linkedin" title="image-map-linkedin" href="http://www.linkedin.com/in/polinasoshnin" target="" ><em>linkedin</em></a>
-
-</div> -->
-
-</hgroup>
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:psoshnin.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-
-	<li><a href="/">Home</a></li>
-
-  	<li><a href="/blog">Blog</a></li>
- 
-  	<li><a href="/code">Projects</a></li>
- 
-  	<li><a href="/about">About</a></li>
-  	
-  	<li><a href="/syllabus">Syllabus</a></li>
-  	
-	<!--<li><a href="/tags/">Tags</a></li> -->
-
-  	<li><a href="/archives">Archives</a></li>
-
-  	<!--<li><a href="/glossary">Glossary</a></li> -->
-  
+  <div class="navbar navbar-inverse navbar-static-top">
+  	<div class="navbar-inner">
+  	  <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+  	  	<div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+  	      <ul class="nav">
+    
+        <li ><a href="/">Home</a></li>
+    
+        <li ><a href="/code">Code</a></li>
+    
+        <li ><a href="/blog/archives">Blog Archive</a></li>
+    
+        <li ><a href="/syllabus">Syllabus</a></li>
+    
 </ul>
 
+<ul class="nav pull-right">
+    
+    <li><a href="http://github.com/psoshnin" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
+    
+    
+    
+    <li><a href="http://linkedin.com/in/polinasoshnin" title="Linkedin Profile"><i class="icon-linkedin-sign social-navbar"></i></a></li>
+    
+    
+    <li><a href="http://twitter.com/907code" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    
+    
+    
+    
 
+    
+</ul>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
+  	    </div>
+  	  </div>
+  	</div>
+  </div>
+  <div class="container" id="main">
+      <div class="row-fluid">
+        <div id="content">
+          <div class="blog-index">
   
   
   
     <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/02/20/a-short-guide-to-email-spoofing/">A Short Guide to Email Spoofing</a></h1>
-    
-    
-      <p class="meta">
-        
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
 
 
 
@@ -128,14 +104,19 @@
   
 
 
-<time datetime="2014-02-20T00:07:53-05:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is a fun trick I learned that uses a few basic networking concepts. I didn&rsquo;t realize how easy it was to send spoof email via command line. Here&rsquo;s how:</p>
+<i class="icon-calendar-empty"></i> <time datetime="2014-02-20T00:07:53-05:00" pubdate data-updated="true">Feb 20<span>th</span>, 2014</time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/02/20/a-short-guide-to-email-spoofing/">A short guide to email spoofing</a></h1>
+      <p>This is a fun trick I learned that uses a few basic networking concepts. I didn&rsquo;t realize how easy it was to send spoof email via command line. Here&rsquo;s how:</p>
 
 <h4>Basic idea:</h4>
 
@@ -224,9 +205,12 @@ Connection closed by foreign host.
 </code></pre>
 
 <p>Didn&rsquo;t think you could get email from god? Let&rsquo;s check my inbox:</p>
-</div>
-  
-  
+
+      
+      
+    </div>
+  </div>
+
 
 
     </article>
@@ -234,13 +218,10 @@ Connection closed by foreign host.
   
     <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/02/07/week-two/">Polina on Rails: Week Two</a></h1>
-    
-    
-      <p class="meta">
-        
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
 
 
 
@@ -252,14 +233,19 @@ Connection closed by foreign host.
   
 
 
-<time datetime="2014-02-07T13:26:15-05:00" pubdate data-updated="true">Feb 7<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This week I will be talking about making an app that uses Devise for authentication with ActiveRecord and SQLite for a database. I will also be using Test Driven Development (TDD), so I will be including RSpec and Cucumber as well.</p>
+<i class="icon-calendar-empty"></i> <time datetime="2014-02-07T13:26:15-05:00" pubdate data-updated="true">Feb 7<span>th</span>, 2014</time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/02/07/week-two/">Polina on Rails: Week Two</a></h1>
+      <p>This week I will be talking about making an app that uses Devise for authentication with ActiveRecord and SQLite for a database. I will also be using Test Driven Development (TDD), so I will be including RSpec and Cucumber as well.</p>
 
 <h4>Background:</h4>
 
@@ -309,9 +295,12 @@ $ echo "rails3-devise-rspec-cucumber" &gt; .ruby-gemset
 <li>Basecamp-style subdomains with Devise and MongoDB</li>
 </ul>
 
-</div>
-  
-  
+
+      
+      
+    </div>
+  </div>
+
 
 
     </article>
@@ -319,13 +308,10 @@ $ echo "rails3-devise-rspec-cucumber" &gt; .ruby-gemset
   
     <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/02/01/week-one/">Polina on Rails: Week One</a></h1>
-    
-    
-      <p class="meta">
-        
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
 
 
 
@@ -337,14 +323,19 @@ $ echo "rails3-devise-rspec-cucumber" &gt; .ruby-gemset
   
 
 
-<time datetime="2014-02-01T17:53:20-05:00" pubdate data-updated="true">Feb 1<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hello and welcome to my blog! I&rsquo;m designing an independent study this semester so I can devote time to learning the ins and outs of Rails. I&rsquo;m using Octopress, a blogging framework built for <a href="http://jekyllrb.com/">Jekyll</a> which is a static site generator that uses Github <a href="http://pages.github.com/">pages</a>. If you&rsquo;re interested in seeing how I set up this blog, see setting up <a href="http://octopress.org/docs/setup/">Octopress</a>. You can also checkout my source code <a href="https://github.com/psoshnin/psoshnin.github.io/tree/source">here</a> if you want to see how I customized my blog.</p>
+<i class="icon-calendar-empty"></i> <time datetime="2014-02-01T17:53:20-05:00" pubdate data-updated="true">Feb 1<span>st</span>, 2014</time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/02/01/week-one/">Polina on Rails: Week One</a></h1>
+      <p>Hello and welcome to my blog! I&rsquo;m designing an independent study this semester so I can devote time to learning the ins and outs of Rails. I&rsquo;m using Octopress, a blogging framework built for <a href="http://jekyllrb.com/">Jekyll</a> which is a static site generator that uses Github <a href="http://pages.github.com/">pages</a>. If you&rsquo;re interested in seeing how I set up this blog, see setting up <a href="http://octopress.org/docs/setup/">Octopress</a>. You can also checkout my source code <a href="https://github.com/psoshnin/psoshnin.github.io/tree/source">here</a> if you want to see how I customized my blog.</p>
 
 <p>To see what fun things I&rsquo;m going to be up to, go to the <a href="http://polina.io/syllabus/">Syllabus</a> tab.</p>
 
@@ -365,9 +356,12 @@ rake preview
 </code></pre>
 
 <p>Difference between rake watch and rake preview?</p>
-</div>
-  
-  
+
+      
+      
+    </div>
+  </div>
+
 
 
     </article>
@@ -402,7 +396,7 @@ rake preview
 
 
 
-<section>
+<!--<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
@@ -419,18 +413,23 @@ rake preview
       </li>
     
   </ul>
-</section>
+</section>&#8211;>
 
   
 </aside>
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Built with &#x2661 by Polina -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>. &copy; 2014 </span>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <p>
+  Copyright &copy; 2014 - Polina Soshnin -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> - Theme by <a href="http://alexgaribay.com">Alex Garibay</a>
 </p>
 
-</footer>
+
+        </footer>
+      </div>
+  </div>
   
 
 

@@ -12,3 +12,4 @@ categories:
 “The Analytical Engine does not occupy common ground with mere ‘calculating machines,’ ” she wrote elsewhere. “It holds a position wholly its own ... A new, a vast, and a powerful language is developed ... in which to wield its truths so that these may become of more speedy and accurate practical application for the purposes of mankind than the means hitherto in our possession have rendered possible. Thus not only the mental and the material, but the theoretical and the practical in the mathematical world, are brought into more intimate and effective connexion with each other.”
 
 
+

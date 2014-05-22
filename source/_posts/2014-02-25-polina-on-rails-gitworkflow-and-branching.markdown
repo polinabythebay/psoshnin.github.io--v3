@@ -6,9 +6,7 @@ comments: true
 categories: git
 ---
 
-http://infinitemonkeys.influitive.com/a-simple-explanation-for-git-rebase/
-
-Version control is the bread and butter of open source and professional software development and yet I found it almost absent in my academic computer science education. Version control is a way to track changes to your software projects and management collaboration. For those completely new to it though, it can be really confusing to first download the Mac GUI client for github and then realize it's pretty pointless for learning how to actually use and understand how a successful git branching model works. I will run through the basic commands you need to be successful with git and then describe how I do feature branching in my projects.
+Version control is the bread and butter of open source and professional software development and yet I found it almost absent in my academic computer science education. Version control is a way to track changes to your software projects and manage collaboration. For those completely new to it though, it can be really confusing to first download the Mac GUI client for github and then realize it's pretty pointless for learning how to actually use and understand how a successful git branching model works. I will run through the basic commands you need to be successful with git and then describe how I do feature branching in my projects.
 
 ##Basic git
 
@@ -76,10 +74,11 @@ Working with collaborators
 ```
 
 Creating a pull request 
-1. Visit original repository you forked on github,  http://www.github.com/username/projectname
-2. Click "Pull request" on the right-side menu, then "New pull request"
-3. Select branch with the changes you want to submit
-4. The page should then show the changes associated with your pull request. 
+
+* Visit original repository you forked on github,  http://www.github.com/username/projectname
+* Click "Pull request" on the right-side menu, then "New pull request"
+* Select branch with the changes you want to submit
+* The page should then show the changes associated with your pull request. 
 
 Merging a branch
 
@@ -89,6 +88,31 @@ Merging a branch
 	$ git branch -D <BRANCHNAME>
 	$ git push <REMOTENAME> -- delete <BRANCHNAME> //you can also delete the branch from your fork on github
 ```
+##Git rebase
+
+Git rebase is a really awesome way to handle feature branch workflow. Some of the definitions of rebase are pretty convoluted but here's basically what you need to know about how git rebase works:
+
+{% blockquote Brad Robertson http://infinitemonkeys.influitive.com/a-simple-explanation-for-git-rebase/ A Simple Explanation for git rebase %}
+When you're working on a feature branch, rebasing the main development line into your feature branch will keep all of your feature branch commits at the head of the branch
+{% endblockquote %}
+
+Rebase works for your feature branches that aren't shared with your team. In other words, don't try rebasing into any shared branches (development, master, etc). If you do then everyone else will have to force pull your changes, and that's not helpful. 
+
+Feature development workflow with git rebase:
+
+* Create feature branch
+* Develop as per usual
+* Checkout main development branch by pulling/fetch
+* Rebase the dev branch into your feature branch by checking out the feature branch and running
+```
+	$ git rebase development
+```
+* Push changes to remote. You might have to do a force push since you've changed the history on your feature branch
+```
+	$ git push -f
+```
+
+
 
 
 

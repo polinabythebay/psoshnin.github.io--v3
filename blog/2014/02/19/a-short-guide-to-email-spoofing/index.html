@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Polina on Rails: Week One - polina i/o</title>
+  <title>A short guide to email spoofing - polina i/o</title>
   <meta name="author" content="Polina Soshnin">
 
   
-  <meta name="description" content="Hello and welcome to my blog! I&rsquo;m designing an independent study this semester so I can devote time to learning the ins and outs of Rails. I& &hellip;">
+  <meta name="description" content="This is a fun trick I learned that uses a few basic networking concepts. I didn&rsquo;t realize how easy it was to send spoof email via command line &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://psoshnin.github.io/blog/2014/02/01/week-one/">
+  <link rel="canonical" href="http://psoshnin.github.io/blog/2014/02/19/a-short-guide-to-email-spoofing/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -109,7 +109,7 @@
   
   <header>
     
-      <h1 class="entry-title">Polina on Rails: Week One</h1>
+      <h1 class="entry-title">A Short Guide to Email Spoofing</h1>
     
     
       <p class="meta">
@@ -125,34 +125,102 @@
   
 
 
-<time datetime="2014-02-01T14:53:20-08:00" pubdate data-updated="true">Feb 1<span>st</span>, 2014</time>
+<time datetime="2014-02-19T21:07:53-08:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Hello and welcome to my blog! I&rsquo;m designing an independent study this semester so I can devote time to learning the ins and outs of Rails. I&rsquo;m using Octopress, a blogging framework built for <a href="http://jekyllrb.com/">Jekyll</a> which is a static site generator that uses Github <a href="http://pages.github.com/">pages</a>. If you&rsquo;re interested in seeing how I set up this blog, see setting up <a href="http://octopress.org/docs/setup/">Octopress</a>. You can also checkout my source code <a href="https://github.com/psoshnin/psoshnin.github.io/tree/source">here</a> if you want to see how I customized my blog.</p>
+<div class="entry-content"><p>This is a fun trick I learned that uses a few basic networking concepts. I didn&rsquo;t realize how easy it was to send spoof email via command line. Here&rsquo;s how:</p>
 
-<p>To see what fun things I&rsquo;m going to be up to, go to the <a href="http://polina.io/syllabus/">Syllabus</a> tab.</p>
+<h4>Basic idea:</h4>
 
-<p>To see what fun projects I&rsquo;ll be working on, I will be designating all of my Github repos with the following naming convention: cs350-week-number-projectname. I&rsquo;ll also be posting notable ones in the <a href="http://polina.io/code/">Code</a> tab.</p>
+<p>Establish a TCP connection to a mail server and use SMTP commands to send email from &ldquo;anyone&rdquo; to &ldquo;anyone&rdquo;. :) You&rsquo;ll see what I mean.</p>
 
-<p>I&rsquo;m currently based in Boston, so if you&rsquo;re also really excited about learning Rails and want to meet up/learn more feel free to get in touch: me[at]polina[dot]io.</p>
+<h4>Concepts:</h4>
 
-<p>Shortcut to creating posts on octopress:</p>
+<p>TCP, or the Transmission Control Protocol, is a transport layer protocol used for establishing logical communication between applications and different hosts that are not physically connected to one another. Applications can be ones running on your computer (a local host) or the internet (Gmail for example). In this case, I am using TCP to establish a connection from my linux account on a college server to a google mail server. SMTP is the Simple Mail Transfer Protocol that is the de facto standard for sending email across the internet. It&rsquo;s been around since 1982 and is very minimal&mdash; to this day it will only support 7 bit ASCII characters, which amuses me when I think of multimedia email attachments these days. In this example I&rsquo;m going to use telnet to manually send mail through an SMTP mail server.</p>
 
-<pre><code>rake new_post["title"]
-rake new_page[super-awesome]
-rake new_page[super-awesome/page.html]
+<h4>Step 1: Establish a TCP Connection</h4>
 
-rake generate
-rake deploy
-rake watch
-rake preview
+<p>In order to send SMTP commands to a mail server you need to know the host name of the mail server for your domain. My domain is wellesley.edu, so I&rsquo;m going to first query the DNS for the MX record that holds information about my mail domain.</p>
+
+<p>SSH into my linux account:</p>
+
+<pre><code>$ ssh -Y psoshnin@cs.wellesley.edu
+psoshnin@cs.wellesley.edu's password:
+[psoshnin@tempest~] 
 </code></pre>
 
-<p>Difference between rake watch and rake preview?</p>
+<p>Query DNS for the mail servers that deliver mail to wellesley.edu:</p>
+
+<pre><code>[psoshnin@tempest~] nslookup -type=MX wellesley.edu
+Server:         149.130.10.16
+Address:        149.130.10.16#53
+
+wellesley.edu   mail exchanger = 5 ALT2.ASPMX.L.GOOGLE.COM.
+wellesley.edu   mail exchanger = 10 ASPMX2.GOOGLEMAIL.COM.
+wellesley.edu   mail exchanger = 10 ASPMX3.GOOGLEMAIL.COM.
+wellesley.edu   mail exchanger = 1 ASPMX.L.GOOGLE.COM.
+wellesley.edu   mail exchanger = 5 ALT1.ASPMX.L.GOOGLE.COM.
+
+[psoshnin@tempest~]
+</code></pre>
+
+<p>From here you can see that Wellesley has 5 different mail servers through Google mail services. We need to pick one of them&mdash; let&rsquo;s pick ALT2.ASPMX.L.GOOGLE.COM. We use telnet to establish the connection and use port 25 because it&rsquo;s a TCP connection:</p>
+
+<pre><code>[psoshnin@tempest~] telnet ALT2.ASPMX.L.GOOGLE.COM 25
+Trying 173.194.65.27...
+Connected to ALT2.ASPMX.L.GOOGLE.COM.
+Escape character is '^]'.
+220 mx.google.com ESMTP u6si42550271een.213 -gsmtp
+</code></pre>
+
+<h4>Step two: Use SMTP commands to send an email</h4>
+
+<p>Yay we&rsquo;re connected! Now here&rsquo;s where the fun begins. Let&rsquo;s enter in some commands to send a message. A basic message for SMTP needs the following:</p>
+
+<pre><code>MAIL FROM: Sender &lt;sending@email.address&gt;
+RCPT TO: Receiver &lt;receiving@email.address&gt;
+DATA
+FROM: &lt;from@an.address&gt;
+T0: &lt;to@an.address&gt;
+SUBJECT: email subject
+Body of email
+.
+QUIT
+</code></pre>
+
+<p>Note that there&rsquo;s a period [.] at the end. You will need that. Let&rsquo;s try this!</p>
+
+<pre><code>[psoshnin@tempest~] telnet ALT2.ASPMX.L.GOOGLE.COM 25
+Trying 173.194.65.27...
+Connected to ALT2.ASPMX.L.GOOGLE.COM.
+Escape character is '^]'.
+220 mx.google.com ESMTP u6si42550271een.213 -gsmtp
+HELO psoshnin@wellesley.edu
+250 mx.google.com at your service
+MAIL FROM: &lt;god@heaven.onearth&gt;
+250 2.1.0 OK u6si4550271een.213 -gsmtp
+RCPT TO: &lt;me@polina.io&gt;
+250 2.1.0 OK u6si42250271een.213 -gsmtp
+DATA
+350 Go ahead u6si42550271een.213 -gsmtp
+FROM: God &lt;god@heaven.onearth&gt;
+TO: Earthling &lt;why@hello.earthling&gt;
+SUBJECT: Hello world!
+Hello world! I should visit more.
+-God
+.
+250 2.0.0 OK 1392756346 u6si42550271een.213 -gsmtp
+QUIT
+221 2.0.0 closing connection u6si42550271een.213 -gsmtp
+Connection closed by foreign host.
+[psoshnin@tempest~] 
+</code></pre>
+
+<p>Didn&rsquo;t think you could get email from god? Let&rsquo;s check my inbox:</p>
 </div>
 
 
@@ -175,7 +243,7 @@ rake preview
   
 
 
-<time datetime="2014-02-01T14:53:20-08:00" pubdate data-updated="true">Feb 1<span>st</span>, 2014</time>
+<time datetime="2014-02-19T21:07:53-08:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
       
 
 
@@ -191,8 +259,8 @@ rake preview
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2014/02/07/week-two/" title="Previous Post: Polina on Rails: Week Two">&laquo; Polina on Rails: Week Two</a>
       
-        <a class="basic-alignment right" href="/blog/2014/02/07/week-two/" title="Next Post: Polina on Rails: Week Two">Polina on Rails: Week Two &raquo;</a>
       
     </p>
   </footer>
